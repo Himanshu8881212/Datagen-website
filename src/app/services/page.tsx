@@ -420,7 +420,7 @@ export default function ServicesPage() {
               </div>
               <div className="text-right">
                 <p className="text-xs text-muted-foreground">
-                  DataGen © 2024. All rights reserved.
+                  DataGen © 2025. All rights reserved.
                 </p>
                 <p className="text-xs text-muted-foreground mt-1">
                   Synthetic Data Solutions for AI Innovation

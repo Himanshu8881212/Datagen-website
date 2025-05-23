@@ -72,7 +72,7 @@ export default function TrySynthEngyne() {
                 <h1 className="text-4xl font-bold tracking-tight sm:text-5xl mb-4">SynthEngyne Coming Soon</h1>
                 <div className="w-20 h-1 bg-gradient-to-r from-primary to-primary/50 mx-auto rounded-full mb-6"></div>
                 <p className="text-xl text-muted-foreground leading-relaxed">
-                  We're working hard to bring you the best synthetic data platform. SynthEngyne will be available by the end of August 2024.
+                  We're working hard to bring you the best synthetic data platform. SynthEngyne will be available by the end of August 2025.
                 </p>
               </div>
 
