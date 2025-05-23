@@ -573,20 +573,22 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-              <div className="flex flex-col justify-center space-y-6 order-1 lg:order-2">
+              <div className="flex flex-col justify-center space-y-8 order-1 lg:order-2">
                 <div className="space-y-4">
                   <div className="inline-block px-3 py-1 rounded-full bg-primary/10 text-primary text-sm font-medium mb-2">
                     Flagship Product
                   </div>
-                  <h2 className="text-3xl font-bold tracking-tight sm:text-4xl bg-clip-text text-transparent bg-gradient-to-r from-foreground to-foreground/80">SynthEngyne Platform</h2>
-                  <p className="max-w-[600px] text-muted-foreground text-lg leading-relaxed">
+                  <h2 className="text-3xl font-bold tracking-tight sm:text-4xl bg-clip-text text-transparent bg-gradient-to-r from-foreground to-foreground/80 mb-6">
+                    SynthEngyne Platform
+                  </h2>
+                  <p className="max-w-[600px] text-muted-foreground text-lg leading-relaxed mb-4">
                     SynthEngyne is our synthetic data platform designed to help businesses generate custom datasets for AI training. Our intuitive workflow supports multiple data formats including text, image, time-series, and tabular data.
                   </p>
-                  <p className="max-w-[600px] text-muted-foreground text-lg leading-relaxed mt-3">
+                  <p className="max-w-[600px] text-muted-foreground text-lg leading-relaxed">
                     The platform focuses on data quality and consistency, providing businesses with reliable training data for their AI development needs.
                   </p>
                 </div>
-                <div className="flex flex-col sm:flex-row gap-3">
+                <div className="flex flex-col sm:flex-row gap-3 mt-8">
                   <Button
                     asChild
                     className="w-fit bg-gradient-to-r from-primary to-primary/80 hover:opacity-90 transition-opacity"
