@@ -7,6 +7,7 @@ import { useState, useEffect, useRef } from "react";
 import { toast } from "sonner";
 import { MobileMenu } from "@/components/mobile-menu";
 import { Logo } from "@/components/logo";
+import { Footer } from "@/components/footer";
 import { createScrollHandler, scrollToElement } from "@/lib/scroll-utils";
 // Import EmailJS for email sending
 import emailjs from '@emailjs/browser';
@@ -429,14 +430,14 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-screen w-full">
       {/* Navigation */}
-      <header className="border-b border-border/40 sticky top-0 z-50 bg-background/95 backdrop-blur-md shadow-md w-full">
+      <header className="border-b border-white/20 sticky top-0 z-50 bg-black text-white shadow-md w-full">
         <div className="container mx-auto flex h-16 md:h-20 items-center justify-between px-4 md:px-6 lg:px-8">
           <div className="flex items-center gap-8">
             <Logo className="text-lg md:text-xl" />
             <nav className="hidden md:flex gap-6 lg:gap-8">
               <Link
                 href="#product"
-                className="text-sm font-medium hover:text-primary transition-colors relative group tracking-wide"
+                className="text-sm font-medium text-white hover:text-primary transition-colors relative group tracking-wide"
                 onClick={(e) => {
                   e.preventDefault();
                   scrollToElement('product');
@@ -448,7 +449,7 @@ export default function Home() {
               </Link>
               <Link
                 href="#services"
-                className="text-sm font-medium hover:text-primary transition-colors relative group tracking-wide"
+                className="text-sm font-medium text-white hover:text-primary transition-colors relative group tracking-wide"
                 onClick={(e) => {
                   e.preventDefault();
                   scrollToElement('services');
@@ -460,7 +461,7 @@ export default function Home() {
               </Link>
               <Link
                 href="#faq"
-                className="text-sm font-medium hover:text-primary transition-colors relative group tracking-wide"
+                className="text-sm font-medium text-white hover:text-primary transition-colors relative group tracking-wide"
                 onClick={(e) => {
                   e.preventDefault();
                   scrollToElement('faq');
@@ -477,7 +478,7 @@ export default function Home() {
               asChild
               variant="outline"
               size="sm"
-              className="hidden sm:flex border-border hover:border-primary/50 hover:bg-primary/5 text-sm font-medium tracking-wide"
+              className="hidden sm:flex bg-white text-black border-white text-sm font-bold tracking-wide"
               onClick={(e) => {
                 e.preventDefault();
                 scrollToElement('contact');
@@ -491,7 +492,7 @@ export default function Home() {
             <Button
               asChild
               size="sm"
-              className="hidden sm:flex bg-gradient-to-r from-primary to-primary/80 hover:opacity-90 transition-opacity text-sm font-medium tracking-wide"
+              className="hidden sm:flex bg-white text-black border-white text-sm font-bold tracking-wide"
             >
               <Link href="/trysynthengyne">
                 Try SynthEngyne
@@ -511,16 +512,13 @@ export default function Home() {
           <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-primary/10 rounded-full blur-3xl"></div>
 
           <div className="container mx-auto px-4 md:px-6 lg:px-8 relative">
-            <div className="grid gap-10 lg:grid-cols-2 lg:gap-16 xl:grid-cols-2 items-center">
+            <div className="grid gap-8 lg:grid-cols-2 lg:gap-16 items-center">
               <div className="flex flex-col justify-center space-y-6">
                 <div className="space-y-4">
-                  <div className="inline-block px-3 py-1 rounded-full bg-primary/10 text-primary text-sm font-medium mb-2">
-                    Synthetic Data Solutions
-                  </div>
-                  <h1 className="text-4xl font-bold tracking-tight sm:text-5xl xl:text-6xl/none bg-clip-text text-transparent bg-gradient-to-r from-foreground to-foreground/80">
+                  <h1 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl xl:text-6xl/none bg-clip-text text-transparent bg-gradient-to-r from-foreground to-foreground/80">
                     Unlock the Power of AI with DataGen
                   </h1>
-                  <p className="max-w-[600px] text-muted-foreground text-lg md:text-xl leading-relaxed">
+                  <p className="max-w-[600px] text-muted-foreground text-base md:text-lg lg:text-xl leading-relaxed">
                     DataGen helps businesses make the most of AI by providing high-quality synthetic datasets and complete AI solutions for your most challenging data needs.
                   </p>
                 </div>
@@ -537,10 +535,10 @@ export default function Home() {
                 </div>
               </div>
               <div className="flex items-center justify-center">
-                <div className="relative h-[350px] w-[350px] md:h-[450px] md:w-[450px] lg:h-[500px] lg:w-[500px]">
+                <div className="relative w-full max-w-sm md:max-w-md lg:max-w-lg aspect-square">
                   <div className="absolute inset-0 bg-gradient-to-r from-primary/40 to-primary/20 rounded-full blur-3xl opacity-30 animate-pulse-slow"></div>
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="h-[300px] w-[300px] md:h-[400px] md:w-[400px] lg:h-[450px] lg:w-[450px] bg-card rounded-3xl shadow-2xl overflow-hidden border border-primary/10">
+                  <div className="absolute inset-4 md:inset-6 lg:inset-8 flex items-center justify-center">
+                    <div className="w-full h-full bg-card rounded-3xl shadow-2xl overflow-hidden border border-primary/10">
                       <div className="h-full w-full bg-[url('https://images.unsplash.com/photo-1717501218636-a390f9ac5957?crop=entropy&cs=srgb&fm=jpg&ixid=M3w0OTUyODh8MHwxfHNlYXJjaHw1fHxhcnRpZmljaWFsJTIwaW50ZWxsaWdlbmNlfGVufDB8MHx8fDE3MzM4MjA4MTF8MA&ixlib=rb-4.0.3&q=85')] bg-cover bg-center transition-transform duration-700 hover:scale-105"></div>
                     </div>
                   </div>
@@ -551,7 +549,7 @@ export default function Home() {
         </section>
 
         {/* Product Section */}
-        <section id="product" className="py-28 relative overflow-hidden">
+        <section id="product" className="py-24 md:py-32 relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-tr from-primary/5 to-transparent"></div>
           <div className="absolute -top-40 -left-40 w-80 h-80 bg-primary/10 rounded-full blur-3xl"></div>
           <div className="absolute -bottom-40 -right-40 w-80 h-80 bg-primary/10 rounded-full blur-3xl"></div>
@@ -562,12 +560,12 @@ export default function Home() {
               <div className="w-20 h-1 bg-gradient-to-r from-primary to-primary/50 mx-auto rounded-full"></div>
             </div>
 
-            <div className="grid gap-10 lg:grid-cols-2 lg:gap-16 items-center">
+            <div className="grid gap-8 lg:grid-cols-2 lg:gap-16 items-center">
               <div className="flex items-center justify-center order-2 lg:order-1">
-                <div className="relative h-[350px] w-[350px] md:h-[450px] md:w-[450px]">
+                <div className="relative w-full max-w-sm md:max-w-md aspect-square">
                   <div className="absolute inset-0 bg-gradient-to-r from-primary/30 to-primary/10 rounded-full blur-3xl opacity-30 animate-pulse-slow"></div>
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="h-[300px] w-[300px] md:h-[400px] md:w-[400px] bg-card rounded-3xl shadow-2xl overflow-hidden border border-primary/10 rotate-3 hover:rotate-0 transition-all duration-500">
+                  <div className="absolute inset-4 md:inset-6 flex items-center justify-center">
+                    <div className="w-full h-full bg-card rounded-3xl shadow-2xl overflow-hidden border border-primary/10 rotate-3 hover:rotate-0 transition-all duration-500">
                       <div className="h-full w-full bg-[url('https://images.unsplash.com/photo-1717501219008-5f436ead74d5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0OTUyODh8MHwxfHNlYXJjaHwxNTR8fGFydGlmaWNpYWwlMjBpbnRlbGxpZ2VuY2V8ZW58MHwwfHx8MTczMzgyMDk4MXww&ixlib=rb-4.0.3&q=80&w=1080')] bg-cover bg-center transition-transform duration-700 hover:scale-105"></div>
                     </div>
                   </div>
@@ -575,16 +573,13 @@ export default function Home() {
               </div>
               <div className="flex flex-col justify-center space-y-8 order-1 lg:order-2">
                 <div className="space-y-4">
-                  <div className="inline-block px-3 py-1 rounded-full bg-primary/10 text-primary text-sm font-medium mb-2">
-                    Flagship Product
-                  </div>
-                  <h2 className="text-3xl font-bold tracking-tight sm:text-4xl bg-clip-text text-transparent bg-gradient-to-r from-foreground to-foreground/80 mb-6">
+                  <h2 className="text-2xl font-bold tracking-tight sm:text-3xl md:text-4xl mb-6">
                     SynthEngyne Platform
                   </h2>
-                  <p className="max-w-[600px] text-muted-foreground text-lg leading-relaxed mb-4">
+                  <p className="max-w-[600px] text-muted-foreground text-base md:text-lg leading-relaxed mb-4">
                     SynthEngyne is our synthetic data platform designed to help businesses generate custom datasets for AI training. Our intuitive workflow supports multiple data formats including text, image, time-series, and tabular data.
                   </p>
-                  <p className="max-w-[600px] text-muted-foreground text-lg leading-relaxed">
+                  <p className="max-w-[600px] text-muted-foreground text-base md:text-lg leading-relaxed">
                     The platform focuses on data quality and consistency, providing businesses with reliable training data for their AI development needs.
                   </p>
                 </div>
@@ -599,8 +594,7 @@ export default function Home() {
                   </Button>
                   <Button
                     asChild
-                    variant="outline"
-                    className="w-fit border-primary/30 hover:border-primary hover:bg-primary/5"
+                    className="w-fit bg-gradient-to-r from-primary to-primary/80 hover:opacity-90 transition-opacity"
                   >
                     <Link href="/product">
                       Learn More
@@ -613,7 +607,7 @@ export default function Home() {
         </section>
 
         {/* Services Section */}
-        <section id="services" className="py-28 bg-muted/30 relative overflow-hidden">
+        <section id="services" className="py-24 md:py-32 bg-muted/30 relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-bl from-primary/5 to-transparent"></div>
           <div className="absolute -top-40 -right-40 w-80 h-80 bg-primary/10 rounded-full blur-3xl"></div>
           <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-primary/10 rounded-full blur-3xl"></div>
@@ -624,19 +618,16 @@ export default function Home() {
               <div className="w-20 h-1 bg-gradient-to-r from-primary to-primary/50 mx-auto rounded-full"></div>
             </div>
 
-            <div className="grid gap-10 lg:grid-cols-2 lg:gap-16 items-center">
+            <div className="grid gap-8 lg:grid-cols-2 lg:gap-16 items-center">
               <div className="flex flex-col justify-center space-y-6">
                 <div className="space-y-4">
-                  <div className="inline-block px-3 py-1 rounded-full bg-primary/10 text-primary text-sm font-medium mb-2">
-                    End-to-End AI Solutions
-                  </div>
-                  <h3 className="text-2xl font-bold tracking-tight sm:text-3xl">Complete AI Services</h3>
-                  <p className="max-w-[600px] text-muted-foreground text-lg leading-relaxed">
+                  <h3 className="text-xl font-bold tracking-tight sm:text-2xl md:text-3xl">Complete AI Services</h3>
+                  <p className="max-w-[600px] text-muted-foreground text-base md:text-lg leading-relaxed">
                     At DataGen, we offer comprehensive AI services that take you from data to deployment. Our expertise covers synthetic dataset creation, model fine-tuning, and alignment to ensure your AI solutions deliver real business value.
                   </p>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
                   <div className="bg-card p-4 rounded-xl border border-primary/10 shadow-sm hover:shadow-md transition-all duration-300 hover:border-primary/30">
                     <div className="flex items-center gap-3 mb-2">
                       <div className="h-8 w-8 rounded-full bg-primary/10 flex items-center justify-center text-primary">
@@ -681,7 +672,7 @@ export default function Home() {
                       </div>
                       <h4 className="font-medium">Agentic Systems</h4>
                     </div>
-                    <p className="text-sm text-muted-foreground">Intelligent AI agents that can perform complex tasks autonomously.</p>
+                    <p className="text-sm text-muted-foreground">Comprehensive AI agent solutions including RAG systems, autonomous task execution, and intelligent decision-making capabilities.</p>
                   </div>
 
                   <div className="bg-card p-4 rounded-xl border border-primary/10 shadow-sm hover:shadow-md transition-all duration-300 hover:border-primary/30">
@@ -704,8 +695,7 @@ export default function Home() {
                 <div className="mt-4">
                   <Button
                     asChild
-                    variant="outline"
-                    className="w-fit border-primary/30 hover:border-primary hover:bg-primary/5"
+                    className="w-fit bg-gradient-to-r from-primary to-primary/80 hover:opacity-90 transition-opacity"
                   >
                     <Link href="/services">
                       Learn More
@@ -715,10 +705,10 @@ export default function Home() {
               </div>
 
               <div className="flex items-center justify-center">
-                <div className="relative h-[350px] w-[350px] md:h-[450px] md:w-[450px]">
+                <div className="relative w-full max-w-sm md:max-w-md aspect-square">
                   <div className="absolute inset-0 bg-gradient-to-r from-primary/30 to-primary/10 rounded-full blur-3xl opacity-30 animate-pulse-slow"></div>
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="h-[300px] w-[300px] md:h-[400px] md:w-[400px] bg-card rounded-3xl shadow-2xl overflow-hidden border border-primary/10 -rotate-3 hover:rotate-0 transition-all duration-500">
+                  <div className="absolute inset-4 md:inset-6 flex items-center justify-center">
+                    <div className="w-full h-full bg-card rounded-3xl shadow-2xl overflow-hidden border border-primary/10 -rotate-3 hover:rotate-0 transition-all duration-500">
                       <div className="h-full w-full bg-[url('https://images.unsplash.com/photo-1717501218661-0322e4bc4c81?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w0OTUyODh8MHwxfHNlYXJjaHwxNTl8fGFydGlmaWNpYWwlMjBpbnRlbGxpZ2VuY2V8ZW58MHwwfHx8MTczMzgyMDk4MXww&ixlib=rb-4.0.3&q=80&w=1080')] bg-cover bg-center transition-transform duration-700 hover:scale-105"></div>
                     </div>
                   </div>
@@ -729,7 +719,7 @@ export default function Home() {
         </section>
 
         {/* Pricing Section */}
-        <section id="pricing" className="py-28 relative overflow-hidden">
+        <section id="pricing" className="py-24 md:py-32 relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-tr from-primary/5 to-transparent"></div>
           <div className="absolute -top-40 -left-40 w-80 h-80 bg-primary/10 rounded-full blur-3xl"></div>
           <div className="absolute -bottom-40 -right-40 w-80 h-80 bg-primary/10 rounded-full blur-3xl"></div>
@@ -752,7 +742,7 @@ export default function Home() {
                     <p className="text-muted-foreground">Perfect for individuals and small projects</p>
                   </div>
                   <div className="mt-6 flex items-baseline">
-                    <span className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-foreground to-foreground/80">€0</span>
+                    <span className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-foreground to-foreground/80">₹0</span>
                     <span className="ml-1 text-muted-foreground">/month</span>
                   </div>
                   <div className="mt-2 mb-6 h-0.5 w-16 bg-gradient-to-r from-primary/30 to-transparent rounded-full"></div>
@@ -836,8 +826,7 @@ export default function Home() {
                   </ul>
                   <Button
                     asChild
-                    className="mt-8 w-full group-hover:bg-primary/5 group-hover:border-primary/30"
-                    variant="outline"
+                    className="mt-8 w-full bg-gradient-to-r from-primary to-primary/80 text-white"
                   >
                     <Link href="/trysynthengyne">
                       Get Started
@@ -855,7 +844,7 @@ export default function Home() {
                     <p className="text-muted-foreground">For professionals and growing teams</p>
                   </div>
                   <div className="mt-6 flex items-baseline">
-                    <span className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/80">€20</span>
+                    <span className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/80">₹2200</span>
                     <span className="ml-1 text-muted-foreground">/month</span>
                   </div>
                   <div className="mt-2 mb-6 h-0.5 w-16 bg-gradient-to-r from-primary to-primary/30 rounded-full"></div>
@@ -958,7 +947,7 @@ export default function Home() {
                   </ul>
                   <Button
                     asChild
-                    className="mt-8 w-full bg-gradient-to-r from-primary to-primary/80 hover:opacity-90 transition-opacity"
+                    className="mt-8 w-full bg-gradient-to-r from-primary to-primary/80 text-white"
                   >
                     <Link href="/trysynthengyne">
                       Subscribe Now
@@ -1075,8 +1064,7 @@ export default function Home() {
                   </ul>
                   <Button
                     asChild
-                    className="mt-8 w-full group-hover:bg-primary/5 group-hover:border-primary/30"
-                    variant="outline"
+                    className="mt-8 w-full bg-gradient-to-r from-primary to-primary/80 text-white"
                     onClick={(e) => {
                       e.preventDefault();
                       scrollToElement('contact');
@@ -1094,7 +1082,7 @@ export default function Home() {
         </section>
 
         {/* FAQ Section */}
-        <section id="faq" className="py-28 relative overflow-hidden">
+        <section id="faq" className="py-24 md:py-32 relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-bl from-primary/5 to-transparent"></div>
           <div className="absolute -top-40 -right-40 w-80 h-80 bg-primary/10 rounded-full blur-3xl"></div>
           <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-primary/10 rounded-full blur-3xl"></div>
@@ -1130,7 +1118,7 @@ export default function Home() {
                 <div className="rounded-xl border border-primary/10 p-6 bg-card shadow-sm hover:shadow-md transition-all hover:border-primary/20 group">
                   <h3 className="font-semibold text-lg group-hover:text-primary transition-colors">How much does SynthEngyne cost?</h3>
                   <p className="mt-3 text-muted-foreground">
-                    We offer a Free tier (€0/month) with 3 dataspaces and 3 datasets per space. Our Pro tier (€20/month) includes 10 dataspaces, 7 datasets per space, priority processing, and API access. For larger organizations, we provide custom Enterprise solutions.
+                    We offer a Free tier (₹0/month) with 3 dataspaces and 3 datasets per space. Our Pro tier (₹2200/month) includes 10 dataspaces, 7 datasets per space, priority processing, and API access. For larger organizations, we provide custom Enterprise solutions.
                   </p>
                 </div>
                 <div className="rounded-xl border border-primary/10 p-6 bg-card shadow-sm hover:shadow-md transition-all hover:border-primary/20 group">
@@ -1145,7 +1133,7 @@ export default function Home() {
         </section>
 
         {/* Contact Section */}
-        <section id="contact" className="py-28 bg-muted/30 relative overflow-hidden">
+        <section id="contact" className="py-24 md:py-32 bg-muted/30 relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-tr from-primary/5 to-transparent"></div>
           <div className="absolute -top-40 -left-40 w-80 h-80 bg-primary/10 rounded-full blur-3xl"></div>
           <div className="absolute -bottom-40 -right-40 w-80 h-80 bg-primary/10 rounded-full blur-3xl"></div>
@@ -1159,7 +1147,7 @@ export default function Home() {
                   Have questions about our platform or services? We're here to help you implement effective AI solutions.
                 </p>
               </div>
-              <div className="bg-card rounded-xl border border-primary/10 p-8 shadow-lg">
+              <div className="bg-card rounded-xl border-2 border-primary/20 p-8 shadow-lg">
                 <form
                   id="contact-form"
                   ref={formRef}
@@ -1191,7 +1179,7 @@ export default function Home() {
                         <div className="mt-3">
                           <Button
                             onClick={handleSendEmail}
-                            className="w-full bg-gradient-to-r from-primary to-primary/80 hover:opacity-90 transition-opacity"
+                            className="w-full bg-gradient-to-r from-primary to-primary/80 text-white"
                           >
                             Send Email
                           </Button>
@@ -1212,7 +1200,7 @@ export default function Home() {
                     Email address *
                   </label>
                   <input
-                    className={`flex h-10 w-full rounded-md border ${formStatus.errors?.email ? 'border-red-500' : 'border-input'} bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50`}
+                    className={`flex h-10 w-full rounded-md border ${formStatus.errors?.email ? 'border-red-500' : 'border-primary/20 hover:border-primary/40 focus:border-primary'} bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 transition-colors`}
                     id="email"
                     name="email"
                     placeholder="Enter your email"
@@ -1229,7 +1217,7 @@ export default function Home() {
                     Name *
                   </label>
                   <input
-                    className={`flex h-10 w-full rounded-md border ${formStatus.errors?.name ? 'border-red-500' : 'border-input'} bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50`}
+                    className={`flex h-10 w-full rounded-md border ${formStatus.errors?.name ? 'border-red-500' : 'border-primary/20 hover:border-primary/40 focus:border-primary'} bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 transition-colors`}
                     id="name"
                     name="name"
                     placeholder="Enter your name"
@@ -1246,7 +1234,7 @@ export default function Home() {
                     Phone number
                   </label>
                   <input
-                    className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+                    className="flex h-10 w-full rounded-md border border-primary/20 hover:border-primary/40 focus:border-primary bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 transition-colors"
                     id="phone"
                     name="phone"
                     placeholder="Enter your phone number"
@@ -1259,7 +1247,7 @@ export default function Home() {
                     Message *
                   </label>
                   <textarea
-                    className={`flex min-h-[120px] w-full rounded-md border ${formStatus.errors?.message ? 'border-red-500' : 'border-input'} bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50`}
+                    className={`flex min-h-[120px] w-full rounded-md border ${formStatus.errors?.message ? 'border-red-500' : 'border-primary/20 hover:border-primary/40 focus:border-primary'} bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 transition-colors`}
                     id="message"
                     name="message"
                     placeholder="Enter your message"
@@ -1273,7 +1261,7 @@ export default function Home() {
                 <div className="flex items-center gap-3">
                   <Button
                     type="submit"
-                    className="w-full bg-gradient-to-r from-primary to-primary/80 hover:opacity-90 transition-opacity"
+                    className="w-full bg-gradient-to-r from-primary to-primary/80 text-white"
                     disabled={formStatus.success === true}
                   >
                     {formStatus.success === undefined ? 'Contact Us' : formStatus.success ? 'Message Sent' : 'Try Again'}
@@ -1281,8 +1269,7 @@ export default function Home() {
                   {formStatus.success && (
                     <Button
                       type="button"
-                      variant="outline"
-                      className="border-primary/30 hover:border-primary hover:bg-primary/5"
+                      className="bg-gradient-to-r from-primary to-primary/80 text-white"
                       onClick={() => {
                         setFormStatus({});
                         const form = document.getElementById('contact-form') as HTMLFormElement;
@@ -1305,146 +1292,10 @@ export default function Home() {
         </section>
       </main>
 
-      {/* Footer */}
-      <footer className="border-t border-border/40 py-12 md:py-16 bg-muted/30">
-        <div className="container mx-auto px-4 md:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
-            <div className="space-y-4">
-              <Logo className="text-lg md:text-xl" />
-              <p className="text-sm text-muted-foreground">
-                Pioneering synthetic data solutions for AI innovation.
-              </p>
-
-            </div>
-
-            <div className="space-y-4">
-              <h3 className="text-sm font-semibold uppercase tracking-wider">Product</h3>
-              <ul className="space-y-3">
-                <li>
-                  <Link
-                    href="#product"
-                    className="text-sm text-muted-foreground hover:text-primary transition-colors"
-                    onClick={(e) => {
-                      e.preventDefault();
-                      scrollToElement('product');
-                      window.history.pushState(null, '', '#product');
-                    }}
-                  >
-                    SynthEngyne
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/product"
-                    className="text-sm text-muted-foreground hover:text-primary transition-colors"
-                  >
-                    Features
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="#pricing"
-                    className="text-sm text-muted-foreground hover:text-primary transition-colors"
-                    onClick={(e) => {
-                      e.preventDefault();
-                      scrollToElement('pricing');
-                      window.history.pushState(null, '', '#pricing');
-                    }}
-                  >
-                    Pricing
-                  </Link>
-                </li>
-              </ul>
-            </div>
-
-            <div className="space-y-4">
-              <h3 className="text-sm font-semibold uppercase tracking-wider">Services</h3>
-              <ul className="space-y-3">
-                <li>
-                  <Link
-                    href="#services"
-                    className="text-sm text-muted-foreground hover:text-primary transition-colors"
-                    onClick={(e) => {
-                      e.preventDefault();
-                      scrollToElement('services');
-                      window.history.pushState(null, '', '#services');
-                    }}
-                  >
-                    Overview
-                  </Link>
-                </li>
-
-                <li>
-                  <Link
-                    href="/services"
-                    className="text-sm text-muted-foreground hover:text-primary transition-colors"
-                  >
-                    AI Solutions
-                  </Link>
-                </li>
-              </ul>
-            </div>
-
-            <div className="space-y-4">
-              <h3 className="text-sm font-semibold uppercase tracking-wider">Company</h3>
-              <ul className="space-y-3">
-                <li>
-                  <Link
-                    href="/about"
-                    className="text-sm text-muted-foreground hover:text-primary transition-colors"
-                  >
-                    About Us
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="#faq"
-                    className="text-sm text-muted-foreground hover:text-primary transition-colors"
-                    onClick={(e) => {
-                      e.preventDefault();
-                      scrollToElement('faq');
-                      window.history.pushState(null, '', '#faq');
-                    }}
-                  >
-                    FAQ
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="#contact"
-                    className="text-sm text-muted-foreground hover:text-primary transition-colors"
-                    onClick={(e) => {
-                      e.preventDefault();
-                      scrollToElement('contact');
-                      window.history.pushState(null, '', '#contact');
-                    }}
-                  >
-                    Contact
-                  </Link>
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <div className="mt-12 pt-8 border-t border-border/40">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div>
-                <h4 className="text-sm font-semibold mb-2">Contact Us</h4>
-                <p className="text-xs text-muted-foreground">Email: info@datagen.in</p>
-                <p className="text-xs text-muted-foreground">Website: www.datagen.in</p>
-              </div>
-              <div className="text-right">
-                <p className="text-xs text-muted-foreground">
-                  DataGen © 2025. All rights reserved.
-                </p>
-                <p className="text-xs text-muted-foreground mt-1">
-                  Synthetic Data Solutions for AI Innovation
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </footer>
+      <Footer onNavigate={(section) => {
+        scrollToElement(section);
+        window.history.pushState(null, '', `#${section}`);
+      }} />
     </div>
   );
 }

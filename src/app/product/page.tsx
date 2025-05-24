@@ -4,33 +4,34 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { Logo } from "@/components/logo";
 import { MobileMenu } from "@/components/mobile-menu";
+import { Footer } from "@/components/footer";
 
 export default function ProductPage() {
   return (
     <div className="flex flex-col min-h-screen w-full">
       {/* Navigation */}
-      <header className="border-b border-border/40 sticky top-0 z-50 bg-background/95 backdrop-blur-md shadow-md w-full">
+      <header className="border-b border-white/20 sticky top-0 z-50 bg-black text-white shadow-md w-full">
         <div className="container mx-auto flex h-16 md:h-20 items-center justify-between px-4 md:px-6 lg:px-8">
           <div className="flex items-center gap-8">
             <Logo className="text-lg md:text-xl" />
             <nav className="hidden md:flex gap-6 lg:gap-8">
               <Link
                 href="/#product"
-                className="text-sm font-medium hover:text-primary transition-colors relative group tracking-wide"
+                className="text-sm font-medium text-white hover:text-primary transition-colors relative group tracking-wide"
               >
                 Product
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
               </Link>
               <Link
                 href="/#services"
-                className="text-sm font-medium hover:text-primary transition-colors relative group tracking-wide"
+                className="text-sm font-medium text-white hover:text-primary transition-colors relative group tracking-wide"
               >
                 Services
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
               </Link>
               <Link
                 href="/#faq"
-                className="text-sm font-medium hover:text-primary transition-colors relative group tracking-wide"
+                className="text-sm font-medium text-white hover:text-primary transition-colors relative group tracking-wide"
               >
                 FAQ
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
@@ -42,7 +43,7 @@ export default function ProductPage() {
               asChild
               variant="outline"
               size="sm"
-              className="hidden sm:flex border-border hover:border-primary/50 hover:bg-primary/5 text-sm font-medium tracking-wide"
+              className="hidden sm:flex bg-white text-black border-white text-sm font-bold tracking-wide"
               onClick={(e) => {
                 e.preventDefault();
                 window.location.href = "/#contact";
@@ -55,7 +56,7 @@ export default function ProductPage() {
             <Button
               asChild
               size="sm"
-              className="hidden sm:flex bg-gradient-to-r from-primary to-primary/80 hover:opacity-90 transition-opacity text-sm font-medium tracking-wide"
+              className="hidden sm:flex bg-white text-black border-white text-sm font-bold tracking-wide"
             >
               <Link href="/trysynthengyne">
                 Try SynthEngyne
@@ -161,17 +162,17 @@ export default function ProductPage() {
                   <h2 className="text-2xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-foreground to-foreground/80">How SynthEngyne Works</h2>
                   <div className="grid gap-8 md:grid-cols-3">
                     <div className="flex flex-col items-center text-center space-y-4 p-4 bg-muted/30 rounded-xl hover:bg-muted/50 transition-colors duration-300">
-                      <div className="h-14 w-14 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold text-xl">1</div>
+                      <div className="h-16 w-16 rounded-full bg-gradient-to-br from-primary to-primary/80 flex items-center justify-center text-white font-bold text-xl shadow-lg border-2 border-primary/30 hover:scale-105 transition-transform duration-300">1</div>
                       <h3 className="font-semibold text-lg">Create Dataspaces</h3>
                       <p className="text-muted-foreground">Organize your work with customizable dataspaces for different projects.</p>
                     </div>
                     <div className="flex flex-col items-center text-center space-y-4 p-4 bg-muted/30 rounded-xl hover:bg-muted/50 transition-colors duration-300">
-                      <div className="h-14 w-14 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold text-xl">2</div>
+                      <div className="h-16 w-16 rounded-full bg-gradient-to-br from-primary to-primary/80 flex items-center justify-center text-white font-bold text-xl shadow-lg border-2 border-primary/30 hover:scale-105 transition-transform duration-300">2</div>
                       <h3 className="font-semibold text-lg">Generate Datasets</h3>
                       <p className="text-muted-foreground">Choose from multiple generation methods to create the perfect dataset.</p>
                     </div>
                     <div className="flex flex-col items-center text-center space-y-4 p-4 bg-muted/30 rounded-xl hover:bg-muted/50 transition-colors duration-300">
-                      <div className="h-14 w-14 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold text-xl">3</div>
+                      <div className="h-16 w-16 rounded-full bg-gradient-to-br from-primary to-primary/80 flex items-center justify-center text-white font-bold text-xl shadow-lg border-2 border-primary/30 hover:scale-105 transition-transform duration-300">3</div>
                       <h3 className="font-semibold text-lg">Use & Export</h3>
                       <p className="text-muted-foreground">View, analyze, and export your datasets for use in AI models.</p>
                     </div>
@@ -191,129 +192,7 @@ export default function ProductPage() {
         </section>
       </main>
 
-      {/* Footer */}
-      <footer className="border-t border-border/40 py-12 md:py-16 bg-muted/30">
-        <div className="container mx-auto px-4 md:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
-            <div className="space-y-4">
-              <Logo className="text-lg md:text-xl" />
-              <p className="text-sm text-muted-foreground">
-                Pioneering synthetic data solutions for AI innovation.
-              </p>
-
-            </div>
-
-            <div className="space-y-4">
-              <h3 className="text-sm font-semibold uppercase tracking-wider">Product</h3>
-              <ul className="space-y-3">
-                <li>
-                  <Link
-                    href="/#product"
-                    className="text-sm text-muted-foreground hover:text-primary transition-colors"
-                    onClick={(e) => {
-                      e.preventDefault();
-                      window.location.href = "/#product";
-                    }}
-                  >
-                    SynthEngyne
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/product"
-                    className="text-sm text-muted-foreground hover:text-primary transition-colors"
-                  >
-                    Features
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/#pricing"
-                    className="text-sm text-muted-foreground hover:text-primary transition-colors"
-                    onClick={(e) => {
-                      e.preventDefault();
-                      window.location.href = "/#pricing";
-                    }}
-                  >
-                    Pricing
-                  </Link>
-                </li>
-              </ul>
-            </div>
-
-            <div className="space-y-4">
-              <h3 className="text-sm font-semibold uppercase tracking-wider">Services</h3>
-              <ul className="space-y-3">
-                <li>
-                  <Link
-                    href="/#services"
-                    className="text-sm text-muted-foreground hover:text-primary transition-colors"
-                    onClick={(e) => {
-                      e.preventDefault();
-                      window.location.href = "/#services";
-                    }}
-                  >
-                    Overview
-                  </Link>
-                </li>
-
-                <li>
-                  <Link
-                    href="/services"
-                    className="text-sm text-muted-foreground hover:text-primary transition-colors"
-                  >
-                    AI Solutions
-                  </Link>
-                </li>
-              </ul>
-            </div>
-
-            <div className="space-y-4">
-              <h3 className="text-sm font-semibold uppercase tracking-wider">Company</h3>
-              <ul className="space-y-3">
-                <li>
-                  <Link
-                    href="/about"
-                    className="text-sm text-muted-foreground hover:text-primary transition-colors"
-                  >
-                    About Us
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/#faq"
-                    className="text-sm text-muted-foreground hover:text-primary transition-colors"
-                    onClick={(e) => {
-                      e.preventDefault();
-                      window.location.href = "/#faq";
-                    }}
-                  >
-                    FAQ
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/#contact"
-                    className="text-sm text-muted-foreground hover:text-primary transition-colors"
-                    onClick={(e) => {
-                      e.preventDefault();
-                      window.location.href = "/#contact";
-                    }}
-                  >
-                    Contact
-                  </Link>
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <div className="mt-12 pt-8 border-t border-border/40 text-center">
-            <p className="text-xs text-muted-foreground">
-              DataGen © 2025. All rights reserved.
-            </p>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }

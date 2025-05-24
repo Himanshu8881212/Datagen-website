@@ -67,11 +67,18 @@ export function MobileMenu() {
       </Button>
 
       {isOpen && (
-        <div className="fixed inset-0 z-50 bg-background/98 backdrop-blur-md pt-20">
-          <nav className="container mx-auto px-4 md:px-6 lg:px-8 flex flex-col gap-6 p-6">
+        <>
+          {/* Backdrop overlay */}
+          <div
+            className="fixed inset-0 z-40 bg-black/80"
+            onClick={closeMenu}
+          />
+          {/* Menu content */}
+          <div className="fixed inset-x-0 top-16 bottom-0 z-50 bg-black text-white border-t border-white/20">
+            <nav className="container mx-auto px-4 md:px-6 lg:px-8 flex flex-col gap-6 p-6">
             <Link
               href="#product"
-              className="text-xl font-medium hover:text-primary transition-colors py-3 border-b border-border/30 flex items-center justify-between"
+              className="text-xl font-medium hover:text-primary transition-colors py-3 border-b border-white/30 flex items-center justify-between"
               onClick={(e) => {
                 e.preventDefault();
                 scrollToElement('product');
@@ -97,7 +104,7 @@ export function MobileMenu() {
             </Link>
             <Link
               href="#services"
-              className="text-xl font-medium hover:text-primary transition-colors py-3 border-b border-border/30 flex items-center justify-between"
+              className="text-xl font-medium hover:text-primary transition-colors py-3 border-b border-white/30 flex items-center justify-between"
               onClick={(e) => {
                 e.preventDefault();
                 scrollToElement('services');
@@ -123,7 +130,7 @@ export function MobileMenu() {
             </Link>
             <Link
               href="#faq"
-              className="text-xl font-medium hover:text-primary transition-colors py-3 border-b border-border/30 flex items-center justify-between"
+              className="text-xl font-medium hover:text-primary transition-colors py-3 border-b border-white/30 flex items-center justify-between"
               onClick={(e) => {
                 e.preventDefault();
                 scrollToElement('faq');
@@ -151,7 +158,7 @@ export function MobileMenu() {
               <Button
                 asChild
                 variant="outline"
-                className="h-12 text-base border-primary/30 hover:border-primary hover:bg-primary/5"
+                className="h-12 text-base bg-white text-black border-white hover:bg-white/90 font-bold tracking-wide"
                 onClick={(e) => {
                   e.preventDefault();
                   scrollToElement('contact');
@@ -163,13 +170,14 @@ export function MobileMenu() {
               </Button>
               <Button
                 asChild
-                className="h-12 text-base bg-gradient-to-r from-primary to-primary/80 hover:opacity-90 transition-opacity"
+                className="h-12 text-base bg-white text-black border-white hover:bg-white/90 font-bold tracking-wide"
               >
                 <Link href="/trysynthengyne" onClick={closeMenu}>Try SynthEngyne</Link>
               </Button>
             </div>
           </nav>
-        </div>
+          </div>
+        </>
       )}
     </div>
   );
