@@ -1,0 +1,55 @@
+# Cloudflare Pages Headers Configuration
+# This file configures security headers for the DataGen website when deployed to Cloudflare Pages
+
+# Global security headers for all pages
+/*
+  # Basic security headers
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: DENY
+  X-XSS-Protection: 1; mode=block
+  Referrer-Policy: strict-origin-when-cross-origin
+  
+  # Content Security Policy - Comprehensive protection against XSS
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://api.emailjs.com https://cdn.emailjs.com https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https: blob:; font-src 'self' data: https://fonts.gstatic.com; connect-src 'self' https://api.emailjs.com https://docs.datagen.in https://www.google-analytics.com https://analytics.google.com; frame-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests;
+  
+  # Enhanced permissions policy - Restrict browser features
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), interest-cohort=(), browsing-topics=(), payment=(), usb=(), serial=(), bluetooth=(), magnetometer=(), gyroscope=(), accelerometer=()
+  
+  # HSTS - Force HTTPS connections
+  Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+  
+  # Additional security headers
+  X-DNS-Prefetch-Control: off
+  X-Download-Options: noopen
+  X-Permitted-Cross-Domain-Policies: none
+  Cross-Origin-Embedder-Policy: require-corp
+  Cross-Origin-Opener-Policy: same-origin
+  Cross-Origin-Resource-Policy: same-origin
+  
+  # Custom security headers
+  X-Security-Policy: DataGen-Security-v1.0
+  X-Content-Security: protected
+
+# Specific headers for XML sitemaps
+/sitemap.xml
+  Content-Type: application/xml
+  Cache-Control: public, max-age=3600, s-maxage=3600
+
+/sitemap-ai.xml
+  Content-Type: application/xml
+  Cache-Control: public, max-age=3600, s-maxage=3600
+
+# Specific headers for robots.txt
+/robots.txt
+  Content-Type: text/plain
+  Cache-Control: public, max-age=3600, s-maxage=3600
+
+# Cache control for static assets
+/favicon.ico
+  Cache-Control: public, max-age=31536000, immutable
+
+# Security headers for API endpoints (if any)
+/api/*
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: DENY
+  Content-Security-Policy: default-src 'none'

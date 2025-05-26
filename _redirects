@@ -1,0 +1,60 @@
+# Cloudflare Pages Redirects Configuration
+# This file configures URL redirects for the DataGen website when deployed to Cloudflare Pages
+
+# Redirect old URLs to new ones (SEO-friendly)
+/home / 301
+/index / 301
+/index.html / 301
+
+# Redirect common admin/config paths to 404 for security
+/admin/* /404 404
+/wp-admin/* /404 404
+/wp-login.php /404 404
+/wp-content/* /404 404
+/wp-includes/* /404 404
+/phpmyadmin/* /404 404
+/pma/* /404 404
+/mysql/* /404 404
+/.env /404 404
+/.git/* /404 404
+/config/* /404 404
+/backup/* /404 404
+/backups/* /404 404
+/database/* /404 404
+/db/* /404 404
+/sql/* /404 404
+/shell/* /404 404
+/cmd/* /404 404
+/console/* /404 404
+/debug/* /404 404
+/test/* /404 404
+/tmp/* /404 404
+/temp/* /404 404
+/upload/* /404 404
+/uploads/* /404 404
+/files/* /404 404
+/file/* /404 404
+/download/* /404 404
+/downloads/* /404 404
+/logs/* /404 404
+/log/* /404 404
+/error/* /404 404
+/errors/* /404 404
+/cgi-bin/* /404 404
+/scripts/* /404 404
+/script/* /404 404
+/bin/* /404 404
+/etc/* /404 404
+/var/* /404 404
+/usr/* /404 404
+/root/* /404 404
+/home/* /404 404
+/proc/* /404 404
+/sys/* /404 404
+
+# Redirect HTTP to HTTPS (handled by Cloudflare automatically, but good to have)
+http://datagen.in/* https://datagen.in/:splat 301!
+http://www.datagen.in/* https://datagen.in/:splat 301!
+
+# Redirect www to non-www
+https://www.datagen.in/* https://datagen.in/:splat 301!
