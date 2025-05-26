@@ -22,12 +22,12 @@ export function Logo({ className = '', variant = 'default', theme = 'light' }: L
 
   const getLogoSize = () => {
     if (variant === 'mark-only') return { width: 40, height: 40 };
-    if (variant === 'compact') return { width: 120, height: 40 };
-    if (variant === 'docs') return { width: 200, height: 60 };
-    if (variant === 'docs-compact') return { width: 140, height: 40 };
-    if (variant === 'synthengyne') return { width: 240, height: 60 };
-    if (variant === 'synthengyne-compact') return { width: 180, height: 40 };
-    return { width: 200, height: 60 };
+    if (variant === 'compact') return { width: 180, height: 60 };
+    if (variant === 'docs') return { width: 240, height: 60 };
+    if (variant === 'docs-compact') return { width: 200, height: 60 };
+    if (variant === 'synthengyne') return { width: 300, height: 60 };
+    if (variant === 'synthengyne-compact') return { width: 240, height: 60 };
+    return { width: 250, height: 60 };
   };
 
   const logoSize = getLogoSize();

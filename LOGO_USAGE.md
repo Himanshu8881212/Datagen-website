@@ -7,54 +7,59 @@ This document outlines the usage of the DataGen logo SVG files and the Logo comp
 ## 🎨 Logo Variants
 
 ### 1. **Default Logo** (`/logo.svg`)
-- **Size**: 200x60px
+- **Size**: 250x60px
 - **Usage**: Main logo for hero sections, footers, and large displays
 - **Theme**: Light (white text on dark backgrounds)
 - **Contains**: Logo mark + "DataGen" text + subtext
-- **Enhanced**: Better visibility, text shadows, improved contrast
+- **Enhanced**: Better visibility, text shadows, improved contrast, outer white ring
 
 ### 2. **Dark Logo** (`/logo-dark.svg`)
-- **Size**: 200x60px
+- **Size**: 250x60px
 - **Usage**: For light backgrounds
 - **Theme**: Dark (dark text on light backgrounds)
 - **Contains**: Logo mark + "DataGen" text + subtext
 
 ### 3. **Compact Logo** (`/logo-compact.svg`)
-- **Size**: 120x40px
+- **Size**: 180x60px
 - **Usage**: Navigation headers, smaller spaces
 - **Theme**: Light (white text)
 - **Contains**: Logo mark + "DataGen" text only
-- **Enhanced**: Better visibility, larger logo mark, improved contrast
+- **Enhanced**: Better visibility, larger logo mark, improved contrast, outer white ring
 
 ### 4. **Logo Mark** (`/logo-mark.svg`)
 - **Size**: 40x40px
 - **Usage**: Favicons, app icons, very small spaces
 - **Theme**: Light (white)
-- **Contains**: Logo mark only
+- **Contains**: Logo mark only with outer white ring
+- **Enhanced**: Clean design with no background, professional outer ring
 
 ### 5. **DataGen Docs** (`/logo-docs.svg`)
-- **Size**: 200x60px
+- **Size**: 240x60px
 - **Usage**: Documentation sites, docs-related content
 - **Theme**: Light with gray "Docs" text
 - **Contains**: Logo mark + "DataGen" (white) + "Docs" (gray) + subtext
+- **Enhanced**: Unified design with outer white ring
 
 ### 6. **DataGen Docs Compact** (`/logo-docs-compact.svg`)
-- **Size**: 140x40px
+- **Size**: 200x60px
 - **Usage**: Docs navigation headers, smaller docs spaces
 - **Theme**: Light with gray "Docs" text
 - **Contains**: Logo mark + "DataGen" (white) + "Docs" (gray)
+- **Enhanced**: Bigger size, unified design with outer white ring
 
 ### 7. **DataGen SynthEngyne** (`/logo-synthengyne.svg`)
-- **Size**: 240x60px
+- **Size**: 300x60px
 - **Usage**: SynthEngyne product pages, product-specific content
 - **Theme**: Light with gray "SynthEngyne" text
 - **Contains**: Logo mark + "DataGen" (white) + "SynthEngyne" (gray) + subtext
+- **Enhanced**: Larger width for better text fitting, unified design
 
 ### 8. **DataGen SynthEngyne Compact** (`/logo-synthengyne-compact.svg`)
-- **Size**: 180x40px
+- **Size**: 240x60px
 - **Usage**: SynthEngyne navigation headers, product headers
 - **Theme**: Light with gray "SynthEngyne" text
 - **Contains**: Logo mark + "DataGen" (white) + "SynthEngyne" (gray)
+- **Enhanced**: Bigger size, unified design with outer white ring
 
 ## 🔧 Logo Component Usage
 
@@ -105,6 +110,14 @@ All page headers use the compact variant:
 - Privacy Policy (`/privacy-policy`)
 - Try SynthEngyne (`/trysynthengyne`)
 - Generative AI Models (`/generative-ai-models`)
+- AI Synthetic Data (`/ai-synthetic-data`)
+- Machine Learning Datasets (`/machine-learning-datasets`)
+
+### Footers
+All page footers use the main logo:
+```tsx
+<Logo theme="light" />
+```
 
 ## 🎯 Logo Design Elements
 
@@ -155,6 +168,21 @@ The Logo component automatically handles sizing:
 - `logo-synthengyne-compact.svg`: ~3.5KB
 
 All logos are optimized SVG files for fast loading and crisp display at any size.
+
+## ✨ Enhanced Features (v3.0)
+
+### Recent Updates (v3.0)
+- **Unified Typography**: All logos now use consistent font family (system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif)
+- **Improved Text Alignment**: Better vertical and horizontal positioning across all variants
+- **Enhanced Icon Design**: Restored and improved original cross/plus pattern with enhanced details
+- **Consistent Spacing**: Unified letter-spacing and positioning for professional appearance
+- **Better Contrast**: Improved text shadows and opacity for better readability
+
+### Typography Improvements
+- **Font Stack**: Modern system font stack for better cross-platform compatibility
+- **Letter Spacing**: Optimized negative letter-spacing for tighter, more professional text
+- **Positioning**: Precise text positioning for perfect alignment with logo mark
+- **Weight**: Consistent font-weight 800 for main text, 600 for subtext
 
 ## ✨ Enhanced Features (v2.0)
 

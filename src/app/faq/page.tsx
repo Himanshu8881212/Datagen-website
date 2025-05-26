@@ -17,24 +17,21 @@ export default function FAQPage() {
             <nav className="hidden md:flex gap-6 lg:gap-8">
               <Link
                 href="/#product"
-                className="text-sm font-medium text-white hover:text-primary transition-colors relative group tracking-wide"
+                className="text-sm font-medium text-white tracking-wide"
               >
                 Product
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
               </Link>
               <Link
                 href="/#services"
-                className="text-sm font-medium text-white hover:text-primary transition-colors relative group tracking-wide"
+                className="text-sm font-medium text-white tracking-wide"
               >
                 Services
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
               </Link>
               <Link
                 href="/#faq"
-                className="text-sm font-medium text-white hover:text-primary transition-colors relative group tracking-wide"
+                className="text-sm font-medium text-white tracking-wide"
               >
                 FAQ
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
               </Link>
             </nav>
           </div>
