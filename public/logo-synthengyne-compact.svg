@@ -1,51 +1,62 @@
-<svg width="120" height="40" viewBox="0 0 120 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg width="180" height="40" viewBox="0 0 180 40" fill="none" xmlns="http://www.w3.org/2000/svg">
   <!-- Background circle for logo mark with better visibility -->
   <circle cx="15" cy="20" r="14" fill="url(#bgGradientCompact)" opacity="0.15"/>
   <circle cx="15" cy="20" r="13" stroke="url(#gradientCompact)" stroke-width="0.5" opacity="0.3"/>
-
+  
   <!-- Logo mark - Enhanced data/AI symbol -->
   <g transform="translate(5, 10)">
     <!-- Central node - larger and more prominent -->
     <circle cx="10" cy="10" r="3" fill="url(#gradientCompact)" stroke="url(#strokeGradientCompact)" stroke-width="0.8"/>
-
+    
     <!-- Main connection lines - thicker and brighter -->
-    <path d="M10 1.5 L10 7 M10 13 L10 18.5 M1.5 10 L7 10 M13 10 L18.5 10"
-          stroke="url(#gradientCompact)"
-          stroke-width="2"
+    <path d="M10 1.5 L10 7 M10 13 L10 18.5 M1.5 10 L7 10 M13 10 L18.5 10" 
+          stroke="url(#gradientCompact)" 
+          stroke-width="2" 
           stroke-linecap="round"/>
-
+    
     <!-- Corner nodes - larger and more visible -->
     <circle cx="5.5" cy="5.5" r="1.5" fill="url(#gradientCompact)" opacity="0.9"/>
     <circle cx="14.5" cy="5.5" r="1.5" fill="url(#gradientCompact)" opacity="0.9"/>
     <circle cx="5.5" cy="14.5" r="1.5" fill="url(#gradientCompact)" opacity="0.9"/>
     <circle cx="14.5" cy="14.5" r="1.5" fill="url(#gradientCompact)" opacity="0.9"/>
-
+    
     <!-- Connecting lines to corners - enhanced -->
-    <path d="M8 8 L5.5 5.5 M12 8 L14.5 5.5 M8 12 L5.5 14.5 M12 12 L14.5 14.5"
-          stroke="url(#gradientCompact)"
-          stroke-width="1.5"
-          stroke-linecap="round"
+    <path d="M8 8 L5.5 5.5 M12 8 L14.5 5.5 M8 12 L5.5 14.5 M12 12 L14.5 14.5" 
+          stroke="url(#gradientCompact)" 
+          stroke-width="1.5" 
+          stroke-linecap="round" 
           opacity="0.8"/>
-
+    
     <!-- Additional detail lines for tech feel -->
-    <path d="M10 4 L10 5.5 M10 14.5 L10 16 M4 10 L5.5 10 M14.5 10 L16 10"
-          stroke="url(#accentGradientCompact)"
-          stroke-width="0.8"
-          stroke-linecap="round"
+    <path d="M10 4 L10 5.5 M10 14.5 L10 16 M4 10 L5.5 10 M14.5 10 L16 10" 
+          stroke="url(#accentGradientCompact)" 
+          stroke-width="0.8" 
+          stroke-linecap="round" 
           opacity="0.6"/>
   </g>
-
+  
   <!-- Main text "DataGen" with better contrast -->
-  <text x="32" y="26"
-        font-family="system-ui, -apple-system, sans-serif"
-        font-size="16"
-        font-weight="800"
-        fill="white"
+  <text x="32" y="26" 
+        font-family="system-ui, -apple-system, sans-serif" 
+        font-size="16" 
+        font-weight="800" 
+        fill="white" 
         letter-spacing="-0.3px"
         filter="url(#textShadowCompact)">
     DataGen
   </text>
-
+  
+  <!-- "SynthEngyne" text in gray -->
+  <text x="100" y="26" 
+        font-family="system-ui, -apple-system, sans-serif" 
+        font-size="16" 
+        font-weight="600" 
+        fill="#888888" 
+        letter-spacing="-0.2px"
+        filter="url(#textShadowCompact)">
+    SynthEngyne
+  </text>
+  
   <!-- Enhanced gradient definitions -->
   <defs>
     <linearGradient id="gradientCompact" x1="0%" y1="0%" x2="100%" y2="100%">

@@ -11,6 +11,7 @@ This document outlines the usage of the DataGen logo SVG files and the Logo comp
 - **Usage**: Main logo for hero sections, footers, and large displays
 - **Theme**: Light (white text on dark backgrounds)
 - **Contains**: Logo mark + "DataGen" text + subtext
+- **Enhanced**: Better visibility, text shadows, improved contrast
 
 ### 2. **Dark Logo** (`/logo-dark.svg`)
 - **Size**: 200x60px
@@ -23,12 +24,37 @@ This document outlines the usage of the DataGen logo SVG files and the Logo comp
 - **Usage**: Navigation headers, smaller spaces
 - **Theme**: Light (white text)
 - **Contains**: Logo mark + "DataGen" text only
+- **Enhanced**: Better visibility, larger logo mark, improved contrast
 
 ### 4. **Logo Mark** (`/logo-mark.svg`)
 - **Size**: 40x40px
 - **Usage**: Favicons, app icons, very small spaces
 - **Theme**: Light (white)
 - **Contains**: Logo mark only
+
+### 5. **DataGen Docs** (`/logo-docs.svg`)
+- **Size**: 200x60px
+- **Usage**: Documentation sites, docs-related content
+- **Theme**: Light with gray "Docs" text
+- **Contains**: Logo mark + "DataGen" (white) + "Docs" (gray) + subtext
+
+### 6. **DataGen Docs Compact** (`/logo-docs-compact.svg`)
+- **Size**: 140x40px
+- **Usage**: Docs navigation headers, smaller docs spaces
+- **Theme**: Light with gray "Docs" text
+- **Contains**: Logo mark + "DataGen" (white) + "Docs" (gray)
+
+### 7. **DataGen SynthEngyne** (`/logo-synthengyne.svg`)
+- **Size**: 240x60px
+- **Usage**: SynthEngyne product pages, product-specific content
+- **Theme**: Light with gray "SynthEngyne" text
+- **Contains**: Logo mark + "DataGen" (white) + "SynthEngyne" (gray) + subtext
+
+### 8. **DataGen SynthEngyne Compact** (`/logo-synthengyne-compact.svg`)
+- **Size**: 180x40px
+- **Usage**: SynthEngyne navigation headers, product headers
+- **Theme**: Light with gray "SynthEngyne" text
+- **Contains**: Logo mark + "DataGen" (white) + "SynthEngyne" (gray)
 
 ## 🔧 Logo Component Usage
 
@@ -47,10 +73,18 @@ import { Logo } from '@/components/logo';
 
 // Dark theme for light backgrounds
 <Logo theme="dark" />
+
+// DataGen Docs variants
+<Logo variant="docs" />                    // Full docs logo (200x60)
+<Logo variant="docs-compact" />            // Compact docs logo (140x40)
+
+// DataGen SynthEngyne variants
+<Logo variant="synthengyne" />             // Full SynthEngyne logo (240x60)
+<Logo variant="synthengyne-compact" />     // Compact SynthEngyne logo (180x40)
 ```
 
 ### Props
-- `variant`: `'default' | 'compact' | 'mark-only'`
+- `variant`: `'default' | 'compact' | 'mark-only' | 'docs' | 'docs-compact' | 'synthengyne' | 'synthengyne-compact'`
 - `theme`: `'light' | 'dark'`
 - `className`: Additional CSS classes
 
@@ -111,9 +145,32 @@ The Logo component automatically handles sizing:
 - Prefer compact variant for navigation to maintain clean layout
 
 ## 📊 File Sizes
-- `logo.svg`: ~2.5KB
+- `logo.svg`: ~3.5KB (enhanced with better visibility)
 - `logo-dark.svg`: ~2.5KB
-- `logo-compact.svg`: ~2KB
+- `logo-compact.svg`: ~3KB (enhanced with better visibility)
 - `logo-mark.svg`: ~1.5KB
+- `logo-docs.svg`: ~3.8KB
+- `logo-docs-compact.svg`: ~3.2KB
+- `logo-synthengyne.svg`: ~4KB
+- `logo-synthengyne-compact.svg`: ~3.5KB
 
 All logos are optimized SVG files for fast loading and crisp display at any size.
+
+## ✨ Enhanced Features (v2.0)
+
+### Improved Visibility
+- **Text Shadows**: Added subtle shadows for better contrast on dark backgrounds
+- **Larger Logo Mark**: Increased size and stroke width for better visibility
+- **Enhanced Gradients**: Multi-stop gradients for better depth and contrast
+- **Background Circles**: Subtle background elements for better definition
+- **Stroke Outlines**: Added stroke outlines to logo elements
+
+### Better Typography
+- **Increased Font Weight**: Subtext now uses font-weight 600 for better readability
+- **Improved Letter Spacing**: Optimized spacing for better legibility
+- **Larger Subtext**: Increased from 10px to 11px for better visibility
+
+### Technical Improvements
+- **Filter Effects**: Added drop shadows and text effects
+- **Multiple Gradients**: Separate gradients for different elements
+- **Better Opacity**: Optimized opacity values for maximum contrast
