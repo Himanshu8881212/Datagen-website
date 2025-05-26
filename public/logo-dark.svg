@@ -1,0 +1,57 @@
+<svg width="200" height="60" viewBox="0 0 200 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background circle for logo mark -->
+  <circle cx="20" cy="20" r="18" fill="url(#gradientDark)" opacity="0.1"/>
+  
+  <!-- Logo mark - Abstract data/AI symbol -->
+  <g transform="translate(8, 8)">
+    <!-- Central node -->
+    <circle cx="12" cy="12" r="3" fill="url(#gradientDark)"/>
+    
+    <!-- Data connection lines -->
+    <path d="M12 3 L12 9 M12 15 L12 21 M3 12 L9 12 M15 12 L21 12" 
+          stroke="url(#gradientDark)" 
+          stroke-width="2" 
+          stroke-linecap="round"/>
+    
+    <!-- Corner nodes -->
+    <circle cx="6" cy="6" r="1.5" fill="url(#gradientDark)" opacity="0.8"/>
+    <circle cx="18" cy="6" r="1.5" fill="url(#gradientDark)" opacity="0.8"/>
+    <circle cx="6" cy="18" r="1.5" fill="url(#gradientDark)" opacity="0.8"/>
+    <circle cx="18" cy="18" r="1.5" fill="url(#gradientDark)" opacity="0.8"/>
+    
+    <!-- Connecting lines to corners -->
+    <path d="M9 9 L6 6 M15 9 L18 6 M9 15 L6 18 M15 15 L18 18" 
+          stroke="url(#gradientDark)" 
+          stroke-width="1.5" 
+          stroke-linecap="round" 
+          opacity="0.6"/>
+  </g>
+  
+  <!-- Main text "DataGen" -->
+  <text x="45" y="28" 
+        font-family="system-ui, -apple-system, sans-serif" 
+        font-size="24" 
+        font-weight="800" 
+        fill="#1a1a1a" 
+        letter-spacing="-0.5px">
+    DataGen
+  </text>
+  
+  <!-- Subtext -->
+  <text x="45" y="42" 
+        font-family="system-ui, -apple-system, sans-serif" 
+        font-size="10" 
+        font-weight="500" 
+        fill="#666666" 
+        letter-spacing="0.5px">
+    AI and Synthetic Data Solutions
+  </text>
+  
+  <!-- Gradient definitions -->
+  <defs>
+    <linearGradient id="gradientDark" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a1a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#333333;stop-opacity:0.8" />
+    </linearGradient>
+  </defs>
+</svg>
