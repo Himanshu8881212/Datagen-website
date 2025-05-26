@@ -6,7 +6,13 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "security:audit": "node scripts/security-audit.js",
+    "security:check": "npm audit --audit-level=moderate",
+    "security:fix": "npm audit fix",
+    "security:deps": "npm outdated && npm audit",
+    "security:headers": "curl -I https://datagen.in | grep -E '(X-|Content-Security|Strict-Transport)'",
+    "security:test": "npm run security:check && npm run security:audit"
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
@@ -25,13 +31,11 @@
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "critters": "^0.0.23",
-    "express-rate-limit": "^7.5.0",
+    "dompurify": "^3.2.0",
     "lucide-react": "^0.511.0",
     "next": "15.3.2",
-    "nodemailer": "^7.0.3",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "resend": "^4.5.1",
     "sonner": "^2.0.3",
     "tailwind-merge": "^3.3.0",
     "zod": "^3.25.23"
@@ -39,8 +43,8 @@
   "devDependencies": {
     "@eslint/eslintrc": "^3",
     "@tailwindcss/postcss": "^4",
+    "@types/dompurify": "^3.2.0",
     "@types/node": "^20",
-    "@types/nodemailer": "^6.4.17",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",

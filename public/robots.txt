@@ -1,10 +1,50 @@
-# Allow all crawlers
+# DataGen - AI Synthetic Data Solutions
+# Allow all crawlers to index AI-related content
 User-agent: *
 Allow: /
 
-# Sitemap location
-Sitemap: https://datagen.in/sitemap.xml
+# Specifically allow important AI-related pages
+Allow: /ai-synthetic-data
+Allow: /generative-ai-models
+Allow: /machine-learning-datasets
+Allow: /ai-training-data
+Allow: /custom-ai-datasets
+Allow: /ai-model-fine-tuning
+Allow: /rag-systems
+Allow: /ai-agents
+
+# Allow main product and service pages
+Allow: /product
+Allow: /services
+Allow: /about
+Allow: /trysynthengyne
 
 # Disallow specific paths
 Disallow: /api/
 Disallow: /_next/
+Disallow: /admin/
+Disallow: /private/
+Disallow: /*.json$
+Disallow: /*?*utm_*
+Disallow: /*?*ref=*
+
+# Special instructions for major search engines
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Slurp
+Allow: /
+Crawl-delay: 2
+
+# Sitemap locations
+Sitemap: https://datagen.in/sitemap.xml
+Sitemap: https://datagen.in/sitemap-ai.xml
+Sitemap: https://datagen.in/sitemap-blog.xml
+
+# Host directive
+Host: https://datagen.in

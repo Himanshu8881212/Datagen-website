@@ -55,6 +55,16 @@ export default function ServicesPage() {
             </Button>
             <Button
               asChild
+              variant="outline"
+              size="sm"
+              className="hidden sm:flex bg-white text-black border-white text-sm font-bold tracking-wide"
+            >
+              <Link href="https://docs.datagen.in/" target="_blank" rel="noopener noreferrer">
+                Docs
+              </Link>
+            </Button>
+            <Button
+              asChild
               size="sm"
               className="hidden sm:flex bg-white text-black border-white text-sm font-bold tracking-wide"
             >
@@ -89,57 +99,15 @@ export default function ServicesPage() {
                 <div className="bg-card rounded-xl border border-primary/10 p-8 shadow-lg hover:shadow-xl transition-all duration-300">
                   <h2 className="text-2xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-foreground to-foreground/80">Professional AI Services</h2>
                   <p className="text-lg text-muted-foreground leading-relaxed">
-                    DataGen provides comprehensive AI services to help businesses implement effective solutions. From data generation to model deployment, we support your AI initiatives with technical expertise and business-focused results.
+                    DataGen delivers enterprise-grade AI services including end-to-end deployment, professional data generation, fine-tuning based on business needs, and advanced agentic workflows. We provide comprehensive solutions that drive measurable business value.
                   </p>
                 </div>
 
                 <div className="grid gap-6 md:grid-cols-2">
                   <div className="bg-card rounded-xl border border-primary/10 p-6 shadow-lg hover:shadow-xl transition-all duration-300">
                     <div className="flex items-center gap-3 mb-4">
-                      <div className="h-10 w-10 rounded-full bg-primary/10 flex items-center justify-center text-primary">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                          <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
-                          <polyline points="3.29 7 12 12 20.71 7"></polyline>
-                          <line x1="12" y1="22" x2="12" y2="12"></line>
-                        </svg>
-                      </div>
-                      <h3 className="font-bold text-lg">Data Strategy & Generation</h3>
-                    </div>
-                    <p className="text-muted-foreground">
-                      We create custom datasets tailored to your specific AI training needs with a focus on data quality and business requirements.
-                    </p>
-                    <ul className="mt-4 space-y-2">
-                      <li className="flex items-start gap-2">
-                        <div className="h-5 w-5 rounded-full bg-primary/10 flex items-center justify-center text-primary mt-0.5 flex-shrink-0">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                            <polyline points="20 6 9 17 4 12"></polyline>
-                          </svg>
-                        </div>
-                        <span>Business needs assessment</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <div className="h-5 w-5 rounded-full bg-primary/10 flex items-center justify-center text-primary mt-0.5 flex-shrink-0">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                            <polyline points="20 6 9 17 4 12"></polyline>
-                          </svg>
-                        </div>
-                        <span>Custom dataset creation</span>
-                      </li>
-                      <li className="flex items-start gap-2">
-                        <div className="h-5 w-5 rounded-full bg-primary/10 flex items-center justify-center text-primary mt-0.5 flex-shrink-0">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                            <polyline points="20 6 9 17 4 12"></polyline>
-                          </svg>
-                        </div>
-                        <span>Data quality assurance</span>
-                      </li>
-                    </ul>
-                  </div>
-
-                  <div className="bg-card rounded-xl border border-primary/10 p-6 shadow-lg hover:shadow-xl transition-all duration-300">
-                    <div className="flex items-center gap-3 mb-4">
-                      <div className="h-10 w-10 rounded-full bg-primary/10 flex items-center justify-center text-primary">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                           <path d="M18 8h1a4 4 0 0 1 0 8h-1"></path>
                           <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path>
                           <line x1="6" y1="1" x2="6" y2="4"></line>
@@ -147,10 +115,10 @@ export default function ServicesPage() {
                           <line x1="14" y1="1" x2="14" y2="4"></line>
                         </svg>
                       </div>
-                      <h3 className="font-bold text-lg">Model Deployment</h3>
+                      <h3 className="font-bold text-lg">Full-Stack Deployment</h3>
                     </div>
                     <p className="text-muted-foreground">
-                      We implement AI systems in production environments with a focus on reliability, scalability, and performance for your business applications.
+                      Complete AI solution deployment from development to production with seamless infrastructure integration and scalable architecture for enterprise environments.
                     </p>
                     <ul className="mt-4 space-y-2">
                       <li className="flex items-start gap-2">
@@ -159,7 +127,7 @@ export default function ServicesPage() {
                             <polyline points="20 6 9 17 4 12"></polyline>
                           </svg>
                         </div>
-                        <span>Infrastructure setup</span>
+                        <span>Infrastructure architecture & setup</span>
                       </li>
                       <li className="flex items-start gap-2">
                         <div className="h-5 w-5 rounded-full bg-primary/10 flex items-center justify-center text-primary mt-0.5 flex-shrink-0">
@@ -167,7 +135,7 @@ export default function ServicesPage() {
                             <polyline points="20 6 9 17 4 12"></polyline>
                           </svg>
                         </div>
-                        <span>API development</span>
+                        <span>Production-ready API development</span>
                       </li>
                       <li className="flex items-start gap-2">
                         <div className="h-5 w-5 rounded-full bg-primary/10 flex items-center justify-center text-primary mt-0.5 flex-shrink-0">
@@ -175,15 +143,57 @@ export default function ServicesPage() {
                             <polyline points="20 6 9 17 4 12"></polyline>
                           </svg>
                         </div>
-                        <span>Monitoring and maintenance</span>
+                        <span>Continuous monitoring & maintenance</span>
                       </li>
                     </ul>
                   </div>
 
                   <div className="bg-card rounded-xl border border-primary/10 p-6 shadow-lg hover:shadow-xl transition-all duration-300">
                     <div className="flex items-center gap-3 mb-4">
-                      <div className="h-10 w-10 rounded-full bg-primary/10 flex items-center justify-center text-primary">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                          <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                          <polyline points="3.29 7 12 12 20.71 7"></polyline>
+                          <line x1="12" y1="22" x2="12" y2="12"></line>
+                        </svg>
+                      </div>
+                      <h3 className="font-bold text-lg">Synthetic Data Services</h3>
+                    </div>
+                    <p className="text-muted-foreground">
+                      Professional synthetic dataset creation tailored to industry requirements with privacy-compliant data solutions and comprehensive quality assurance processes.
+                    </p>
+                    <ul className="mt-4 space-y-2">
+                      <li className="flex items-start gap-2">
+                        <div className="h-5 w-5 rounded-full bg-primary/10 flex items-center justify-center text-primary mt-0.5 flex-shrink-0">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                          </svg>
+                        </div>
+                        <span>Custom synthetic dataset creation</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <div className="h-5 w-5 rounded-full bg-primary/10 flex items-center justify-center text-primary mt-0.5 flex-shrink-0">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                          </svg>
+                        </div>
+                        <span>Industry-specific data modeling</span>
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <div className="h-5 w-5 rounded-full bg-primary/10 flex items-center justify-center text-primary mt-0.5 flex-shrink-0">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                          </svg>
+                        </div>
+                        <span>Privacy-compliant data solutions</span>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div className="bg-card rounded-xl border border-primary/10 p-6 shadow-lg hover:shadow-xl transition-all duration-300">
+                    <div className="flex items-center gap-3 mb-4">
+                      <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                           <path d="M12 2v4"></path>
                           <path d="M12 18v4"></path>
                           <path d="M4.93 4.93l2.83 2.83"></path>
@@ -194,10 +204,10 @@ export default function ServicesPage() {
                           <path d="M16.24 7.76l2.83-2.83"></path>
                         </svg>
                       </div>
-                      <h3 className="font-bold text-lg">Model Optimization</h3>
+                      <h3 className="font-bold text-lg">Fine-tuning Based on Business Needs</h3>
                     </div>
                     <p className="text-muted-foreground">
-                      We enhance AI models for your specific use cases, improving performance and adapting them to your business requirements.
+                      Expert AI model fine-tuning services that align with your specific business objectives, optimizing performance for your unique use cases and industry requirements.
                     </p>
                     <ul className="mt-4 space-y-2">
                       <li className="flex items-start gap-2">
@@ -206,7 +216,7 @@ export default function ServicesPage() {
                             <polyline points="20 6 9 17 4 12"></polyline>
                           </svg>
                         </div>
-                        <span>Domain adaptation</span>
+                        <span>Business-specific model adaptation</span>
                       </li>
                       <li className="flex items-start gap-2">
                         <div className="h-5 w-5 rounded-full bg-primary/10 flex items-center justify-center text-primary mt-0.5 flex-shrink-0">
@@ -214,7 +224,7 @@ export default function ServicesPage() {
                             <polyline points="20 6 9 17 4 12"></polyline>
                           </svg>
                         </div>
-                        <span>Performance improvement</span>
+                        <span>Domain-specific optimization</span>
                       </li>
                       <li className="flex items-start gap-2">
                         <div className="h-5 w-5 rounded-full bg-primary/10 flex items-center justify-center text-primary mt-0.5 flex-shrink-0">
@@ -222,24 +232,26 @@ export default function ServicesPage() {
                             <polyline points="20 6 9 17 4 12"></polyline>
                           </svg>
                         </div>
-                        <span>Business alignment</span>
+                        <span>Performance metrics alignment</span>
                       </li>
                     </ul>
                   </div>
 
                   <div className="bg-card rounded-xl border border-primary/10 p-6 shadow-lg hover:shadow-xl transition-all duration-300">
                     <div className="flex items-center gap-3 mb-4">
-                      <div className="h-10 w-10 rounded-full bg-primary/10 flex items-center justify-center text-primary">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                          <circle cx="12" cy="12" r="10"></circle>
-                          <line x1="2" y1="12" x2="22" y2="12"></line>
-                          <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                      <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                          <path d="M9 12l2 2 4-4"></path>
+                          <path d="M21 12c.552 0 1-.448 1-1V5c0-.552-.448-1-1-1H3c-.552 0-1 .448-1 1v6c0 .552.448 1 1 1"></path>
+                          <path d="M3 10v6c0 .552.448 1 1 1h16c.552 0 1-.448 1-1v-6"></path>
+                          <path d="M7 7h.01"></path>
+                          <path d="M17 7h.01"></path>
                         </svg>
                       </div>
-                      <h3 className="font-bold text-lg">Business Integration</h3>
+                      <h3 className="font-bold text-lg">Agentic Workflows</h3>
                     </div>
                     <p className="text-muted-foreground">
-                      We connect AI systems with your existing business processes and applications to create efficient workflows that deliver value.
+                      Advanced autonomous AI systems that intelligently orchestrate complex business processes, enabling intelligent automation and decision-making workflows.
                     </p>
                     <ul className="mt-4 space-y-2">
                       <li className="flex items-start gap-2">
@@ -248,7 +260,7 @@ export default function ServicesPage() {
                             <polyline points="20 6 9 17 4 12"></polyline>
                           </svg>
                         </div>
-                        <span>Process automation</span>
+                        <span>Intelligent process automation</span>
                       </li>
                       <li className="flex items-start gap-2">
                         <div className="h-5 w-5 rounded-full bg-primary/10 flex items-center justify-center text-primary mt-0.5 flex-shrink-0">
@@ -256,7 +268,7 @@ export default function ServicesPage() {
                             <polyline points="20 6 9 17 4 12"></polyline>
                           </svg>
                         </div>
-                        <span>System connectivity</span>
+                        <span>Multi-agent system design</span>
                       </li>
                       <li className="flex items-start gap-2">
                         <div className="h-5 w-5 rounded-full bg-primary/10 flex items-center justify-center text-primary mt-0.5 flex-shrink-0">
@@ -264,7 +276,7 @@ export default function ServicesPage() {
                             <polyline points="20 6 9 17 4 12"></polyline>
                           </svg>
                         </div>
-                        <span>Custom solution development</span>
+                        <span>Autonomous decision frameworks</span>
                       </li>
                     </ul>
                   </div>

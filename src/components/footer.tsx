@@ -110,6 +110,14 @@ export function Footer({ onNavigate }: FooterProps) {
                   Contact
                 </Link>
               </li>
+              <li>
+                <Link
+                  href="/privacy-policy"
+                  className="text-sm text-white/70 hover:text-primary transition-colors"
+                >
+                  Privacy Policy
+                </Link>
+              </li>
             </ul>
           </div>
         </div>

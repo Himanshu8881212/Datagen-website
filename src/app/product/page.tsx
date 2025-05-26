@@ -1,10 +1,24 @@
-'use client';
-
+import type { Metadata } from "next";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { Logo } from "@/components/logo";
 import { MobileMenu } from "@/components/mobile-menu";
 import { Footer } from "@/components/footer";
+
+export const metadata: Metadata = {
+  title: "SynthEngyne - AI Synthetic Data Platform | DataGen Product",
+  description: "SynthEngyne is DataGen's cutting-edge synthetic data generation platform. Create high-quality datasets for AI training with privacy protection, multi-format support, and enterprise scalability.",
+  keywords: "SynthEngyne, synthetic data platform, AI data generation, machine learning datasets, data privacy, custom datasets, AI training data, synthetic data tool",
+  openGraph: {
+    title: "SynthEngyne - AI Synthetic Data Platform | DataGen",
+    description: "Create high-quality synthetic datasets for AI training with SynthEngyne's advanced data generation platform.",
+    url: "https://datagen.in/product",
+    type: "website",
+  },
+  alternates: {
+    canonical: "https://datagen.in/product",
+  },
+};
 
 export default function ProductPage() {
   return (
@@ -44,13 +58,19 @@ export default function ProductPage() {
               variant="outline"
               size="sm"
               className="hidden sm:flex bg-white text-black border-white text-sm font-bold tracking-wide"
-              onClick={(e) => {
-                e.preventDefault();
-                window.location.href = "/#contact";
-              }}
             >
               <Link href="/#contact">
                 Contact Us
+              </Link>
+            </Button>
+            <Button
+              asChild
+              variant="outline"
+              size="sm"
+              className="hidden sm:flex bg-white text-black border-white text-sm font-bold tracking-wide"
+            >
+              <Link href="https://docs.datagen.in/" target="_blank" rel="noopener noreferrer">
+                Docs
               </Link>
             </Button>
             <Button
@@ -93,67 +113,214 @@ export default function ProductPage() {
                   </p>
                 </div>
 
-                <div className="bg-card rounded-xl border border-primary/10 p-8 shadow-lg hover:shadow-xl transition-all duration-300">
-                  <h2 className="text-2xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-foreground to-foreground/80">Key Features</h2>
-                  <div className="grid md:grid-cols-2 gap-6 mt-6">
-                    <div className="space-y-3">
-                      <div className="flex items-center gap-3">
-                        <div className="h-8 w-8 rounded-full bg-primary/10 flex items-center justify-center text-primary">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                {/* SynthEngyne Features Section */}
+                <div className="space-y-8">
+                  <div className="text-center">
+                    <h2 className="text-3xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-foreground to-foreground/80">SynthEngyne Features</h2>
+                    <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+                      Comprehensive synthetic data generation capabilities designed for modern AI development workflows and enterprise requirements.
+                    </p>
+                  </div>
+
+                  <div className="grid md:grid-cols-2 gap-6">
+                    <div className="bg-card p-6 rounded-xl border border-primary/10 shadow-sm hover:shadow-md transition-all duration-300 hover:border-primary/30">
+                      <div className="flex items-center gap-3 mb-4">
+                        <div className="h-14 w-14 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                            <polyline points="3.29 7 12 12 20.71 7"></polyline>
+                            <line x1="12" y1="22" x2="12" y2="12"></line>
                           </svg>
                         </div>
-                        <h3 className="font-medium text-lg">Privacy-Preserving</h3>
+                        <h3 className="font-semibold text-lg">Multi-Format Data Generation</h3>
                       </div>
-                      <p className="text-muted-foreground pl-11">Generate synthetic data that maintains statistical properties without exposing sensitive information.</p>
+                      <p className="text-muted-foreground">
+                        Support for text, image, tabular, and time-series data generation. Create datasets for NLP, computer vision, machine learning applications, and diverse AI training needs with comprehensive format support.
+                      </p>
+                      <ul className="mt-4 space-y-2">
+                        <li className="flex items-start gap-2">
+                          <div className="h-5 w-5 rounded-full bg-primary/10 flex items-center justify-center text-primary mt-0.5 flex-shrink-0">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                              <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                          </div>
+                          <span>Text data for NLP models & language processing</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <div className="h-5 w-5 rounded-full bg-primary/10 flex items-center justify-center text-primary mt-0.5 flex-shrink-0">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                              <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                          </div>
+                          <span>Image datasets for computer vision applications</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <div className="h-5 w-5 rounded-full bg-primary/10 flex items-center justify-center text-primary mt-0.5 flex-shrink-0">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                              <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                          </div>
+                          <span>Tabular data for machine learning models</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <div className="h-5 w-5 rounded-full bg-primary/10 flex items-center justify-center text-primary mt-0.5 flex-shrink-0">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                              <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                          </div>
+                          <span>Time-series data for forecasting & analytics</span>
+                        </li>
+                      </ul>
                     </div>
 
-                    <div className="space-y-3">
-                      <div className="flex items-center gap-3">
-                        <div className="h-8 w-8 rounded-full bg-primary/10 flex items-center justify-center text-primary">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                            <polyline points="4 17 10 11 4 5"></polyline>
-                            <line x1="12" y1="19" x2="20" y2="19"></line>
+                    <div className="bg-card p-6 rounded-xl border border-primary/10 shadow-sm hover:shadow-md transition-all duration-300 hover:border-primary/30">
+                      <div className="flex items-center gap-3 mb-4">
+                        <div className="h-14 w-14 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                            <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path>
                           </svg>
                         </div>
-                        <h3 className="font-medium text-lg">Customizable</h3>
+                        <h3 className="font-semibold text-lg">Real-time Processing & Scalability</h3>
                       </div>
-                      <p className="text-muted-foreground pl-11">Tailor synthetic data generation to your specific requirements with flexible parameters.</p>
+                      <p className="text-muted-foreground">
+                        Fast, scalable data generation with real-time processing capabilities. Generate datasets of any size from small test sets to massive training corpora for enterprise-scale projects with optimized performance.
+                      </p>
+                      <ul className="mt-4 space-y-2">
+                        <li className="flex items-start gap-2">
+                          <div className="h-5 w-5 rounded-full bg-primary/10 flex items-center justify-center text-primary mt-0.5 flex-shrink-0">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                              <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                          </div>
+                          <span>Real-time data generation & streaming</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <div className="h-5 w-5 rounded-full bg-primary/10 flex items-center justify-center text-primary mt-0.5 flex-shrink-0">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                              <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                          </div>
+                          <span>Enterprise-scale processing capabilities</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <div className="h-5 w-5 rounded-full bg-primary/10 flex items-center justify-center text-primary mt-0.5 flex-shrink-0">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                              <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                          </div>
+                          <span>Flexible dataset sizing & batch processing</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <div className="h-5 w-5 rounded-full bg-primary/10 flex items-center justify-center text-primary mt-0.5 flex-shrink-0">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                              <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                          </div>
+                          <span>Optimized performance & resource management</span>
+                        </li>
+                      </ul>
                     </div>
 
-                    <div className="space-y-3">
-                      <div className="flex items-center gap-3">
-                        <div className="h-8 w-8 rounded-full bg-primary/10 flex items-center justify-center text-primary">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                            <path d="M18 10h-4V6"></path>
-                            <path d="M22 10h-4V6"></path>
-                            <path d="M6 14H2v4"></path>
-                            <path d="M10 14H6v4"></path>
-                            <rect x="2" y="2" width="20" height="20" rx="5"></rect>
+                    <div className="bg-card p-6 rounded-xl border border-primary/10 shadow-sm hover:shadow-md transition-all duration-300 hover:border-primary/30">
+                      <div className="flex items-center gap-3 mb-4">
+                        <div className="h-14 w-14 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                            <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path>
+                            <polyline points="14,2 14,8 20,8"></polyline>
+                            <line x1="16" y1="13" x2="8" y2="13"></line>
+                            <line x1="16" y1="17" x2="8" y2="17"></line>
+                            <polyline points="10,9 9,9 8,9"></polyline>
                           </svg>
                         </div>
-                        <h3 className="font-medium text-lg">Scalable</h3>
+                        <h3 className="font-semibold text-lg">Custom Dataset Creation</h3>
                       </div>
-                      <p className="text-muted-foreground pl-11">Generate datasets of any size, from small test sets to massive training corpora.</p>
+                      <p className="text-muted-foreground">
+                        Generate custom datasets from proprietary documents with strict confidentiality protocols. Flexible parameters and customizable generation methods for domain-specific AI training requirements with enterprise security.
+                      </p>
+                      <ul className="mt-4 space-y-2">
+                        <li className="flex items-start gap-2">
+                          <div className="h-5 w-5 rounded-full bg-primary/10 flex items-center justify-center text-primary mt-0.5 flex-shrink-0">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                              <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                          </div>
+                          <span>Proprietary document processing & analysis</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <div className="h-5 w-5 rounded-full bg-primary/10 flex items-center justify-center text-primary mt-0.5 flex-shrink-0">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                              <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                          </div>
+                          <span>Strict confidentiality & security protocols</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <div className="h-5 w-5 rounded-full bg-primary/10 flex items-center justify-center text-primary mt-0.5 flex-shrink-0">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                              <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                          </div>
+                          <span>Domain-specific customization & parameters</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <div className="h-5 w-5 rounded-full bg-primary/10 flex items-center justify-center text-primary mt-0.5 flex-shrink-0">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                              <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                          </div>
+                          <span>Flexible generation methods & workflows</span>
+                        </li>
+                      </ul>
                     </div>
 
-                    <div className="space-y-3">
-                      <div className="flex items-center gap-3">
-                        <div className="h-8 w-8 rounded-full bg-primary/10 flex items-center justify-center text-primary">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                            <path d="M12 2v4"></path>
-                            <path d="M12 18v4"></path>
-                            <path d="M4.93 4.93l2.83 2.83"></path>
-                            <path d="M16.24 16.24l2.83 2.83"></path>
-                            <path d="M2 12h4"></path>
-                            <path d="M18 12h4"></path>
-                            <path d="M4.93 19.07l2.83-2.83"></path>
-                            <path d="M16.24 7.76l2.83-2.83"></path>
+                    <div className="bg-card p-6 rounded-xl border border-primary/10 shadow-sm hover:shadow-md transition-all duration-300 hover:border-primary/30">
+                      <div className="flex items-center gap-3 mb-4">
+                        <div className="h-14 w-14 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                            <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path>
+                            <rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect>
+                            <path d="M9 14l2 2 4-4"></path>
                           </svg>
                         </div>
-                        <h3 className="font-medium text-lg">Multi-Modal</h3>
+                        <h3 className="font-semibold text-lg">Enterprise Quality & Deduplication</h3>
                       </div>
-                      <p className="text-muted-foreground pl-11">Support for text, image, tabular, and time-series data generation in a single platform.</p>
+                      <p className="text-muted-foreground">
+                        Comprehensive quality control, validation processes, and advanced deduplication ensuring reliable, high-fidelity training data for AI models and machine learning applications with enterprise-grade standards.
+                      </p>
+                      <ul className="mt-4 space-y-2">
+                        <li className="flex items-start gap-2">
+                          <div className="h-5 w-5 rounded-full bg-primary/10 flex items-center justify-center text-primary mt-0.5 flex-shrink-0">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                              <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                          </div>
+                          <span>Advanced quality control & validation systems</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <div className="h-5 w-5 rounded-full bg-primary/10 flex items-center justify-center text-primary mt-0.5 flex-shrink-0">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                              <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                          </div>
+                          <span>Intelligent deduplication & data cleaning</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <div className="h-5 w-5 rounded-full bg-primary/10 flex items-center justify-center text-primary mt-0.5 flex-shrink-0">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                              <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                          </div>
+                          <span>High-fidelity validation & accuracy metrics</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <div className="h-5 w-5 rounded-full bg-primary/10 flex items-center justify-center text-primary mt-0.5 flex-shrink-0">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                              <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                          </div>
+                          <span>Enterprise-grade reliability & consistency</span>
+                        </li>
+                      </ul>
                     </div>
                   </div>
                 </div>

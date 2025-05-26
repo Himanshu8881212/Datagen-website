@@ -1,36 +1,193 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# DataGen - AI Synthetic Data Solutions Website
 
-## Getting Started
+This is the official website for DataGen, a leading platform for AI synthetic data generation, generative AI models, and custom datasets for machine learning applications.
 
-First, run the development server:
+## 🚀 Features
 
+- **Hyper-Optimized SEO**: Comprehensive SEO implementation targeting AI-related keywords
+- **AI-Focused Content**: Specialized landing pages for AI synthetic data, generative AI models, and machine learning datasets
+- **Modern Tech Stack**: Built with Next.js 15, TypeScript, and Tailwind CSS
+- **Performance Optimized**: Static export with advanced caching and optimization
+- **Responsive Design**: Mobile-first design with excellent user experience
+- **Structured Data**: Rich schema markup for better search engine understanding
+
+## 🎯 SEO Implementation
+
+### Comprehensive Keyword Targeting
+The website is optimized for high-value AI-related keywords:
+- **Primary Keywords**: artificial intelligence, AI synthetic data, generative AI, machine learning datasets
+- **Long-tail Keywords**: AI synthetic data generation platform, custom transformer model training, machine learning datasets for AI training
+- **Technical Keywords**: neural networks, deep learning, transformer models, diffusion models, RAG systems
+
+### Technical SEO Features
+- ✅ Dynamic sitemap generation with AI-focused pages
+- ✅ Optimized robots.txt with specific AI page allowances
+- ✅ Rich structured data (Organization, Website, SoftwareApplication schemas)
+- ✅ Open Graph and Twitter Card optimization
+- ✅ Canonical URLs and proper meta tags
+- ✅ Mobile-optimized with responsive design
+- ✅ Fast loading times with static export
+- ✅ Security headers and performance optimization
+
+### AI-Focused Landing Pages
+- `/ai-synthetic-data` - AI Synthetic Data Generation
+- `/generative-ai-models` - Generative AI Models Development
+- `/machine-learning-datasets` - Machine Learning Datasets
+- `/ai-training-data` - AI Training Data Solutions
+- `/custom-ai-datasets` - Custom AI Datasets
+- `/ai-model-fine-tuning` - AI Model Fine-tuning Services
+- `/rag-systems` - RAG Systems Development
+- `/ai-agents` - AI Agents Solutions
+
+## 🛠️ Getting Started
+
+### Prerequisites
+- Node.js 18+
+- npm, yarn, or pnpm
+
+### Installation
+
+1. Clone the repository:
+```bash
+git clone https://github.com/your-username/datagen-website.git
+cd datagen-website
+```
+
+2. Install dependencies:
+```bash
+npm install
+# or
+yarn install
+# or
+pnpm install
+```
+
+3. Run the development server:
 ```bash
 npm run dev
 # or
 yarn dev
 # or
 pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4. Open [http://localhost:3000](http://localhost:3000) to view the website.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📁 Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+src/
+├── app/                          # Next.js App Router
+│   ├── layout.tsx               # Root layout with SEO configuration
+│   ├── page.tsx                 # Homepage with AI-focused content
+│   ├── sitemap.ts               # Dynamic sitemap generation
+│   ├── robots.ts                # Dynamic robots.txt generation
+│   ├── ai-synthetic-data/       # AI synthetic data landing page
+│   ├── generative-ai-models/    # Generative AI models page
+│   ├── machine-learning-datasets/ # ML datasets page
+│   └── ...                      # Other AI-focused pages
+├── components/                   # Reusable React components
+├── lib/                         # Utility functions and configurations
+│   ├── seo-config.ts           # Centralized SEO configuration
+│   └── utils.ts                # General utilities
+└── public/                      # Static assets
+    ├── sitemap.xml             # Static sitemap
+    ├── robots.txt              # Static robots.txt
+    └── ...                     # Images and other assets
+```
 
-## Learn More
+## 🔧 SEO Configuration
 
-To learn more about Next.js, take a look at the following resources:
+### Customizing SEO Settings
+Edit `src/lib/seo-config.ts` to modify:
+- Primary and long-tail keywords
+- Page-specific metadata
+- Structured data schemas
+- Social media configuration
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Adding New AI-Focused Pages
+1. Create a new page in `src/app/your-page/page.tsx`
+2. Add the page to `src/app/sitemap.ts`
+3. Update `src/lib/seo-config.ts` with page-specific SEO data
+4. Add the page to robots.txt allowances
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 📊 Performance & Analytics
 
-## Deploy on Vercel
+### Built-in Optimizations
+- Static export for fast loading
+- Image optimization with modern formats
+- CSS and JavaScript minification
+- Proper caching headers
+- Security headers implementation
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Analytics Setup
+Replace placeholder tracking IDs in `src/app/layout.tsx`:
+- Google Analytics: `GA_MEASUREMENT_ID`
+- Google Search Console: `your-google-verification-code`
+- Bing Webmaster Tools: `your-bing-verification-code`
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🚀 Deployment
+
+### Static Export
+The website is configured for static export, making it compatible with:
+- Cloudflare Pages
+- Netlify
+- Vercel
+- GitHub Pages
+- Any static hosting provider
+
+### Build Commands
+```bash
+# Development
+npm run dev
+
+# Production build
+npm run build
+
+# Lint code
+npm run lint
+```
+
+## 🎨 Customization
+
+### Styling
+- Built with Tailwind CSS
+- Custom color scheme in `tailwind.config.ts`
+- Responsive design with mobile-first approach
+
+### Content Management
+- All content is component-based for easy updates
+- SEO metadata centralized in configuration files
+- Modular structure for scalability
+
+## 📈 SEO Monitoring
+
+### Key Metrics to Track
+- Organic search traffic for AI-related keywords
+- Search engine rankings for target keywords
+- Click-through rates from search results
+- Core Web Vitals performance scores
+
+### Recommended Tools
+- Google Search Console
+- Google Analytics 4
+- Ahrefs or SEMrush for keyword tracking
+- PageSpeed Insights for performance monitoring
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Test thoroughly
+5. Submit a pull request
+
+## 📄 License
+
+This project is proprietary to DataGen. All rights reserved.
+
+## 📞 Support
+
+For questions or support, contact:
+- Email: info@datagen.in
+- Website: https://datagen.in

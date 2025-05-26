@@ -154,6 +154,27 @@ export function MobileMenu() {
                 <path d="m9 18 6-6-6-6"/>
               </svg>
             </Link>
+            <Link
+              href="/privacy-policy"
+              className="text-xl font-medium hover:text-primary transition-colors py-3 border-b border-white/30 flex items-center justify-between"
+              onClick={closeMenu}
+            >
+              <span>Privacy Policy</span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="text-primary/70"
+              >
+                <path d="m9 18 6-6-6-6"/>
+              </svg>
+            </Link>
             <div className="flex flex-col gap-4 mt-6">
               <Button
                 asChild
@@ -167,6 +188,13 @@ export function MobileMenu() {
                 }}
               >
                 <Link href="#contact">Contact Us</Link>
+              </Button>
+              <Button
+                asChild
+                variant="outline"
+                className="h-12 text-base bg-white text-black border-white hover:bg-white/90 font-bold tracking-wide"
+              >
+                <Link href="https://docs.datagen.in/" target="_blank" rel="noopener noreferrer" onClick={closeMenu}>Docs</Link>
               </Button>
               <Button
                 asChild

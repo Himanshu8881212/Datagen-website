@@ -16,8 +16,82 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "DataGen - Synthetic Data Solutions",
-  description: "DataGen provides high-quality synthetic datasets and AI services to help businesses implement effective AI solutions for their development needs.",
+  title: "DataGen - AI Synthetic Data Solutions | Generative AI Models & Custom Datasets",
+  description: "DataGen specializes in AI synthetic data generation, generative AI models, and custom datasets for machine learning. Transform your AI projects with SynthEngyne - the leading synthetic data platform for artificial intelligence training.",
+  keywords: [
+    "artificial intelligence",
+    "AI synthetic data",
+    "generative AI",
+    "machine learning datasets",
+    "AI training data",
+    "synthetic data generation",
+    "AI models",
+    "custom datasets",
+    "SynthEngyne",
+    "AI development",
+    "data science",
+    "neural networks",
+    "deep learning",
+    "AI solutions",
+    "artificial intelligence services",
+    "AI consulting",
+    "data privacy",
+    "AI deployment",
+    "transformer models",
+    "diffusion models",
+    "AI fine-tuning",
+    "model alignment",
+    "RAG systems",
+    "AI agents",
+    "automated AI",
+    "AI infrastructure"
+  ].join(", "),
+  authors: [{ name: "DataGen Team" }],
+  creator: "DataGen",
+  publisher: "DataGen",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    url: 'https://datagen.in',
+    siteName: 'DataGen - AI Synthetic Data Solutions',
+    title: 'DataGen - Leading AI Synthetic Data & Generative AI Platform',
+    description: 'Transform your AI projects with DataGen\'s synthetic data solutions. Generate custom datasets, deploy generative AI models, and accelerate machine learning development with SynthEngyne.',
+    images: [
+      {
+        url: 'https://datagen.in/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'DataGen - AI Synthetic Data Solutions',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'DataGen - AI Synthetic Data & Generative AI Solutions',
+    description: 'Leading platform for AI synthetic data generation, custom datasets, and generative AI model deployment. Accelerate your artificial intelligence projects.',
+    images: ['https://datagen.in/twitter-image.jpg'],
+    creator: '@DataGenAI',
+  },
+  alternates: {
+    canonical: 'https://datagen.in',
+  },
+  category: 'Artificial Intelligence',
+  classification: 'AI Technology',
+  other: {
+    'google-site-verification': 'your-google-verification-code',
+    'msvalidate.01': 'your-bing-verification-code',
+  },
 };
 
 export default function RootLayout({
@@ -25,8 +99,133 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const organizationSchema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "DataGen",
+    "alternateName": "DataGen AI",
+    "url": "https://datagen.in",
+    "logo": "https://datagen.in/logo.png",
+    "description": "DataGen specializes in generating synthetic datasets and implementing generative AI models tailored to user-specific needs. We offer both services and a cutting-edge product called SynthEngyne.",
+    "foundingDate": "2024",
+    "industry": "Artificial Intelligence",
+    "knowsAbout": [
+      "Artificial Intelligence",
+      "Synthetic Data Generation",
+      "Generative AI",
+      "Machine Learning",
+      "Data Science",
+      "AI Model Training",
+      "Custom Datasets",
+      "AI Deployment",
+      "Neural Networks",
+      "Deep Learning"
+    ],
+    "serviceArea": {
+      "@type": "Place",
+      "name": "Global"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+91-XXX-XXX-XXXX",
+      "contactType": "Customer Service",
+      "email": "info@datagen.in",
+      "availableLanguage": "English"
+    },
+    "sameAs": [
+      "https://linkedin.com/company/datagen-ai",
+      "https://twitter.com/DataGenAI",
+      "https://github.com/datagen-ai"
+    ]
+  };
+
+  const websiteSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "DataGen - AI Synthetic Data Solutions",
+    "url": "https://datagen.in",
+    "description": "Leading platform for AI synthetic data generation, generative AI models, and custom datasets for machine learning and artificial intelligence development.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "DataGen"
+    },
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://datagen.in/search?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  };
+
+  const softwareApplicationSchema = {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "SynthEngyne",
+    "applicationCategory": "AI Development Platform",
+    "operatingSystem": "Web-based",
+    "description": "SynthEngyne is our synthetic data platform designed to help businesses generate custom datasets for AI training. Our intuitive workflow supports multiple data formats including text, image, time-series, and tabular data.",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "INR",
+      "description": "Free tier available with premium plans"
+    },
+    "creator": {
+      "@type": "Organization",
+      "name": "DataGen"
+    },
+    "featureList": [
+      "Synthetic Data Generation",
+      "Custom Dataset Creation",
+      "AI Model Training",
+      "Data Privacy Protection",
+      "Multiple Data Formats",
+      "API Access",
+      "Real-time Processing"
+    ]
+  };
+
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        {/* Structured Data */}
+        <Script
+          id="organization-schema"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(organizationSchema),
+          }}
+        />
+        <Script
+          id="website-schema"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(websiteSchema),
+          }}
+        />
+        <Script
+          id="software-schema"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(softwareApplicationSchema),
+          }}
+        />
+
+        {/* Additional SEO Meta Tags */}
+        <meta name="theme-color" content="#000000" />
+        <meta name="msapplication-TileColor" content="#000000" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+        <meta name="format-detection" content="telephone=no" />
+
+        {/* Preconnect to external domains */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link rel="preconnect" href="https://images.unsplash.com" />
+
+        {/* DNS Prefetch */}
+        <link rel="dns-prefetch" href="//www.google-analytics.com" />
+        <link rel="dns-prefetch" href="//www.googletagmanager.com" />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-background min-h-screen`}
         suppressHydrationWarning
@@ -35,6 +234,7 @@ export default function RootLayout({
           {children}
         </div>
         <Toaster />
+
         {/* Script to help with browser extensions that might interfere with hydration */}
         <Script id="handle-browser-extensions" strategy="beforeInteractive">
           {`
@@ -66,6 +266,20 @@ export default function RootLayout({
                 });
               };
             }
+          `}
+        </Script>
+
+        {/* Google Analytics (replace with your tracking ID) */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'GA_MEASUREMENT_ID');
           `}
         </Script>
       </body>

@@ -491,6 +491,16 @@ export default function Home() {
             </Button>
             <Button
               asChild
+              variant="outline"
+              size="sm"
+              className="hidden sm:flex bg-white text-black border-white text-sm font-bold tracking-wide"
+            >
+              <Link href="https://docs.datagen.in/" target="_blank" rel="noopener noreferrer">
+                Docs
+              </Link>
+            </Button>
+            <Button
+              asChild
               size="sm"
               className="hidden sm:flex bg-white text-black border-white text-sm font-bold tracking-wide"
             >
@@ -516,11 +526,18 @@ export default function Home() {
               <div className="flex flex-col justify-center space-y-6">
                 <div className="space-y-4">
                   <h1 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl xl:text-6xl/none bg-clip-text text-transparent bg-gradient-to-r from-foreground to-foreground/80">
-                    Unlock the Power of AI with DataGen
+                    DataGen - AI Solutions & Synthetic Data
                   </h1>
                   <p className="max-w-[600px] text-muted-foreground text-base md:text-lg lg:text-xl leading-relaxed">
-                    DataGen helps businesses make the most of AI by providing high-quality synthetic datasets and complete AI solutions for your most challenging data needs.
+                    We specialize in <strong>synthetic data generation</strong>, <strong>generative AI models</strong>, and <strong>end-to-end AI solutions</strong>. From data creation to model deployment.
                   </p>
+                  <div className="flex flex-wrap gap-2 mt-4">
+                    <span className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium">AI Synthetic Data</span>
+                    <span className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium">Generative AI</span>
+                    <span className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium">Machine Learning</span>
+                    <span className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium">Custom Datasets</span>
+                    <span className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium">AI Training</span>
+                  </div>
                 </div>
                 <div className="flex flex-col gap-3 sm:flex-row">
                   <Button
@@ -535,9 +552,9 @@ export default function Home() {
                 </div>
               </div>
               <div className="flex items-center justify-center">
-                <div className="relative w-full max-w-sm md:max-w-md lg:max-w-lg aspect-square">
+                <div className="relative w-full max-w-sm md:max-w-md aspect-square">
                   <div className="absolute inset-0 bg-gradient-to-r from-primary/40 to-primary/20 rounded-full blur-3xl opacity-30 animate-pulse-slow"></div>
-                  <div className="absolute inset-4 md:inset-6 lg:inset-8 flex items-center justify-center">
+                  <div className="absolute inset-4 md:inset-6 flex items-center justify-center">
                     <div className="w-full h-full bg-card rounded-3xl shadow-2xl overflow-hidden border border-primary/10">
                       <div className="h-full w-full bg-[url('https://images.unsplash.com/photo-1717501218636-a390f9ac5957?crop=entropy&cs=srgb&fm=jpg&ixid=M3w0OTUyODh8MHwxfHNlYXJjaHw1fHxhcnRpZmljaWFsJTIwaW50ZWxsaWdlbmNlfGVufDB8MHx8fDE3MzM4MjA4MTF8MA&ixlib=rb-4.0.3&q=85')] bg-cover bg-center transition-transform duration-700 hover:scale-105"></div>
                     </div>
@@ -576,12 +593,68 @@ export default function Home() {
                   <h2 className="text-2xl font-bold tracking-tight sm:text-3xl md:text-4xl mb-6">
                     SynthEngyne Platform
                   </h2>
-                  <p className="max-w-[600px] text-muted-foreground text-base md:text-lg leading-relaxed mb-4">
-                    SynthEngyne is our synthetic data platform designed to help businesses generate custom datasets for AI training. Our intuitive workflow supports multiple data formats including text, image, time-series, and tabular data.
-                  </p>
                   <p className="max-w-[600px] text-muted-foreground text-base md:text-lg leading-relaxed">
-                    The platform focuses on data quality and consistency, providing businesses with reliable training data for their AI development needs.
+                    Our cutting-edge platform for generating <strong>custom synthetic datasets</strong>. Supports multiple data formats with <strong>quality assurance</strong> and <strong>enterprise scalability</strong>.
                   </p>
+
+                  {/* SynthEngyne Feature Cards */}
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6">
+                    <div className="bg-card p-5 rounded-xl border border-primary/10 shadow-sm hover:shadow-md transition-all duration-300 hover:border-primary/30">
+                      <div className="flex items-center gap-3 mb-3">
+                        <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                            <polyline points="3.29 7 12 12 20.71 7"></polyline>
+                            <line x1="12" y1="22" x2="12" y2="12"></line>
+                          </svg>
+                        </div>
+                        <h4 className="font-semibold">Multi-Format Data Generation</h4>
+                      </div>
+                      <p className="text-sm text-muted-foreground">Generate synthetic data in text, image, tabular, and time-series formats for AI applications.</p>
+                    </div>
+
+                    <div className="bg-card p-5 rounded-xl border border-primary/10 shadow-sm hover:shadow-md transition-all duration-300 hover:border-primary/30">
+                      <div className="flex items-center gap-3 mb-3">
+                        <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                            <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"></path>
+                          </svg>
+                        </div>
+                        <h4 className="font-semibold">Real-time Processing</h4>
+                      </div>
+                      <p className="text-sm text-muted-foreground">Fast, scalable data generation. Create datasets of any size from small tests to massive training sets.</p>
+                    </div>
+
+                    <div className="bg-card p-5 rounded-xl border border-primary/10 shadow-sm hover:shadow-md transition-all duration-300 hover:border-primary/30">
+                      <div className="flex items-center gap-3 mb-3">
+                        <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                            <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path>
+                            <polyline points="14,2 14,8 20,8"></polyline>
+                            <line x1="16" y1="13" x2="8" y2="13"></line>
+                            <line x1="16" y1="17" x2="8" y2="17"></line>
+                            <polyline points="10,9 9,9 8,9"></polyline>
+                          </svg>
+                        </div>
+                        <h4 className="font-semibold">Custom Dataset Creation</h4>
+                      </div>
+                      <p className="text-sm text-muted-foreground">Generate custom datasets from proprietary documents with strict confidentiality and domain expertise.</p>
+                    </div>
+
+                    <div className="bg-card p-5 rounded-xl border border-primary/10 shadow-sm hover:shadow-md transition-all duration-300 hover:border-primary/30">
+                      <div className="flex items-center gap-3 mb-3">
+                        <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                            <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path>
+                            <rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect>
+                            <path d="M9 14l2 2 4-4"></path>
+                          </svg>
+                        </div>
+                        <h4 className="font-semibold">Quality & Deduplication</h4>
+                      </div>
+                      <p className="text-sm text-muted-foreground">Advanced quality control and deduplication ensuring reliable, high-fidelity training data.</p>
+                    </div>
+                  </div>
                 </div>
                 <div className="flex flex-col sm:flex-row gap-3 mt-8">
                   <Button
@@ -621,31 +694,47 @@ export default function Home() {
             <div className="grid gap-8 lg:grid-cols-2 lg:gap-16 items-center">
               <div className="flex flex-col justify-center space-y-6">
                 <div className="space-y-4">
-                  <h3 className="text-xl font-bold tracking-tight sm:text-2xl md:text-3xl">Complete AI Services</h3>
+                  <h3 className="text-xl font-bold tracking-tight sm:text-2xl md:text-3xl">Professional AI Services</h3>
                   <p className="max-w-[600px] text-muted-foreground text-base md:text-lg leading-relaxed">
-                    At DataGen, we offer comprehensive AI services that take you from data to deployment. Our expertise covers synthetic dataset creation, model fine-tuning, and alignment to ensure your AI solutions deliver real business value.
+                    Enterprise-grade AI solutions including <strong>full-stack deployment</strong>, <strong>synthetic data services</strong>, <strong>custom model optimization</strong>, and <strong>intelligent automation systems</strong>. We deliver comprehensive solutions that drive measurable business value.
                   </p>
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
-                  <div className="bg-card p-4 rounded-xl border border-primary/10 shadow-sm hover:shadow-md transition-all duration-300 hover:border-primary/30">
-                    <div className="flex items-center gap-3 mb-2">
-                      <div className="h-8 w-8 rounded-full bg-primary/10 flex items-center justify-center text-primary">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <div className="bg-card p-5 rounded-xl border border-primary/10 shadow-sm hover:shadow-md transition-all duration-300 hover:border-primary/30">
+                    <div className="flex items-center gap-3 mb-3">
+                      <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                          <path d="M18 8h1a4 4 0 0 1 0 8h-1"></path>
+                          <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path>
+                          <line x1="6" y1="1" x2="6" y2="4"></line>
+                          <line x1="10" y1="1" x2="10" y2="4"></line>
+                          <line x1="14" y1="1" x2="14" y2="4"></line>
+                        </svg>
+                      </div>
+                      <h4 className="font-semibold">Full-Stack Deployment</h4>
+                    </div>
+                    <p className="text-sm text-muted-foreground">Complete AI solution deployment from development to production with seamless infrastructure integration and scalable architecture.</p>
+                  </div>
+
+                  <div className="bg-card p-5 rounded-xl border border-primary/10 shadow-sm hover:shadow-md transition-all duration-300 hover:border-primary/30">
+                    <div className="flex items-center gap-3 mb-3">
+                      <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                           <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
                           <polyline points="3.29 7 12 12 20.71 7"></polyline>
                           <line x1="12" y1="22" x2="12" y2="12"></line>
                         </svg>
                       </div>
-                      <h4 className="font-medium">Data Generation</h4>
+                      <h4 className="font-semibold">Synthetic Data Services</h4>
                     </div>
-                    <p className="text-sm text-muted-foreground">Custom synthetic datasets tailored to your specific AI training needs.</p>
+                    <p className="text-sm text-muted-foreground">Professional synthetic dataset creation tailored to industry requirements with privacy-compliant data solutions and quality assurance.</p>
                   </div>
 
-                  <div className="bg-card p-4 rounded-xl border border-primary/10 shadow-sm hover:shadow-md transition-all duration-300 hover:border-primary/30">
-                    <div className="flex items-center gap-3 mb-2">
-                      <div className="h-8 w-8 rounded-full bg-primary/10 flex items-center justify-center text-primary">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <div className="bg-card p-5 rounded-xl border border-primary/10 shadow-sm hover:shadow-md transition-all duration-300 hover:border-primary/30">
+                    <div className="flex items-center gap-3 mb-3">
+                      <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                           <path d="M12 2v4"></path>
                           <path d="M12 18v4"></path>
                           <path d="M4.93 4.93l2.83 2.83"></path>
@@ -656,39 +745,25 @@ export default function Home() {
                           <path d="M16.24 7.76l2.83-2.83"></path>
                         </svg>
                       </div>
-                      <h4 className="font-medium">Fine-tuning & Alignment</h4>
+                      <h4 className="font-semibold">Custom Model Optimization</h4>
                     </div>
-                    <p className="text-sm text-muted-foreground">Optimize and align pre-trained models for your specific use cases.</p>
+                    <p className="text-sm text-muted-foreground">Expert AI model fine-tuning aligned with business objectives, optimizing performance for unique use cases and industry requirements.</p>
                   </div>
 
-                  <div className="bg-card p-4 rounded-xl border border-primary/10 shadow-sm hover:shadow-md transition-all duration-300 hover:border-primary/30">
-                    <div className="flex items-center gap-3 mb-2">
-                      <div className="h-8 w-8 rounded-full bg-primary/10 flex items-center justify-center text-primary">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                          <circle cx="12" cy="12" r="10"></circle>
-                          <line x1="2" y1="12" x2="22" y2="12"></line>
-                          <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                  <div className="bg-card p-5 rounded-xl border border-primary/10 shadow-sm hover:shadow-md transition-all duration-300 hover:border-primary/30">
+                    <div className="flex items-center gap-3 mb-3">
+                      <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                          <path d="M9 12l2 2 4-4"></path>
+                          <path d="M21 12c.552 0 1-.448 1-1V5c0-.552-.448-1-1-1H3c-.552 0-1 .448-1 1v6c0 .552.448 1 1 1"></path>
+                          <path d="M3 10v6c0 .552.448 1 1 1h16c.552 0 1-.448 1-1v-6"></path>
+                          <path d="M7 7h.01"></path>
+                          <path d="M17 7h.01"></path>
                         </svg>
                       </div>
-                      <h4 className="font-medium">Agentic Systems</h4>
+                      <h4 className="font-semibold">Intelligent Automation Systems</h4>
                     </div>
-                    <p className="text-sm text-muted-foreground">Comprehensive AI agent solutions including RAG systems, autonomous task execution, and intelligent decision-making capabilities.</p>
-                  </div>
-
-                  <div className="bg-card p-4 rounded-xl border border-primary/10 shadow-sm hover:shadow-md transition-all duration-300 hover:border-primary/30">
-                    <div className="flex items-center gap-3 mb-2">
-                      <div className="h-8 w-8 rounded-full bg-primary/10 flex items-center justify-center text-primary">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                          <path d="M18 8h1a4 4 0 0 1 0 8h-1"></path>
-                          <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path>
-                          <line x1="6" y1="1" x2="6" y2="4"></line>
-                          <line x1="10" y1="1" x2="10" y2="4"></line>
-                          <line x1="14" y1="1" x2="14" y2="4"></line>
-                        </svg>
-                      </div>
-                      <h4 className="font-medium">End-to-End Deployment</h4>
-                    </div>
-                    <p className="text-sm text-muted-foreground">Complete deployment of AI systems in production environments.</p>
+                    <p className="text-sm text-muted-foreground">Advanced autonomous AI systems that orchestrate complex business processes with intelligent automation and decision-making workflows.</p>
                   </div>
                 </div>
 
@@ -1282,7 +1357,7 @@ export default function Home() {
                 </div>
 
                 <p className="text-xs text-muted-foreground text-center">
-                  By submitting this form, you agree to our <Link href="#" className="underline hover:text-primary">Privacy Policy</Link>.
+                  By submitting this form, you agree to our <Link href="/privacy-policy" className="underline hover:text-primary">Privacy Policy</Link>.
                   Your message will be sent to <span className="text-primary">info@datagen.in</span>
                 </p>
               </form>

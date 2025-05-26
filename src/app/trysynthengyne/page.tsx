@@ -54,6 +54,16 @@ export default function TrySynthEngyne() {
                 Contact Us
               </Link>
             </Button>
+            <Button
+              asChild
+              variant="outline"
+              size="sm"
+              className="hidden sm:flex bg-white text-black border-white text-sm font-bold tracking-wide"
+            >
+              <Link href="https://docs.datagen.in/" target="_blank" rel="noopener noreferrer">
+                Docs
+              </Link>
+            </Button>
             <MobileMenu />
           </div>
         </div>
