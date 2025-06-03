@@ -44,27 +44,25 @@ export function Logo({ className = '', variant = 'default', theme = 'light' }: L
     if (variant === 'compact') {
       return (
         <svg width="180" height="60" viewBox="0 0 180 60" fill="none" xmlns="http://www.w3.org/2000/svg" style={svgStyle}>
-          <circle cx="20" cy="30" r="18" fill="none" stroke="#ffffff" strokeWidth="2" opacity="0.9" />
+          <circle cx="20" cy="30" r="18" fill="none" stroke="#ffffff" strokeWidth="2" />
           <g transform="translate(8, 18)">
-            <circle cx="12" cy="12" r="3.5" fill="url(#gradientCompact)" stroke="url(#strokeGradientCompact)" strokeWidth="1" />
+            <circle cx="12" cy="12" r="3.5" fill="#ffffff" stroke="#ffffff" strokeWidth="1" />
             <path d="M12 2 L12 8.5 M12 15.5 L12 22 M2 12 L8.5 12 M15.5 12 L22 12"
-              stroke="url(#gradientCompact)"
+              stroke="#ffffff"
               strokeWidth="2.5"
               strokeLinecap="round" />
-            <circle cx="6" cy="6" r="2" fill="url(#gradientCompact)" opacity="0.9" />
-            <circle cx="18" cy="6" r="2" fill="url(#gradientCompact)" opacity="0.9" />
-            <circle cx="6" cy="18" r="2" fill="url(#gradientCompact)" opacity="0.9" />
-            <circle cx="18" cy="18" r="2" fill="url(#gradientCompact)" opacity="0.9" />
+            <circle cx="6" cy="6" r="2" fill="#ffffff" />
+            <circle cx="18" cy="6" r="2" fill="#ffffff" />
+            <circle cx="6" cy="18" r="2" fill="#ffffff" />
+            <circle cx="18" cy="18" r="2" fill="#ffffff" />
             <path d="M9.5 9.5 L6 6 M14.5 9.5 L18 6 M9.5 14.5 L6 18 M14.5 14.5 L18 18"
-              stroke="url(#gradientCompact)"
+              stroke="#ffffff"
               strokeWidth="2"
-              strokeLinecap="round"
-              opacity="0.8" />
+              strokeLinecap="round" />
             <path d="M12 5 L12 6.5 M12 17.5 L12 19 M5 12 L6.5 12 M17.5 12 L19 12"
-              stroke="url(#accentGradientCompact)"
+              stroke="#ffffff"
               strokeWidth="1"
-              strokeLinecap="round"
-              opacity="0.6" />
+              strokeLinecap="round" />
           </g>
           <text x="48" y="38"
             fontFamily="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
@@ -76,19 +74,6 @@ export function Logo({ className = '', variant = 'default', theme = 'light' }: L
             DataGen
           </text>
           <defs>
-            <linearGradient id="gradientCompact" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" style={{ stopColor: '#ffffff', stopOpacity: 1 }} />
-              <stop offset="50%" style={{ stopColor: '#f0f0f0', stopOpacity: 0.95 }} />
-              <stop offset="100%" style={{ stopColor: '#e0e0e0', stopOpacity: 0.9 }} />
-            </linearGradient>
-            <linearGradient id="strokeGradientCompact" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" style={{ stopColor: '#ffffff', stopOpacity: 0.8 }} />
-              <stop offset="100%" style={{ stopColor: '#cccccc', stopOpacity: 0.6 }} />
-            </linearGradient>
-            <linearGradient id="accentGradientCompact" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" style={{ stopColor: '#ffffff', stopOpacity: 0.9 }} />
-              <stop offset="100%" style={{ stopColor: '#dddddd', stopOpacity: 0.7 }} />
-            </linearGradient>
             <filter id="textShadowCompact">
               <feDropShadow dx="0" dy="1" stdDeviation="1" floodColor="#000000" floodOpacity="0.3" />
             </filter>
@@ -100,27 +85,25 @@ export function Logo({ className = '', variant = 'default', theme = 'light' }: L
     // Default variant (footer logo)
     return (
       <svg width="250" height="60" viewBox="0 0 250 60" fill="none" xmlns="http://www.w3.org/2000/svg" style={svgStyle}>
-        <circle cx="20" cy="30" r="18" fill="none" stroke="#ffffff" strokeWidth="2" opacity="0.9" />
+        <circle cx="20" cy="30" r="18" fill="none" stroke="#ffffff" strokeWidth="2" />
         <g transform="translate(8, 18)">
-          <circle cx="12" cy="12" r="3.5" fill="url(#gradientDefault)" stroke="url(#strokeGradientDefault)" strokeWidth="1" />
+          <circle cx="12" cy="12" r="3.5" fill="#ffffff" stroke="#ffffff" strokeWidth="1" />
           <path d="M12 2 L12 8.5 M12 15.5 L12 22 M2 12 L8.5 12 M15.5 12 L22 12"
-            stroke="url(#gradientDefault)"
+            stroke="#ffffff"
             strokeWidth="2.5"
             strokeLinecap="round" />
-          <circle cx="6" cy="6" r="2" fill="url(#gradientDefault)" opacity="0.9" />
-          <circle cx="18" cy="6" r="2" fill="url(#gradientDefault)" opacity="0.9" />
-          <circle cx="6" cy="18" r="2" fill="url(#gradientDefault)" opacity="0.9" />
-          <circle cx="18" cy="18" r="2" fill="url(#gradientDefault)" opacity="0.9" />
+          <circle cx="6" cy="6" r="2" fill="#ffffff" />
+          <circle cx="18" cy="6" r="2" fill="#ffffff" />
+          <circle cx="6" cy="18" r="2" fill="#ffffff" />
+          <circle cx="18" cy="18" r="2" fill="#ffffff" />
           <path d="M9.5 9.5 L6 6 M14.5 9.5 L18 6 M9.5 14.5 L6 18 M14.5 14.5 L18 18"
-            stroke="url(#gradientDefault)"
+            stroke="#ffffff"
             strokeWidth="2"
-            strokeLinecap="round"
-            opacity="0.8" />
+            strokeLinecap="round" />
           <path d="M12 5 L12 6.5 M12 17.5 L12 19 M5 12 L6.5 12 M17.5 12 L19 12"
-            stroke="url(#accentGradientDefault)"
+            stroke="#ffffff"
             strokeWidth="1"
-            strokeLinecap="round"
-            opacity="0.6" />
+            strokeLinecap="round" />
         </g>
         <text x="48" y="35"
           fontFamily="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
@@ -136,25 +119,11 @@ export function Logo({ className = '', variant = 'default', theme = 'light' }: L
           fontSize="11"
           fontWeight="600"
           fill="white"
-          opacity="0.9"
           letterSpacing="0.3px"
           filter="url(#textShadowDefault)">
           AI and Synthetic Data Solutions
         </text>
         <defs>
-          <linearGradient id="gradientDefault" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" style={{ stopColor: '#ffffff', stopOpacity: 1 }} />
-            <stop offset="50%" style={{ stopColor: '#f0f0f0', stopOpacity: 0.95 }} />
-            <stop offset="100%" style={{ stopColor: '#e0e0e0', stopOpacity: 0.9 }} />
-          </linearGradient>
-          <linearGradient id="strokeGradientDefault" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" style={{ stopColor: '#ffffff', stopOpacity: 0.8 }} />
-            <stop offset="100%" style={{ stopColor: '#cccccc', stopOpacity: 0.6 }} />
-          </linearGradient>
-          <linearGradient id="accentGradientDefault" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" style={{ stopColor: '#ffffff', stopOpacity: 0.9 }} />
-            <stop offset="100%" style={{ stopColor: '#dddddd', stopOpacity: 0.7 }} />
-          </linearGradient>
           <filter id="textShadowDefault">
             <feDropShadow dx="0" dy="1" stdDeviation="1" floodColor="#000000" floodOpacity="0.3" />
           </filter>
