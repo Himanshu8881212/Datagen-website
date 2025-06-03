@@ -26,7 +26,7 @@ export default function AISyntheticDataPage() {
       <header className="border-b border-white/20 sticky top-0 z-50 bg-black text-white shadow-md w-full">
         <div className="container mx-auto flex h-16 md:h-20 items-center justify-between px-4 md:px-6 lg:px-8">
           <div className="flex items-center gap-8">
-            <Logo variant="compact" theme="light" />
+            <Logo variant="header" />
             <nav className="hidden md:flex gap-6 lg:gap-8">
               <Link href="/" className="text-sm font-medium text-white hover:text-primary transition-colors">
                 Home

@@ -23,7 +23,7 @@ export function Footer({ onNavigate }: FooterProps) {
       <div className="container mx-auto px-4 md:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
           <div className="space-y-4">
-            <Logo theme="light" />
+            <Logo variant="footer" />
           </div>
 
           <div className="space-y-4">

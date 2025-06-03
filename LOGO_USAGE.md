@@ -13,48 +13,28 @@ This document outlines the usage of the DataGen logo SVG files and the Logo comp
 - **Contains**: Logo mark + "DataGen" text + subtext
 - **Enhanced**: Better visibility, text shadows, improved contrast, outer white ring
 
-### 2. **Dark Logo** (`/logo-dark.svg`)
-- **Size**: 250x60px
-- **Usage**: For light backgrounds
-- **Theme**: Dark (dark text on light backgrounds)
-- **Contains**: Logo mark + "DataGen" text + subtext
-
-### 3. **Compact Logo** (`/logo-compact.svg`)
+### 2. **Compact Logo** (`/logo-compact.svg`)
 - **Size**: 180x60px
 - **Usage**: Navigation headers, smaller spaces
 - **Theme**: Light (white text)
 - **Contains**: Logo mark + "DataGen" text only
 - **Enhanced**: Better visibility, larger logo mark, improved contrast, outer white ring
 
-### 4. **Logo Mark** (`/logo-mark.svg`)
+### 3. **Logo Mark** (`/logo-mark.svg`)
 - **Size**: 40x40px
 - **Usage**: Favicons, app icons, very small spaces
 - **Theme**: Light (white)
 - **Contains**: Logo mark only with outer white ring
 - **Enhanced**: Clean design with no background, professional outer ring
 
-### 5. **DataGen Docs** (`/logo-docs.svg`)
-- **Size**: 240x60px
-- **Usage**: Documentation sites, docs-related content
-- **Theme**: Light with gray "Docs" text
-- **Contains**: Logo mark + "DataGen" (white) + "Docs" (gray) + subtext
-- **Enhanced**: Unified design with outer white ring
-
-### 6. **DataGen Docs Compact** (`/logo-docs-compact.svg`)
-- **Size**: 200x60px
-- **Usage**: Docs navigation headers, smaller docs spaces
-- **Theme**: Light with gray "Docs" text
-- **Contains**: Logo mark + "DataGen" (white) + "Docs" (gray)
-- **Enhanced**: Bigger size, unified design with outer white ring
-
-### 7. **DataGen SynthEngyne** (`/logo-synthengyne.svg`)
+### 4. **DataGen SynthEngyne** (`/logo-synthengyne.svg`)
 - **Size**: 300x60px
 - **Usage**: SynthEngyne product pages, product-specific content
 - **Theme**: Light with gray "SynthEngyne" text
 - **Contains**: Logo mark + "DataGen" (white) + "SynthEngyne" (gray) + subtext
 - **Enhanced**: Larger width for better text fitting, unified design
 
-### 8. **DataGen SynthEngyne Compact** (`/logo-synthengyne-compact.svg`)
+### 5. **DataGen SynthEngyne Compact** (`/logo-synthengyne-compact.svg`)
 - **Size**: 240x60px
 - **Usage**: SynthEngyne navigation headers, product headers
 - **Theme**: Light with gray "SynthEngyne" text
@@ -67,41 +47,26 @@ This document outlines the usage of the DataGen logo SVG files and the Logo comp
 ```tsx
 import { Logo } from '@/components/logo';
 
-// Default logo (200x60)
-<Logo />
+// Header logo (compact version - 120x32)
+<Logo variant="header" />
 
-// Compact version for headers (120x40)
-<Logo variant="compact" />
-
-// Logo mark only for icons (40x40)
-<Logo variant="mark-only" />
-
-// Dark theme for light backgrounds
-<Logo theme="dark" />
-
-// DataGen Docs variants
-<Logo variant="docs" />                    // Full docs logo (200x60)
-<Logo variant="docs-compact" />            // Compact docs logo (140x40)
-
-// DataGen SynthEngyne variants
-<Logo variant="synthengyne" />             // Full SynthEngyne logo (240x60)
-<Logo variant="synthengyne-compact" />     // Compact SynthEngyne logo (180x40)
+// Footer logo (full version - 150x40)
+<Logo variant="footer" />
 ```
 
 ### Props
-- `variant`: `'default' | 'compact' | 'mark-only' | 'docs' | 'docs-compact' | 'synthengyne' | 'synthengyne-compact'`
-- `theme`: `'light' | 'dark'`
+- `variant`: `'header' | 'footer'`
 - `className`: Additional CSS classes
 
 ## 📍 Current Implementation
 
 ### Headers/Navigation
-All page headers use the compact variant:
+All page headers use the header variant (logo-compact.svg):
 ```tsx
-<Logo variant="compact" theme="light" />
+<Logo variant="header" />
 ```
 
-**Pages using compact logo:**
+**Pages using header logo:**
 - Homepage (`/`)
 - About (`/about`)
 - Services (`/services`)
@@ -114,9 +79,9 @@ All page headers use the compact variant:
 - Machine Learning Datasets (`/machine-learning-datasets`)
 
 ### Footers
-All page footers use the main logo:
+All page footers use the footer variant (logo.svg):
 ```tsx
-<Logo theme="light" />
+<Logo variant="footer" />
 ```
 
 ## 🎯 Logo Design Elements
@@ -134,7 +99,6 @@ All page footers use the main logo:
 
 ### Colors
 - **Light Theme**: White (#ffffff) with opacity variations
-- **Dark Theme**: Dark gray (#1a1a1a) to gray (#333333)
 
 ## 📱 Responsive Behavior
 
@@ -154,16 +118,13 @@ The Logo component automatically handles sizing:
 ### Brand Guidelines
 - Always maintain proper spacing around the logo
 - Don't modify the logo mark design
-- Use appropriate theme (light/dark) for background contrast
-- Prefer compact variant for navigation to maintain clean layout
+- Use header variant for navigation to maintain clean layout
+- Use footer variant for footers and larger displays
 
 ## 📊 File Sizes
 - `logo.svg`: ~3.5KB (enhanced with better visibility)
-- `logo-dark.svg`: ~2.5KB
 - `logo-compact.svg`: ~3KB (enhanced with better visibility)
 - `logo-mark.svg`: ~1.5KB
-- `logo-docs.svg`: ~3.8KB
-- `logo-docs-compact.svg`: ~3.2KB
 - `logo-synthengyne.svg`: ~4KB
 - `logo-synthengyne-compact.svg`: ~3.5KB
 

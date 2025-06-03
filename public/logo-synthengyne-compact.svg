@@ -1,37 +1,35 @@
-<svg width="240" height="60" viewBox="0 0 240 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg width="240" height="60" viewBox="0 0 300 60" fill="none" xmlns="http://www.w3.org/2000/svg">
   <!-- Outer white ring -->
   <circle cx="20" cy="30" r="18" fill="none" stroke="#ffffff" stroke-width="2" opacity="0.9"/>
 
   <!-- Logo mark - Enhanced data/AI symbol -->
   <g transform="translate(8, 18)">
     <!-- Central node -->
-    <circle cx="12" cy="12" r="3.5" fill="url(#gradientCompact)" stroke="url(#strokeGradientCompact)" stroke-width="1"/>
+    <circle cx="12" cy="12" r="3.5" fill="#ffffff" stroke="#ffffff" stroke-width="1"/>
 
-    <!-- Main connection lines -->
+    <!-- Main connection lines - made thicker and solid white -->
     <path d="M12 2 L12 8.5 M12 15.5 L12 22 M2 12 L8.5 12 M15.5 12 L22 12"
-          stroke="url(#gradientCompact)"
+          stroke="#ffffff"
+          stroke-width="3"
+          stroke-linecap="round"/>
+
+    <!-- Corner nodes - solid white -->
+    <circle cx="6" cy="6" r="2" fill="#ffffff"/>
+    <circle cx="18" cy="6" r="2" fill="#ffffff"/>
+    <circle cx="6" cy="18" r="2" fill="#ffffff"/>
+    <circle cx="18" cy="18" r="2" fill="#ffffff"/>
+
+    <!-- Connecting lines to corners - thicker and solid white -->
+    <path d="M9.5 9.5 L6 6 M14.5 9.5 L18 6 M9.5 14.5 L6 18 M14.5 14.5 L18 18"
+          stroke="#ffffff"
           stroke-width="2.5"
           stroke-linecap="round"/>
 
-    <!-- Corner nodes -->
-    <circle cx="6" cy="6" r="2" fill="url(#gradientCompact)" opacity="0.9"/>
-    <circle cx="18" cy="6" r="2" fill="url(#gradientCompact)" opacity="0.9"/>
-    <circle cx="6" cy="18" r="2" fill="url(#gradientCompact)" opacity="0.9"/>
-    <circle cx="18" cy="18" r="2" fill="url(#gradientCompact)" opacity="0.9"/>
-
-    <!-- Connecting lines to corners -->
-    <path d="M9.5 9.5 L6 6 M14.5 9.5 L18 6 M9.5 14.5 L6 18 M14.5 14.5 L18 18"
-          stroke="url(#gradientCompact)"
-          stroke-width="2"
-          stroke-linecap="round"
-          opacity="0.8"/>
-
-    <!-- Additional detail lines -->
+    <!-- Additional detail lines - solid white -->
     <path d="M12 5 L12 6.5 M12 17.5 L12 19 M5 12 L6.5 12 M17.5 12 L19 12"
-          stroke="url(#accentGradientCompact)"
-          stroke-width="1"
-          stroke-linecap="round"
-          opacity="0.6"/>
+          stroke="#ffffff"
+          stroke-width="1.5"
+          stroke-linecap="round"/>
   </g>
 
   <!-- Main text "DataGen" -->
@@ -39,14 +37,14 @@
         font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
         font-size="22"
         font-weight="800"
-        fill="white"
+        fill="#ffffff"
         letter-spacing="-0.5px"
         filter="url(#textShadowCompact)">
     DataGen
   </text>
 
   <!-- "SynthEngyne" text in gray -->
-  <text x="138" y="38"
+  <text x="145" y="38"
         font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
         font-size="22"
         font-weight="800"
