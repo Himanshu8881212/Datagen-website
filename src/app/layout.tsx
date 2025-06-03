@@ -162,26 +162,62 @@ export default function RootLayout({
     "name": "SynthEngyne",
     "applicationCategory": "AI Development Platform",
     "operatingSystem": "Web-based",
-    "description": "SynthEngyne is our synthetic data platform designed to help businesses generate custom datasets for AI training. Our intuitive workflow supports multiple data formats including text, image, time-series, and tabular data.",
+    "description": "SynthEngyne is our AI synthetic data platform designed to help businesses generate custom machine learning datasets for artificial intelligence training. Our intuitive workflow supports multiple data formats including text, image, time-series, and tabular data with enterprise-grade privacy protection.",
     "offers": {
       "@type": "Offer",
       "price": "0",
       "priceCurrency": "INR",
-      "description": "Free tier available with premium plans"
+      "description": "Free tier available with premium AI synthetic data plans"
     },
     "creator": {
       "@type": "Organization",
       "name": "DataGen"
     },
     "featureList": [
-      "Synthetic Data Generation",
-      "Custom Dataset Creation",
-      "AI Model Training",
+      "AI Synthetic Data Generation",
+      "Custom Machine Learning Datasets",
+      "Artificial Intelligence Model Training",
       "Data Privacy Protection",
-      "Multiple Data Formats",
-      "API Access",
-      "Real-time Processing"
+      "Multiple AI Data Formats",
+      "API Access for AI Development",
+      "Real-time AI Data Processing",
+      "Enterprise AI Solutions"
     ]
+  };
+
+  const serviceSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "AI Synthetic Data Generation Services",
+    "description": "Professional artificial intelligence synthetic data generation and custom machine learning dataset creation services for enterprise AI development.",
+    "provider": {
+      "@type": "Organization",
+      "name": "DataGen"
+    },
+    "serviceType": "AI Development Services",
+    "areaServed": "Global",
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "AI Synthetic Data Services",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Custom AI Dataset Generation",
+            "description": "Generate custom synthetic datasets for machine learning and artificial intelligence training"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "AI Model Fine-tuning",
+            "description": "Professional AI model optimization and fine-tuning services"
+          }
+        }
+      ]
+    }
   };
 
   return (
@@ -207,6 +243,13 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(softwareApplicationSchema),
+          }}
+        />
+        <Script
+          id="service-schema"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(serviceSchema),
           }}
         />
 

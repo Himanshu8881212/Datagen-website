@@ -523,10 +523,10 @@ export default function Home() {
               <div className="flex flex-col justify-center space-y-6">
                 <div className="space-y-4">
                   <h1 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl xl:text-6xl/none bg-clip-text text-transparent bg-gradient-to-r from-foreground to-foreground/80">
-                    DataGen - AI Solutions & Synthetic Data
+                    DataGen - Leading <em>AI Synthetic Data</em> & <em>Generative AI</em> Platform
                   </h1>
                   <p className="max-w-[600px] text-muted-foreground text-base md:text-lg lg:text-xl leading-relaxed">
-                    We specialize in <strong>synthetic data generation</strong>, <strong>generative AI models</strong>, and <strong>end-to-end AI solutions</strong>. From data creation to model deployment.
+                    We specialize in <strong>AI synthetic data generation</strong>, <strong>custom generative AI models</strong>, and <strong>enterprise AI solutions</strong>. Transform your <em>machine learning projects</em> with privacy-compliant <strong>artificial intelligence training data</strong>.
                   </p>
                   <div className="flex flex-wrap gap-2 mt-4">
                     <span className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium">AI Synthetic Data</span>
@@ -588,10 +588,10 @@ export default function Home() {
               <div className="flex flex-col justify-center space-y-8 order-1 lg:order-2">
                 <div className="space-y-4">
                   <h2 className="text-2xl font-bold tracking-tight sm:text-3xl md:text-4xl mb-6">
-                    SynthEngyne Platform
+                    SynthEngyne - <em>AI Synthetic Data Platform</em>
                   </h2>
                   <p className="max-w-[600px] text-muted-foreground text-base md:text-lg leading-relaxed">
-                    Our cutting-edge platform for generating <strong>custom synthetic datasets</strong>. Supports multiple data formats with <strong>quality assurance</strong> and <strong>enterprise scalability</strong>.
+                    Our cutting-edge <strong>AI synthetic data platform</strong> for generating <strong>custom machine learning datasets</strong>. Supports multiple data formats with <strong>AI quality assurance</strong>, <strong>data privacy protection</strong>, and <strong>enterprise scalability</strong> for <em>artificial intelligence training</em>.
                   </p>
 
                   {/* SynthEngyne Feature Cards */}
@@ -691,9 +691,9 @@ export default function Home() {
             <div className="grid gap-8 lg:grid-cols-2 lg:gap-16 items-center">
               <div className="flex flex-col justify-center space-y-6">
                 <div className="space-y-4">
-                  <h3 className="text-xl font-bold tracking-tight sm:text-2xl md:text-3xl">Professional AI Services</h3>
+                  <h3 className="text-xl font-bold tracking-tight sm:text-2xl md:text-3xl">Professional <em>AI Development Services</em></h3>
                   <p className="max-w-[600px] text-muted-foreground text-base md:text-lg leading-relaxed">
-                    Enterprise-grade AI solutions including <strong>full-stack deployment</strong>, <strong>synthetic data services</strong>, <strong>custom model optimization</strong>, and <strong>intelligent automation systems</strong>. We deliver comprehensive solutions that drive measurable business value.
+                    Enterprise-grade <strong>artificial intelligence solutions</strong> including <strong>AI model deployment</strong>, <strong>synthetic data consulting</strong>, <strong>custom AI model fine-tuning</strong>, and <strong>intelligent automation systems</strong>. We deliver comprehensive <em>AI development services</em> that drive measurable business value through <strong>machine learning innovation</strong>.
                   </p>
                 </div>
 
@@ -1160,7 +1160,7 @@ export default function Home() {
           <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-primary/10 rounded-full blur-3xl"></div>
 
           <div className="container mx-auto px-4 md:px-6 lg:px-8 relative">
-            <div className="mx-auto max-w-3xl space-y-10">
+            <div className="mx-auto max-w-6xl space-y-10">
               <div className="text-center space-y-4">
                 <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4">Frequently Asked Questions</h2>
                 <div className="w-20 h-1 bg-gradient-to-r from-primary to-primary/50 mx-auto rounded-full mb-2"></div>
@@ -1168,7 +1168,7 @@ export default function Home() {
                   Find answers to common questions about our products and services.
                 </p>
               </div>
-              <div className="space-y-6">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                 <div className="rounded-xl border border-primary/10 p-6 bg-card shadow-sm hover:shadow-md transition-all hover:border-primary/20 group">
                   <h3 className="font-semibold text-lg group-hover:text-primary transition-colors">What is SynthEngyne?</h3>
                   <p className="mt-3 text-muted-foreground">
@@ -1197,6 +1197,12 @@ export default function Home() {
                   <h3 className="font-semibold text-lg group-hover:text-primary transition-colors">Why choose DataGen?</h3>
                   <p className="mt-3 text-muted-foreground">
                     DataGen combines innovation, reliability, scalability, and data quality to deliver effective synthetic data solutions. Our technology helps businesses develop better AI models with custom-generated training data.
+                  </p>
+                </div>
+                <div className="rounded-xl border border-primary/10 p-6 bg-card shadow-sm hover:shadow-md transition-all hover:border-primary/20 group">
+                  <h3 className="font-semibold text-lg group-hover:text-primary transition-colors">What industries can benefit from synthetic data?</h3>
+                  <p className="mt-3 text-muted-foreground">
+                    Synthetic data benefits healthcare (medical imaging, patient records), finance (fraud detection, risk modeling), automotive (autonomous vehicle training), retail (customer behavior analysis), and any industry requiring privacy-compliant AI training data.
                   </p>
                 </div>
               </div>
@@ -1267,97 +1273,97 @@ export default function Home() {
                     </div>
                   )}
 
-                <div className="space-y-2">
-                  <label className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70" htmlFor="email">
-                    Email address *
-                  </label>
-                  <input
-                    className={`flex h-10 w-full rounded-md border ${formStatus.errors?.email ? 'border-red-500' : 'border-primary/20 hover:border-primary/40 focus:border-primary'} bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 transition-colors`}
-                    id="email"
-                    name="email"
-                    placeholder="Enter your email"
-                    type="email"
-                    required
-                  />
-                  {formStatus.errors?.email && (
-                    <p className="text-xs text-red-500 mt-1">{formStatus.errors.email[0]}</p>
-                  )}
-                </div>
+                  <div className="space-y-2">
+                    <label className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70" htmlFor="email">
+                      Email address *
+                    </label>
+                    <input
+                      className={`flex h-10 w-full rounded-md border ${formStatus.errors?.email ? 'border-red-500' : 'border-primary/20 hover:border-primary/40 focus:border-primary'} bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 transition-colors`}
+                      id="email"
+                      name="email"
+                      placeholder="Enter your email"
+                      type="email"
+                      required
+                    />
+                    {formStatus.errors?.email && (
+                      <p className="text-xs text-red-500 mt-1">{formStatus.errors.email[0]}</p>
+                    )}
+                  </div>
 
-                <div className="space-y-2">
-                  <label className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70" htmlFor="name">
-                    Name *
-                  </label>
-                  <input
-                    className={`flex h-10 w-full rounded-md border ${formStatus.errors?.name ? 'border-red-500' : 'border-primary/20 hover:border-primary/40 focus:border-primary'} bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 transition-colors`}
-                    id="name"
-                    name="name"
-                    placeholder="Enter your name"
-                    type="text"
-                    required
-                  />
-                  {formStatus.errors?.name && (
-                    <p className="text-xs text-red-500 mt-1">{formStatus.errors.name[0]}</p>
-                  )}
-                </div>
+                  <div className="space-y-2">
+                    <label className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70" htmlFor="name">
+                      Name *
+                    </label>
+                    <input
+                      className={`flex h-10 w-full rounded-md border ${formStatus.errors?.name ? 'border-red-500' : 'border-primary/20 hover:border-primary/40 focus:border-primary'} bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 transition-colors`}
+                      id="name"
+                      name="name"
+                      placeholder="Enter your name"
+                      type="text"
+                      required
+                    />
+                    {formStatus.errors?.name && (
+                      <p className="text-xs text-red-500 mt-1">{formStatus.errors.name[0]}</p>
+                    )}
+                  </div>
 
-                <div className="space-y-2">
-                  <label className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70" htmlFor="phone">
-                    Phone number
-                  </label>
-                  <input
-                    className="flex h-10 w-full rounded-md border border-primary/20 hover:border-primary/40 focus:border-primary bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 transition-colors"
-                    id="phone"
-                    name="phone"
-                    placeholder="Enter your phone number"
-                    type="tel"
-                  />
-                </div>
+                  <div className="space-y-2">
+                    <label className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70" htmlFor="phone">
+                      Phone number
+                    </label>
+                    <input
+                      className="flex h-10 w-full rounded-md border border-primary/20 hover:border-primary/40 focus:border-primary bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 transition-colors"
+                      id="phone"
+                      name="phone"
+                      placeholder="Enter your phone number"
+                      type="tel"
+                    />
+                  </div>
 
-                <div className="space-y-2">
-                  <label className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70" htmlFor="message">
-                    Message *
-                  </label>
-                  <textarea
-                    className={`flex min-h-[120px] w-full rounded-md border ${formStatus.errors?.message ? 'border-red-500' : 'border-primary/20 hover:border-primary/40 focus:border-primary'} bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 transition-colors`}
-                    id="message"
-                    name="message"
-                    placeholder="Enter your message"
-                    required
-                  ></textarea>
-                  {formStatus.errors?.message && (
-                    <p className="text-xs text-red-500 mt-1">{formStatus.errors.message[0]}</p>
-                  )}
-                </div>
+                  <div className="space-y-2">
+                    <label className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70" htmlFor="message">
+                      Message *
+                    </label>
+                    <textarea
+                      className={`flex min-h-[120px] w-full rounded-md border ${formStatus.errors?.message ? 'border-red-500' : 'border-primary/20 hover:border-primary/40 focus:border-primary'} bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 transition-colors`}
+                      id="message"
+                      name="message"
+                      placeholder="Enter your message"
+                      required
+                    ></textarea>
+                    {formStatus.errors?.message && (
+                      <p className="text-xs text-red-500 mt-1">{formStatus.errors.message[0]}</p>
+                    )}
+                  </div>
 
-                <div className="flex items-center gap-3">
-                  <Button
-                    type="submit"
-                    className="w-full bg-gradient-to-r from-primary to-primary/80 text-white"
-                    disabled={formStatus.success === true}
-                  >
-                    {formStatus.success === undefined ? 'Contact Us' : formStatus.success ? 'Message Sent' : 'Try Again'}
-                  </Button>
-                  {formStatus.success && (
+                  <div className="flex items-center gap-3">
                     <Button
-                      type="button"
-                      className="bg-gradient-to-r from-primary to-primary/80 text-white"
-                      onClick={() => {
-                        setFormStatus({});
-                        const form = document.getElementById('contact-form') as HTMLFormElement;
-                        if (form) form.reset();
-                      }}
+                      type="submit"
+                      className="w-full bg-gradient-to-r from-primary to-primary/80 text-white"
+                      disabled={formStatus.success === true}
                     >
-                      Send Another
+                      {formStatus.success === undefined ? 'Contact Us' : formStatus.success ? 'Message Sent' : 'Try Again'}
                     </Button>
-                  )}
-                </div>
+                    {formStatus.success && (
+                      <Button
+                        type="button"
+                        className="bg-gradient-to-r from-primary to-primary/80 text-white"
+                        onClick={() => {
+                          setFormStatus({});
+                          const form = document.getElementById('contact-form') as HTMLFormElement;
+                          if (form) form.reset();
+                        }}
+                      >
+                        Send Another
+                      </Button>
+                    )}
+                  </div>
 
-                <p className="text-xs text-muted-foreground text-center">
-                  By submitting this form, you agree to our <Link href="/privacy-policy" className="underline hover:text-primary">Privacy Policy</Link>.
-                  Your message will be sent to <span className="text-primary">info@datagen.in</span>
-                </p>
-              </form>
+                  <p className="text-xs text-muted-foreground text-center">
+                    By submitting this form, you agree to our <Link href="/privacy-policy" className="underline hover:text-primary">Privacy Policy</Link>.
+                    Your message will be sent to <span className="text-primary">info@datagen.in</span>
+                  </p>
+                </form>
               </div>
             </div>
           </div>

@@ -78,15 +78,15 @@ export default function FAQPage() {
           <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-primary/10 rounded-full blur-3xl"></div>
 
           <div className="container mx-auto px-4 md:px-6 lg:px-8 relative">
-            <div className="mx-auto max-w-3xl space-y-8">
+            <div className="mx-auto max-w-6xl space-y-8">
               <div className="text-center mb-12">
                 <h1 className="text-4xl font-bold tracking-tight sm:text-5xl mb-4">Frequently Asked Questions</h1>
                 <div className="w-20 h-1 bg-gradient-to-r from-primary to-primary/50 mx-auto rounded-full mb-6"></div>
-                <p className="text-xl text-muted-foreground leading-relaxed">
+                <p className="text-xl text-muted-foreground leading-relaxed max-w-[700px] mx-auto">
                   Find answers to common questions about our products and services.
                 </p>
               </div>
-              <div className="space-y-6">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                 <div className="rounded-xl border border-primary/10 p-6 bg-card shadow-sm hover:shadow-md transition-all hover:border-primary/20 group">
                   <h3 className="text-xl font-semibold group-hover:text-primary transition-colors">What is SynthEngyne, and how can it help my business?</h3>
                   <p className="mt-2 text-muted-foreground">
@@ -140,6 +140,12 @@ export default function FAQPage() {
                   <h3 className="text-xl font-semibold group-hover:text-primary transition-colors">Can I customize the data generation process to meet my specific needs?</h3>
                   <p className="mt-2 text-muted-foreground">
                     Absolutely! SynthEngyne offers extensive customization options to ensure the generated data meets your specific requirements. You can define parameters such as data distribution, content types, formats, and more to create datasets that perfectly match your use case. For enterprise customers, we also offer additional customization services to tailor the data generation process even further, ensuring you get exactly the data you need for your AI models.
+                  </p>
+                </div>
+                <div className="rounded-xl border border-primary/10 p-6 bg-card shadow-sm hover:shadow-md transition-all hover:border-primary/20 group">
+                  <h3 className="text-xl font-semibold group-hover:text-primary transition-colors">What industries can benefit from synthetic data?</h3>
+                  <p className="mt-2 text-muted-foreground">
+                    Synthetic data benefits healthcare (medical imaging, patient records), finance (fraud detection, risk modeling), automotive (autonomous vehicle training), retail (customer behavior analysis), and any industry requiring privacy-compliant AI training data. Our solutions help organizations overcome data scarcity, privacy concerns, and regulatory compliance challenges while accelerating AI development across diverse sectors.
                   </p>
                 </div>
               </div>

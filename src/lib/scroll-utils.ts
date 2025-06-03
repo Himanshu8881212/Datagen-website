@@ -23,7 +23,7 @@ export function scrollToElement(elementId: string) {
     // Calculate optimal offset for professional centering
     // Header height + comfortable padding for better visual positioning
     // Accounts for section padding and provides perfect visual centering
-    const optimalOffset = headerHeight + 60; // 60px for professional spacing and perfect centering
+    const optimalOffset = headerHeight - 70; // Perfect positioning as tested
 
     // Scroll to the element with proper offset for perfect centering
     window.scrollTo({
@@ -39,7 +39,7 @@ export function scrollToElement(elementId: string) {
  * @param callback Optional callback to execute after scrolling
  */
 export function createScrollHandler(elementId: string, callback?: () => void) {
-  return (e: React.MouseEvent) => {
+  return (e: any) => {
     e.preventDefault();
     scrollToElement(elementId);
     if (callback) callback();
