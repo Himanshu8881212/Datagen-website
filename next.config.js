@@ -25,7 +25,7 @@ const nextConfig = {
     unoptimized: true, // Disable image optimization for static export
     domains: ['images.unsplash.com', 'datagen.in'], // Allow images from these domains
     formats: ['image/webp', 'image/avif'], // Modern image formats
-    dangerouslyAllowSVG: false, // Disable SVG for security
+    dangerouslyAllowSVG: true, // Enable SVG for high-quality logos
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
   },
 

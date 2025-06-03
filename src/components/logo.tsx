@@ -1,7 +1,6 @@
 'use client';
 
 import Link from 'next/link';
-import Image from 'next/image';
 
 interface LogoProps {
   className?: string;
@@ -34,13 +33,19 @@ export function Logo({ className = '', variant = 'default', theme = 'light' }: L
 
   return (
     <Link href="/" className={`transition-all duration-200 hover:opacity-90 ${className}`}>
-      <Image
+      <img
         src={getLogoSrc()}
         alt="DataGen - AI and Synthetic Data Solutions"
         width={logoSize.width}
         height={logoSize.height}
-        priority
         className="h-auto w-auto"
+        style={{
+          maxWidth: '100%',
+          height: 'auto',
+          imageRendering: 'crisp-edges',
+          shapeRendering: 'geometricPrecision',
+        }}
+        loading="eager"
       />
     </Link>
   );
