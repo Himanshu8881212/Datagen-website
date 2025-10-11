@@ -1,70 +1,15 @@
 'use client';
 
-import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
-import { Logo } from "@/components/logo";
-import { MobileMenu } from "@/components/mobile-menu";
+import { Button } from "@/components/ui/button";
+import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 
 export default function TrySynthEngyne() {
   return (
     <div className="flex flex-col min-h-screen w-full">
-      {/* Navigation */}
-      <header className="border-b border-white/20 sticky top-0 z-50 bg-black text-white shadow-md w-full">
-        <div className="container mx-auto flex h-16 md:h-20 items-center justify-between px-4 md:px-6 lg:px-8">
-          <div className="flex items-center gap-8">
-            <Logo variant="header" />
-            <nav className="hidden md:flex gap-6 lg:gap-8">
-              <Link
-                href="/#product"
-                className="text-sm font-medium text-white tracking-wide"
-              >
-                Product
-              </Link>
-              <Link
-                href="/#services"
-                className="text-sm font-medium text-white tracking-wide"
-              >
-                Services
-              </Link>
-              <Link
-                href="/#faq"
-                className="text-sm font-medium text-white tracking-wide"
-              >
-                FAQ
-              </Link>
-            </nav>
-          </div>
-          <div className="flex items-center gap-3 md:gap-4">
-            <Button
-              asChild
-              variant="outline"
-              size="sm"
-              className="hidden sm:flex bg-white text-black border-white text-sm font-bold tracking-wide"
-              onClick={(e) => {
-                e.preventDefault();
-                window.location.href = "/#contact";
-              }}
-            >
-              <Link href="/#contact">
-                Contact Us
-              </Link>
-            </Button>
-            <Button
-              asChild
-              variant="outline"
-              size="sm"
-              className="hidden sm:flex bg-white text-black border-white text-sm font-bold tracking-wide"
-            >
-              <Link href="https://docs.datagen.in/" target="_blank" rel="noopener noreferrer">
-                Docs
-              </Link>
-            </Button>
-            <MobileMenu />
-          </div>
-        </div>
-      </header>
+      <Header currentPage="trysynthengyne" />
 
       <main className="flex-1">
         {/* Try SynthEngyne Hero Section */}
@@ -74,13 +19,13 @@ export default function TrySynthEngyne() {
           <div className="absolute -top-40 -right-40 w-80 h-80 bg-primary/10 rounded-full blur-3xl"></div>
           <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-primary/10 rounded-full blur-3xl"></div>
 
-          <div className="container mx-auto px-4 md:px-6 lg:px-8 relative">
+          <div className="dynamic-container relative">
             <div className="max-w-4xl mx-auto">
               <div className="text-center mb-12">
                 <h1 className="text-4xl font-bold tracking-tight sm:text-5xl mb-4">SynthEngyne Coming Soon</h1>
                 <div className="w-20 h-1 bg-gradient-to-r from-primary to-primary/50 mx-auto rounded-full mb-6"></div>
                 <p className="text-xl text-muted-foreground leading-relaxed">
-                  We're working hard to bring you the best synthetic data platform. SynthEngyne will be available by the end of August 2025.
+                  We're working hard to bring you the best synthetic data platform. SynthEngyne will be available by the end of March 2026.
                 </p>
               </div>
 
@@ -125,7 +70,7 @@ export default function TrySynthEngyne() {
                         <h3 className="font-semibold text-lg">Flexible Subscription Plans</h3>
                       </div>
                       <p className="text-muted-foreground">
-                        Choose from free, pro (₹2200/month), and enterprise plans to suit your needs.
+                        Choose from free, pro (₹4999/month), and enterprise plans to suit your needs.
                       </p>
                     </div>
                     <div className="bg-muted/30 p-6 rounded-xl hover:bg-muted/50 transition-colors duration-300">

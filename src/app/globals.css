@@ -116,7 +116,160 @@
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
+  }
+
+  /* Mobile-specific optimizations */
+  @media (max-width: 768px) {
+
+    /* Improve touch targets */
+    button,
+    a,
+    [role="button"] {
+      min-height: 44px;
+      min-width: 44px;
+    }
+
+    /* Optimize text for mobile reading */
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      line-height: 1.2;
+    }
+
+    p {
+      line-height: 1.6;
+    }
+
+    /* Prevent horizontal scroll */
+    body {
+      overflow-x: hidden;
+    }
+
+    /* Optimize form inputs for mobile */
+    input,
+    textarea,
+    select {
+      font-size: 16px;
+      /* Prevents zoom on iOS */
+    }
+  }
+
+  /* Touch-friendly interactions */
+  .touch-manipulation {
+    touch-action: manipulation;
+  }
+
+  /* Smooth scrolling for mobile */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Mobile-friendly focus states */
+  @media (max-width: 768px) {
+    *:focus {
+      outline: 2px solid #000;
+      outline-offset: 2px;
+    }
+  }
+
+  /* Ensure images are responsive */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Mobile-friendly tables */
+  @media (max-width: 768px) {
+    table {
+      display: block;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+
+    th,
+    td {
+      padding: 0.5rem;
+      font-size: 0.875rem;
+    }
+  }
+
+  /* Dynamic width and responsive optimizations */
+  .dynamic-container {
+    width: 100%;
+    max-width: none;
+    margin: 0 auto;
+    padding-left: clamp(1rem, 5vw, 3rem);
+    padding-right: clamp(1rem, 5vw, 3rem);
+  }
+
+  /* Responsive breakpoints for different aspect ratios */
+  @media (min-width: 320px) and (max-width: 768px) {
+
+    /* Mobile phones */
+    .dynamic-container {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+  }
+
+  @media (min-width: 769px) and (max-width: 1024px) {
+
+    /* Tablets */
+    .dynamic-container {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+  }
+
+  @media (min-width: 1025px) and (max-width: 1440px) {
+
+    /* Desktop */
+    .dynamic-container {
+      padding-left: 3rem;
+      padding-right: 3rem;
+    }
+  }
+
+  @media (min-width: 1441px) and (max-width: 1920px) {
+
+    /* Large desktop */
+    .dynamic-container {
+      padding-left: 4rem;
+      padding-right: 4rem;
+    }
+  }
+
+  @media (min-width: 1921px) {
+
+    /* Ultra-wide screens */
+    .dynamic-container {
+      padding-left: 6rem;
+      padding-right: 6rem;
+    }
+  }
+
+  /* Aspect ratio specific optimizations */
+  @media (aspect-ratio: 16/9) {
+    .dynamic-container {
+      max-width: 90vw;
+    }
+  }
+
+  @media (aspect-ratio: 21/9) {
+    .dynamic-container {
+      max-width: 85vw;
+    }
+  }
+
+  @media (aspect-ratio: 32/9) {
+    .dynamic-container {
+      max-width: 80vw;
+    }
   }
 }

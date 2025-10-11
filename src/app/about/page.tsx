@@ -1,78 +1,14 @@
 'use client';
 
-import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import { Logo } from "@/components/logo";
-import { MobileMenu } from "@/components/mobile-menu";
+import { Button } from "@/components/ui/button";
+import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 
 export default function AboutPage() {
   return (
     <div className="flex flex-col min-h-screen w-full">
-      {/* Navigation */}
-      <header className="border-b border-white/20 sticky top-0 z-50 bg-black text-white shadow-md w-full">
-        <div className="container mx-auto flex h-16 md:h-20 items-center justify-between px-4 md:px-6 lg:px-8">
-          <div className="flex items-center gap-8">
-            <Logo variant="header" />
-            <nav className="hidden md:flex gap-6 lg:gap-8">
-              <Link
-                href="/#product"
-                className="text-sm font-medium text-white tracking-wide"
-              >
-                Product
-              </Link>
-              <Link
-                href="/#services"
-                className="text-sm font-medium text-white tracking-wide"
-              >
-                Services
-              </Link>
-              <Link
-                href="/#faq"
-                className="text-sm font-medium text-white tracking-wide"
-              >
-                FAQ
-              </Link>
-            </nav>
-          </div>
-          <div className="flex items-center gap-3 md:gap-4">
-            <Button
-              asChild
-              variant="outline"
-              size="sm"
-              className="hidden sm:flex bg-white text-black border-white text-sm font-bold tracking-wide"
-              onClick={(e) => {
-                e.preventDefault();
-                window.location.href = "/#contact";
-              }}
-            >
-              <Link href="/#contact">
-                Contact Us
-              </Link>
-            </Button>
-            <Button
-              asChild
-              variant="outline"
-              size="sm"
-              className="hidden sm:flex bg-white text-black border-white text-sm font-bold tracking-wide"
-            >
-              <Link href="https://docs.datagen.in/" target="_blank" rel="noopener noreferrer">
-                Docs
-              </Link>
-            </Button>
-            <Button
-              asChild
-              size="sm"
-              className="hidden sm:flex bg-white text-black border-white text-sm font-bold tracking-wide"
-            >
-              <Link href="/trysynthengyne">
-                Try SynthEngyne
-              </Link>
-            </Button>
-            <MobileMenu />
-          </div>
-        </div>
-      </header>
+      <Header currentPage="about" />
 
       <main className="flex-1">
         {/* About Hero Section */}

@@ -273,7 +273,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-background min-h-screen`}
         suppressHydrationWarning
       >
-        <div className="relative mx-auto max-w-[1920px] overflow-x-hidden">
+        <div className="relative w-full min-h-screen overflow-x-hidden">
           {children}
         </div>
         <Toaster />

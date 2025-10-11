@@ -13,7 +13,7 @@ interface HeaderProps {
 export function Header({ currentPage = "home" }: HeaderProps) {
   return (
     <header className="border-b border-white/20 sticky top-0 z-50 bg-black text-white shadow-md w-full">
-      <div className="container mx-auto flex h-16 md:h-20 items-center justify-between px-4 md:px-6 lg:px-8">
+      <div className="dynamic-container flex h-16 md:h-20 items-center justify-between">
         <div className="flex items-center gap-8">
           <Logo variant="header" />
           <nav className="hidden md:flex gap-6 lg:gap-8">
@@ -62,42 +62,36 @@ export function Header({ currentPage = "home" }: HeaderProps) {
             >
               FAQ
             </Link>
+            <Link
+              href={currentPage === "home" ? "#contact" : "/#contact"}
+              className="text-sm font-medium text-white tracking-wide"
+              onClick={(e) => {
+                if (currentPage === "home") {
+                  e.preventDefault();
+                  scrollToElement('contact');
+                  window.history.pushState(null, '', '#contact');
+                } else {
+                  window.location.href = "/#contact";
+                }
+              }}
+            >
+              Contact Us
+            </Link>
+            <Link
+              href="https://docs.datagen.in/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm font-medium text-white tracking-wide"
+            >
+              Docs
+            </Link>
           </nav>
         </div>
         <div className="flex items-center gap-3 md:gap-4">
           <Button
             asChild
-            variant="outline"
             size="sm"
-            className="hidden sm:flex bg-white text-black border-white text-sm font-bold tracking-wide"
-            onClick={(e) => {
-              if (currentPage === "home") {
-                e.preventDefault();
-                scrollToElement('contact');
-                window.history.pushState(null, '', '#contact');
-              } else {
-                window.location.href = "/#contact";
-              }
-            }}
-          >
-            <Link href={currentPage === "home" ? "#contact" : "/#contact"}>
-              Contact Us
-            </Link>
-          </Button>
-          <Button
-            asChild
-            variant="outline"
-            size="sm"
-            className="hidden sm:flex bg-white text-black border-white text-sm font-bold tracking-wide"
-          >
-            <Link href="https://docs.datagen.in/" target="_blank" rel="noopener noreferrer">
-              Docs
-            </Link>
-          </Button>
-          <Button
-            asChild
-            size="sm"
-            className="hidden sm:flex bg-white text-black border-white text-sm font-bold tracking-wide"
+            className="hidden sm:flex bg-white text-black border-white text-sm font-bold tracking-wide hover:bg-white"
           >
             <Link href="/trysynthengyne">
               Try SynthEngyne

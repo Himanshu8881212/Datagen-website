@@ -431,7 +431,7 @@ export default function Home() {
     <div className="flex flex-col min-h-screen w-full">
       {/* Navigation */}
       <header className="border-b border-white/20 sticky top-0 z-50 bg-black text-white shadow-md w-full">
-        <div className="container mx-auto flex h-16 md:h-20 items-center justify-between px-4 md:px-6 lg:px-8">
+        <div className="dynamic-container flex h-16 md:h-20 items-center justify-between">
           <div className="flex items-center gap-8">
             <Logo variant="header" />
             <nav className="hidden md:flex gap-6 lg:gap-8">
@@ -468,38 +468,32 @@ export default function Home() {
               >
                 FAQ
               </Link>
+              <Link
+                href="#contact"
+                className="text-sm font-medium text-white tracking-wide"
+                onClick={(e) => {
+                  e.preventDefault();
+                  scrollToElement('contact');
+                  window.history.pushState(null, '', '#contact');
+                }}
+              >
+                Contact Us
+              </Link>
+              <Link
+                href="https://docs.datagen.in/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm font-medium text-white tracking-wide"
+              >
+                Docs
+              </Link>
             </nav>
           </div>
           <div className="flex items-center gap-3 md:gap-4">
             <Button
               asChild
-              variant="outline"
               size="sm"
-              className="hidden sm:flex bg-white text-black border-white text-sm font-bold tracking-wide"
-              onClick={(e) => {
-                e.preventDefault();
-                scrollToElement('contact');
-                window.history.pushState(null, '', '#contact');
-              }}
-            >
-              <Link href="#contact">
-                Contact Us
-              </Link>
-            </Button>
-            <Button
-              asChild
-              variant="outline"
-              size="sm"
-              className="hidden sm:flex bg-white text-black border-white text-sm font-bold tracking-wide"
-            >
-              <Link href="https://docs.datagen.in/" target="_blank" rel="noopener noreferrer">
-                Docs
-              </Link>
-            </Button>
-            <Button
-              asChild
-              size="sm"
-              className="hidden sm:flex bg-white text-black border-white text-sm font-bold tracking-wide"
+              className="hidden sm:flex bg-white text-black border-white text-sm font-bold tracking-wide hover:bg-white"
             >
               <Link href="/trysynthengyne">
                 Try SynthEngyne
@@ -518,7 +512,7 @@ export default function Home() {
           <div className="absolute -top-40 -right-40 w-80 h-80 bg-primary/10 rounded-full blur-3xl"></div>
           <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-primary/10 rounded-full blur-3xl"></div>
 
-          <div className="container mx-auto px-4 md:px-6 lg:px-8 relative">
+          <div className="dynamic-container relative">
             <div className="grid gap-8 lg:grid-cols-2 lg:gap-16 items-center">
               <div className="flex flex-col justify-center space-y-6">
                 <div className="space-y-4">
@@ -568,7 +562,7 @@ export default function Home() {
           <div className="absolute -top-40 -left-40 w-80 h-80 bg-primary/10 rounded-full blur-3xl"></div>
           <div className="absolute -bottom-40 -right-40 w-80 h-80 bg-primary/10 rounded-full blur-3xl"></div>
 
-          <div className="container mx-auto px-4 md:px-6 lg:px-8 relative">
+          <div className="dynamic-container relative">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4">Our Product</h2>
               <div className="w-20 h-1 bg-gradient-to-r from-primary to-primary/50 mx-auto rounded-full"></div>
@@ -682,7 +676,7 @@ export default function Home() {
           <div className="absolute -top-40 -right-40 w-80 h-80 bg-primary/10 rounded-full blur-3xl"></div>
           <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-primary/10 rounded-full blur-3xl"></div>
 
-          <div className="container mx-auto px-4 md:px-6 lg:px-8 relative">
+          <div className="dynamic-container relative">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4">Our Services</h2>
               <div className="w-20 h-1 bg-gradient-to-r from-primary to-primary/50 mx-auto rounded-full"></div>
@@ -796,7 +790,7 @@ export default function Home() {
           <div className="absolute -top-40 -left-40 w-80 h-80 bg-primary/10 rounded-full blur-3xl"></div>
           <div className="absolute -bottom-40 -right-40 w-80 h-80 bg-primary/10 rounded-full blur-3xl"></div>
 
-          <div className="container mx-auto px-4 md:px-6 lg:px-8 relative">
+          <div className="dynamic-container relative">
             <div className="mx-auto max-w-5xl space-y-12">
               <div className="text-center space-y-4">
                 <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4">Simple Pricing Plans</h2>
@@ -916,7 +910,7 @@ export default function Home() {
                     <p className="text-muted-foreground">For professionals and growing teams</p>
                   </div>
                   <div className="mt-6 flex items-baseline">
-                    <span className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/80">₹2200</span>
+                    <span className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/80">₹4999</span>
                     <span className="ml-1 text-muted-foreground">/month</span>
                   </div>
                   <div className="mt-2 mb-6 h-0.5 w-16 bg-gradient-to-r from-primary to-primary/30 rounded-full"></div>
@@ -1159,7 +1153,7 @@ export default function Home() {
           <div className="absolute -top-40 -right-40 w-80 h-80 bg-primary/10 rounded-full blur-3xl"></div>
           <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-primary/10 rounded-full blur-3xl"></div>
 
-          <div className="container mx-auto px-4 md:px-6 lg:px-8 relative">
+          <div className="dynamic-container relative">
             <div className="mx-auto max-w-6xl space-y-10">
               <div className="text-center space-y-4">
                 <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4">Frequently Asked Questions</h2>
@@ -1190,7 +1184,7 @@ export default function Home() {
                 <div className="rounded-xl border border-primary/10 p-6 bg-card shadow-sm hover:shadow-md transition-all hover:border-primary/20 group">
                   <h3 className="font-semibold text-lg group-hover:text-primary transition-colors">How much does SynthEngyne cost?</h3>
                   <p className="mt-3 text-muted-foreground">
-                    We offer a Free tier (₹0/month) with 3 dataspaces and 3 datasets per space. Our Pro tier (₹2200/month) includes 10 dataspaces, 7 datasets per space, priority processing, and API access. For larger organizations, we provide custom Enterprise solutions.
+                    We offer a Free tier (₹0/month) with 3 dataspaces and 3 datasets per space. Our Pro tier (₹4999/month) includes 10 dataspaces, 7 datasets per space, priority processing, and API access. For larger organizations, we provide custom Enterprise solutions.
                   </p>
                 </div>
                 <div className="rounded-xl border border-primary/10 p-6 bg-card shadow-sm hover:shadow-md transition-all hover:border-primary/20 group">
@@ -1216,7 +1210,7 @@ export default function Home() {
           <div className="absolute -top-40 -left-40 w-80 h-80 bg-primary/10 rounded-full blur-3xl"></div>
           <div className="absolute -bottom-40 -right-40 w-80 h-80 bg-primary/10 rounded-full blur-3xl"></div>
 
-          <div className="container mx-auto px-4 md:px-6 lg:px-8 relative">
+          <div className="dynamic-container relative">
             <div className="mx-auto max-w-3xl space-y-10">
               <div className="text-center space-y-4">
                 <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4">Contact Us</h2>

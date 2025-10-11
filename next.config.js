@@ -10,7 +10,6 @@ const nextConfig = {
   // Disable server-side features that could be security risks in static export
   experimental: {
     optimizeCss: true,
-    optimizePackageImports: ['@/components', '@/lib'],
   },
 
   eslint: {

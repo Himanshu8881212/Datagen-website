@@ -76,110 +76,87 @@ export function MobileMenu() {
           {/* Menu content */}
           <div className="fixed inset-x-0 top-16 bottom-0 z-50 bg-black text-white border-t border-white/20">
             <nav className="container mx-auto px-4 md:px-6 lg:px-8 flex flex-col gap-6 p-6">
-            <Link
-              href="#product"
-              className="text-xl font-medium hover:text-primary transition-colors py-3 border-b border-white/30 flex items-center justify-between"
-              onClick={(e) => {
-                e.preventDefault();
-                scrollToElement('product');
-                window.history.pushState(null, '', '#product');
-                closeMenu();
-              }}
-            >
-              <span>Product</span>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="18"
-                height="18"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="text-primary/70"
+              <Link
+                href="#product"
+                className="text-xl font-medium hover:text-primary transition-colors py-3 border-b border-white/30 flex items-center justify-between"
+                onClick={(e) => {
+                  e.preventDefault();
+                  scrollToElement('product');
+                  window.history.pushState(null, '', '#product');
+                  closeMenu();
+                }}
               >
-                <path d="m9 18 6-6-6-6"/>
-              </svg>
-            </Link>
-            <Link
-              href="#services"
-              className="text-xl font-medium hover:text-primary transition-colors py-3 border-b border-white/30 flex items-center justify-between"
-              onClick={(e) => {
-                e.preventDefault();
-                scrollToElement('services');
-                window.history.pushState(null, '', '#services');
-                closeMenu();
-              }}
-            >
-              <span>Services</span>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="18"
-                height="18"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="text-primary/70"
+                <span>Product</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="text-primary/70"
+                >
+                  <path d="m9 18 6-6-6-6" />
+                </svg>
+              </Link>
+              <Link
+                href="#services"
+                className="text-xl font-medium hover:text-primary transition-colors py-3 border-b border-white/30 flex items-center justify-between"
+                onClick={(e) => {
+                  e.preventDefault();
+                  scrollToElement('services');
+                  window.history.pushState(null, '', '#services');
+                  closeMenu();
+                }}
               >
-                <path d="m9 18 6-6-6-6"/>
-              </svg>
-            </Link>
-            <Link
-              href="#faq"
-              className="text-xl font-medium hover:text-primary transition-colors py-3 border-b border-white/30 flex items-center justify-between"
-              onClick={(e) => {
-                e.preventDefault();
-                scrollToElement('faq');
-                window.history.pushState(null, '', '#faq');
-                closeMenu();
-              }}
-            >
-              <span>FAQ</span>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="18"
-                height="18"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="text-primary/70"
+                <span>Services</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="text-primary/70"
+                >
+                  <path d="m9 18 6-6-6-6" />
+                </svg>
+              </Link>
+              <Link
+                href="#faq"
+                className="text-xl font-medium hover:text-primary transition-colors py-3 border-b border-white/30 flex items-center justify-between"
+                onClick={(e) => {
+                  e.preventDefault();
+                  scrollToElement('faq');
+                  window.history.pushState(null, '', '#faq');
+                  closeMenu();
+                }}
               >
-                <path d="m9 18 6-6-6-6"/>
-              </svg>
-            </Link>
-            <Link
-              href="/privacy-policy"
-              className="text-xl font-medium hover:text-primary transition-colors py-3 border-b border-white/30 flex items-center justify-between"
-              onClick={closeMenu}
-            >
-              <span>Privacy Policy</span>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="18"
-                height="18"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="text-primary/70"
-              >
-                <path d="m9 18 6-6-6-6"/>
-              </svg>
-            </Link>
-            <div className="flex flex-col gap-4 mt-6">
-              <Button
-                asChild
-                variant="outline"
-                className="h-12 text-base bg-white text-black border-white hover:bg-white/90 font-bold tracking-wide"
+                <span>FAQ</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="text-primary/70"
+                >
+                  <path d="m9 18 6-6-6-6" />
+                </svg>
+              </Link>
+              <Link
+                href="#contact"
+                className="text-xl font-medium hover:text-primary transition-colors py-3 border-b border-white/30 flex items-center justify-between"
                 onClick={(e) => {
                   e.preventDefault();
                   scrollToElement('contact');
@@ -187,23 +164,75 @@ export function MobileMenu() {
                   closeMenu();
                 }}
               >
-                <Link href="#contact">Contact Us</Link>
-              </Button>
-              <Button
-                asChild
-                variant="outline"
-                className="h-12 text-base bg-white text-black border-white hover:bg-white/90 font-bold tracking-wide"
+                <span>Contact Us</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="text-primary/70"
+                >
+                  <path d="m9 18 6-6-6-6" />
+                </svg>
+              </Link>
+              <Link
+                href="https://docs.datagen.in/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-xl font-medium hover:text-primary transition-colors py-3 border-b border-white/30 flex items-center justify-between"
+                onClick={closeMenu}
               >
-                <Link href="https://docs.datagen.in/" target="_blank" rel="noopener noreferrer" onClick={closeMenu}>Docs</Link>
-              </Button>
-              <Button
-                asChild
-                className="h-12 text-base bg-white text-black border-white hover:bg-white/90 font-bold tracking-wide"
+                <span>Docs</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="text-primary/70"
+                >
+                  <path d="m9 18 6-6-6-6" />
+                </svg>
+              </Link>
+              <Link
+                href="/privacy-policy"
+                className="text-xl font-medium hover:text-primary transition-colors py-3 border-b border-white/30 flex items-center justify-between"
+                onClick={closeMenu}
               >
-                <Link href="/trysynthengyne" onClick={closeMenu}>Try SynthEngyne</Link>
-              </Button>
-            </div>
-          </nav>
+                <span>Privacy Policy</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="text-primary/70"
+                >
+                  <path d="m9 18 6-6-6-6" />
+                </svg>
+              </Link>
+              <div className="flex flex-col gap-4 mt-6">
+                <Button
+                  asChild
+                  className="h-12 text-base bg-white text-black border-white font-bold tracking-wide hover:bg-white"
+                >
+                  <Link href="/trysynthengyne" onClick={closeMenu}>Try SynthEngyne</Link>
+                </Button>
+              </div>
+            </nav>
           </div>
         </>
       )}

@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
-import { Logo } from "@/components/logo";
 
 export const metadata: Metadata = {
   title: "Machine Learning Datasets | Custom AI Training Data | DataGen",
@@ -22,36 +22,7 @@ export const metadata: Metadata = {
 export default function MachineLearningDatasetsPage() {
   return (
     <div className="flex flex-col min-h-screen w-full">
-      {/* Navigation */}
-      <header className="border-b border-white/20 sticky top-0 z-50 bg-black text-white shadow-md w-full">
-        <div className="container mx-auto flex h-16 md:h-20 items-center justify-between px-4 md:px-6 lg:px-8">
-          <div className="flex items-center gap-8">
-            <Logo variant="header" />
-            <nav className="hidden md:flex gap-6 lg:gap-8">
-              <Link href="/" className="text-sm font-medium text-white hover:text-primary transition-colors">
-                Home
-              </Link>
-              <Link href="/services" className="text-sm font-medium text-white hover:text-primary transition-colors">
-                Services
-              </Link>
-              <Link href="/product" className="text-sm font-medium text-white hover:text-primary transition-colors">
-                Product
-              </Link>
-            </nav>
-          </div>
-          <div className="flex items-center gap-3 md:gap-4">
-            <Button asChild variant="outline" size="sm" className="hidden sm:flex bg-white text-black">
-              <Link href="/#contact">Contact Us</Link>
-            </Button>
-            <Button asChild variant="outline" size="sm" className="hidden sm:flex bg-white text-black">
-              <Link href="https://docs.datagen.in/" target="_blank" rel="noopener noreferrer">Docs</Link>
-            </Button>
-            <Button asChild size="sm" className="hidden sm:flex bg-white text-black">
-              <Link href="/trysynthengyne">Try SynthEngyne</Link>
-            </Button>
-          </div>
-        </div>
-      </header>
+      <Header currentPage="machine-learning-datasets" />
 
       <main className="flex-1">
         {/* Hero Section */}

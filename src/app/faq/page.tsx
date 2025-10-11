@@ -1,74 +1,14 @@
 'use client';
 
-import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import { Logo } from "@/components/logo";
-import { MobileMenu } from "@/components/mobile-menu";
+import { Button } from "@/components/ui/button";
+import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 
 export default function FAQPage() {
   return (
     <div className="flex flex-col min-h-screen w-full">
-      {/* Navigation */}
-      <header className="border-b border-white/20 sticky top-0 z-50 bg-black text-white shadow-md w-full">
-        <div className="container mx-auto flex h-16 md:h-20 items-center justify-between px-4 md:px-6 lg:px-8">
-          <div className="flex items-center gap-8">
-            <Logo variant="header" />
-            <nav className="hidden md:flex gap-6 lg:gap-8">
-              <Link
-                href="/#product"
-                className="text-sm font-medium text-white tracking-wide"
-              >
-                Product
-              </Link>
-              <Link
-                href="/#services"
-                className="text-sm font-medium text-white tracking-wide"
-              >
-                Services
-              </Link>
-              <Link
-                href="/#faq"
-                className="text-sm font-medium text-white tracking-wide"
-              >
-                FAQ
-              </Link>
-            </nav>
-          </div>
-          <div className="flex items-center gap-3 md:gap-4">
-            <Button
-              asChild
-              variant="outline"
-              size="sm"
-              className="hidden sm:flex bg-white text-black border-white text-sm font-bold tracking-wide"
-            >
-              <Link href="/#contact">
-                Contact Us
-              </Link>
-            </Button>
-            <Button
-              asChild
-              variant="outline"
-              size="sm"
-              className="hidden sm:flex bg-white text-black border-white text-sm font-bold tracking-wide"
-            >
-              <Link href="https://docs.datagen.in/" target="_blank" rel="noopener noreferrer">
-                Docs
-              </Link>
-            </Button>
-            <Button
-              asChild
-              size="sm"
-              className="hidden sm:flex bg-white text-black border-white text-sm font-bold tracking-wide"
-            >
-              <Link href="/trysynthengyne">
-                Try SynthEngyne
-              </Link>
-            </Button>
-            <MobileMenu />
-          </div>
-        </div>
-      </header>
+      <Header currentPage="faq" />
 
       <main className="flex-1">
         <section className="py-24 md:py-36 relative overflow-hidden">
@@ -132,7 +72,7 @@ export default function FAQPage() {
                 <div className="rounded-xl border border-primary/10 p-6 bg-card shadow-sm hover:shadow-md transition-all hover:border-primary/20 group">
                   <h3 className="text-xl font-semibold group-hover:text-primary transition-colors">What are the pricing options for SynthEngyne?</h3>
                   <p className="mt-2 text-muted-foreground">
-                    SynthEngyne offers flexible pricing options to suit different needs and budgets. We have a free tier for individuals and small projects, a Pro tier at ₹2200/month for professionals and growing teams, and an Enterprise tier with custom pricing for large organizations with specific requirements. Each tier offers different features and usage limits, allowing you to choose the option that best fits your needs. For detailed pricing information, please visit our pricing page or contact us directly.
+                    SynthEngyne offers flexible pricing options to suit different needs and budgets. We have a free tier for individuals and small projects, a Pro tier at ₹4999/month for professionals and growing teams, and an Enterprise tier with custom pricing for large organizations with specific requirements. Each tier offers different features and usage limits, allowing you to choose the option that best fits your needs. For detailed pricing information, please visit our pricing page or contact us directly.
                   </p>
                 </div>
 
