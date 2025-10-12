@@ -794,7 +794,7 @@ export default function Home() {
             <div className="mx-auto max-w-6xl space-y-12">
               {/* Header */}
               <div className="text-center space-y-4">
-                <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4">Simple, Transparent Pricing</h2>
+                <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4">Pricing</h2>
                 <div className="w-20 h-1 bg-gradient-to-r from-primary to-primary/50 mx-auto rounded-full mb-6"></div>
                 <p className="text-muted-foreground max-w-[700px] mx-auto md:text-lg">
                   Pay only for what you use with our credit-based system. No subscriptions, no hidden fees.
