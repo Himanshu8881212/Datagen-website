@@ -791,28 +791,48 @@ export default function Home() {
           <div className="absolute -bottom-40 -right-40 w-80 h-80 bg-primary/10 rounded-full blur-3xl"></div>
 
           <div className="dynamic-container relative">
-            <div className="mx-auto max-w-5xl space-y-12">
+            <div className="mx-auto max-w-6xl space-y-12">
               <div className="text-center space-y-4">
-                <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4">Simple Pricing Plans</h2>
+                <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4">Simple, Transparent Pricing</h2>
                 <div className="w-20 h-1 bg-gradient-to-r from-primary to-primary/50 mx-auto rounded-full mb-6"></div>
                 <p className="text-muted-foreground max-w-[700px] mx-auto md:text-lg">
-                  Choose the plan that fits your needs. All plans include access to our core features with different capacity limits.
+                  Pay only for what you use with our credit-based system. No subscriptions, no hidden fees.
                 </p>
               </div>
 
-              <div className="grid gap-8 md:grid-cols-3">
-                {/* Free Plan */}
-                <div className="flex flex-col rounded-xl border border-border bg-card p-8 shadow-md transition-all hover:shadow-lg hover:border-primary/20 group">
+              {/* Free Monthly Credits Banner */}
+              <div className="mx-auto max-w-3xl">
+                <div className="rounded-2xl border-2 border-primary/20 bg-gradient-to-r from-primary/5 to-primary/10 p-6 md:p-8">
+                  <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+                    <div className="text-center md:text-left">
+                      <h3 className="text-2xl font-bold mb-2">Get 1,000 Free Credits Every Month!</h3>
+                      <p className="text-muted-foreground">
+                        Start generating data immediately with our monthly free credits. No credit card required.
+                      </p>
+                    </div>
+                    <div className="flex-shrink-0">
+                      <div className="bg-primary text-primary-foreground px-6 py-3 rounded-full font-bold text-lg whitespace-nowrap">
+                        ₹50 Value
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Credit Packages */}
+              <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+                {/* Starter Package */}
+                <div className="flex flex-col rounded-xl border border-border bg-card p-6 shadow-md transition-all hover:shadow-lg hover:border-primary/20">
                   <div className="space-y-2">
-                    <h3 className="text-xl font-bold">Free</h3>
-                    <p className="text-muted-foreground">Perfect for individuals and small projects</p>
+                    <h3 className="text-lg font-bold">Starter</h3>
+                    <p className="text-sm text-muted-foreground">For small projects</p>
                   </div>
-                  <div className="mt-6 flex items-baseline">
-                    <span className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-foreground to-foreground/80">₹0</span>
-                    <span className="ml-1 text-muted-foreground">/month</span>
+                  <div className="mt-4 flex items-baseline">
+                    <span className="text-3xl font-bold">₹1,500</span>
                   </div>
-                  <div className="mt-2 mb-6 h-0.5 w-16 bg-gradient-to-r from-primary/30 to-transparent rounded-full"></div>
-                  <ul className="mt-6 space-y-4 text-sm flex-1">
+                  <div className="mt-1 text-sm text-muted-foreground">30,000 credits</div>
+                  <div className="mt-2 mb-4 h-0.5 w-12 bg-gradient-to-r from-primary/30 to-transparent rounded-full"></div>
+                  <ul className="mt-4 space-y-3 text-sm flex-1">
                     <li className="flex items-center">
                       <div className="mr-3 h-5 w-5 rounded-full bg-primary/10 flex items-center justify-center">
                         <svg
