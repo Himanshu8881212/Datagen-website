@@ -167,7 +167,7 @@ export default function RootLayout({
       "@type": "Offer",
       "price": "0",
       "priceCurrency": "INR",
-      "description": "Free tier available with premium AI synthetic data plans"
+      "description": "Credit-based pricing with 1,000 free credits monthly. Pay only for what you use."
     },
     "creator": {
       "@type": "Organization",

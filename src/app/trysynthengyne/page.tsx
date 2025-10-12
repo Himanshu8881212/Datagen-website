@@ -22,10 +22,10 @@ export default function TrySynthEngyne() {
           <div className="dynamic-container relative">
             <div className="max-w-4xl mx-auto">
               <div className="text-center mb-12">
-                <h1 className="text-4xl font-bold tracking-tight sm:text-5xl mb-4">SynthEngyne Coming Soon</h1>
+                <h1 className="text-4xl font-bold tracking-tight sm:text-5xl mb-4">SynthEngyne - Closed Alpha</h1>
                 <div className="w-20 h-1 bg-gradient-to-r from-primary to-primary/50 mx-auto rounded-full mb-6"></div>
                 <p className="text-xl text-muted-foreground leading-relaxed">
-                  We're working hard to bring you the best synthetic data platform. SynthEngyne will be available by the end of March 2026.
+                  We're working hard to bring you the best synthetic data platform. SynthEngyne is currently in closed alpha and will be publicly available by the end of March 2026.
                 </p>
               </div>
 
@@ -67,10 +67,10 @@ export default function TrySynthEngyne() {
                             <line x1="12" y1="22" x2="12" y2="12"></line>
                           </svg>
                         </div>
-                        <h3 className="font-semibold text-lg">Flexible Subscription Plans</h3>
+                        <h3 className="font-semibold text-lg">Credit-Based Pricing</h3>
                       </div>
                       <p className="text-muted-foreground">
-                        Choose from free, pro (₹4999/month), and enterprise plans to suit your needs.
+                        Pay only for what you use with our simple credit system. Get 1,000 free credits monthly, then purchase credits as needed starting from ₹1,500.
                       </p>
                     </div>
                     <div className="bg-muted/30 p-6 rounded-xl hover:bg-muted/50 transition-colors duration-300">

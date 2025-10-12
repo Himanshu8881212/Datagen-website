@@ -5,7 +5,7 @@ export const seoConfig = {
   siteName: 'DataGen - AI Synthetic Data Solutions',
   defaultTitle: 'DataGen - AI Synthetic Data Solutions | Generative AI Models & Custom Datasets',
   defaultDescription: 'DataGen specializes in AI synthetic data generation, generative AI models, and custom datasets for machine learning. Transform your AI projects with SynthEngyne - the leading synthetic data platform for artificial intelligence training.',
-  
+
   // Primary AI-focused keywords
   primaryKeywords: [
     'artificial intelligence',
@@ -158,7 +158,7 @@ export const seoConfig = {
         '@type': 'Offer',
         price: '0',
         priceCurrency: 'INR',
-        description: 'Free tier available with premium plans'
+        description: 'Credit-based pricing with 1,000 free credits monthly'
       },
       featureList: [
         'Synthetic Data Generation',
