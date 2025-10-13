@@ -90,18 +90,18 @@ export function MobileMenu() {
 
       {/* Menu content - Professional design */}
       <div
-        className={`fixed inset-x-0 top-16 bottom-0 z-50 bg-gradient-to-b from-black via-black to-black/95 text-white border-t border-white/10 shadow-2xl transition-transform duration-300 ease-out ${isOpen ? 'translate-x-0' : 'translate-x-full'
+        className={`fixed inset-x-0 top-0 bottom-0 z-50 bg-gradient-to-b from-black via-black to-black/95 text-white shadow-2xl transition-transform duration-300 ease-out ${isOpen ? 'translate-x-0' : 'translate-x-full'
           }`}
       >
         <div className="h-full flex flex-col overflow-y-auto">
-          {/* Logo section with subtle gradient */}
-          <div className="px-5 py-4 border-b border-white/5 bg-gradient-to-r from-white/[0.02] to-transparent">
+          {/* Logo section - matches header height */}
+          <div className="h-16 px-5 flex items-center border-b border-white/5 bg-black">
             <Link href="/" onClick={closeMenu} className="inline-block group">
               <Image
                 src="/logo-compact.svg"
                 alt="DataGen"
-                width={110}
-                height={33}
+                width={160}
+                height={48}
                 className="h-auto w-auto transition-opacity group-hover:opacity-80"
                 priority
               />
@@ -109,7 +109,7 @@ export function MobileMenu() {
           </div>
 
           {/* Navigation Links - Professional styling */}
-          <nav className="flex-1 px-3 py-4 space-y-1">
+          <nav className="flex-1 px-3 pt-2 pb-4 space-y-1">
             <Link
               href="#product"
               className="group flex items-center justify-between px-4 py-3.5 text-[15px] font-medium text-white/90 hover:text-white hover:bg-white/5 rounded-lg transition-all duration-200 active:scale-[0.98]"
@@ -199,54 +199,6 @@ export function MobileMenu() {
               }}
             >
               <span className="tracking-wide">Contact Us</span>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="18"
-                height="18"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="text-white/30 group-hover:text-white/60 group-hover:translate-x-0.5 transition-all"
-              >
-                <path d="m9 18 6-6-6-6" />
-              </svg>
-            </Link>
-
-            {/* Divider */}
-            <div className="h-px bg-gradient-to-r from-transparent via-white/10 to-transparent my-2" />
-
-            <Link
-              href="https://docs.datagen.in/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group flex items-center justify-between px-4 py-3.5 text-[15px] font-medium text-white/90 hover:text-white hover:bg-white/5 rounded-lg transition-all duration-200 active:scale-[0.98]"
-              onClick={closeMenu}
-            >
-              <span className="tracking-wide">Docs</span>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="18"
-                height="18"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="text-white/30 group-hover:text-white/60 group-hover:translate-x-0.5 transition-all"
-              >
-                <path d="m9 18 6-6-6-6" />
-              </svg>
-            </Link>
-            <Link
-              href="/privacy-policy"
-              className="group flex items-center justify-between px-4 py-3.5 text-[15px] font-medium text-white/90 hover:text-white hover:bg-white/5 rounded-lg transition-all duration-200 active:scale-[0.98]"
-              onClick={closeMenu}
-            >
-              <span className="tracking-wide">Privacy Policy</span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="18"
