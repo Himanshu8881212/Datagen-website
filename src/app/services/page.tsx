@@ -223,7 +223,7 @@ export default function ServicesPage() {
                   <div className="flex justify-center">
                     <Button
                       asChild
-                      className="bg-gradient-to-r from-primary to-primary/80 hover:opacity-90 transition-opacity"
+                      className="bg-black text-white hover:bg-gray-800 transition-colors"
                       onClick={(e) => {
                         e.preventDefault();
                         window.location.href = "/#contact";

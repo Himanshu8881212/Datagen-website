@@ -107,7 +107,7 @@ export default function TrySynthEngyne() {
                 </div>
 
                 <div className="flex justify-center">
-                  <Button asChild className="gap-2 bg-gradient-to-r from-primary to-primary/80 text-white">
+                  <Button asChild className="gap-2 bg-black text-white hover:bg-gray-800 transition-colors text-white">
                     <Link href="/">
                       <ArrowLeft className="h-4 w-4" />
                       Back to DataGen

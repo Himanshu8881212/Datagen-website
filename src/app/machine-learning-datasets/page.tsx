@@ -39,7 +39,7 @@ export default function MachineLearningDatasetsPage() {
                 Custom dataset creation with privacy protection and quality assurance.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button asChild size="lg" className="bg-gradient-to-r from-primary to-primary/80">
+                <Button asChild size="lg" className="bg-black text-white hover:bg-gray-800 transition-colors">
                   <Link href="/trysynthengyne">Browse Datasets</Link>
                 </Button>
                 <Button asChild variant="outline" size="lg">
@@ -185,7 +185,7 @@ export default function MachineLearningDatasetsPage() {
                   for your specific AI training needs.
                 </p>
                 <div className="space-y-3">
-                  <Button asChild className="w-full bg-gradient-to-r from-primary to-primary/80">
+                  <Button asChild className="w-full bg-black text-white hover:bg-gray-800 transition-colors">
                     <Link href="/trysynthengyne">Explore Datasets</Link>
                   </Button>
                   <Button asChild variant="outline" className="w-full">

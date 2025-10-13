@@ -39,7 +39,7 @@ export default function GenerativeAIModelsPage() {
                 From concept to production deployment with enterprise-grade scalability.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button asChild size="lg" className="bg-gradient-to-r from-primary to-primary/80">
+                <Button asChild size="lg" className="bg-black text-white hover:bg-gray-800 transition-colors">
                   <Link href="/#contact">Get Started</Link>
                 </Button>
                 <Button asChild variant="outline" size="lg">
@@ -163,7 +163,7 @@ export default function GenerativeAIModelsPage() {
                 tailored to your business needs and technical requirements.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button asChild size="lg" className="bg-gradient-to-r from-primary to-primary/80">
+                <Button asChild size="lg" className="bg-black text-white hover:bg-gray-800 transition-colors">
                   <Link href="/#contact">Start Your Project</Link>
                 </Button>
                 <Button asChild variant="outline" size="lg">

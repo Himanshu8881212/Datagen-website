@@ -284,7 +284,7 @@ export default function ProductPage() {
                 </div>
 
                 <div className="flex justify-center">
-                  <Button asChild className="bg-gradient-to-r from-primary to-primary/80 hover:opacity-90 transition-opacity">
+                  <Button asChild className="bg-black text-white hover:bg-gray-800 transition-colors">
                     <Link href="/trysynthengyne">
                       Try SynthEngyne Now
                     </Link>

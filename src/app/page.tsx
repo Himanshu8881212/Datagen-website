@@ -534,7 +534,7 @@ export default function Home() {
                   <Button
                     asChild
                     size="lg"
-                    className="bg-gradient-to-r from-primary to-primary/80 hover:opacity-90 transition-opacity"
+                    className="bg-black text-white hover:bg-gray-800 transition-colors"
                   >
                     <Link href="/about">
                       Learn More
@@ -650,7 +650,7 @@ export default function Home() {
                 <div className="flex flex-col sm:flex-row gap-3 mt-8">
                   <Button
                     asChild
-                    className="w-fit bg-gradient-to-r from-primary to-primary/80 hover:opacity-90 transition-opacity"
+                    className="w-fit bg-black text-white hover:bg-gray-800 transition-colors"
                   >
                     <Link href="/trysynthengyne">
                       Try SynthEngyne Now
@@ -658,7 +658,7 @@ export default function Home() {
                   </Button>
                   <Button
                     asChild
-                    className="w-fit bg-gradient-to-r from-primary to-primary/80 hover:opacity-90 transition-opacity"
+                    className="w-fit bg-black text-white hover:bg-gray-800 transition-colors"
                   >
                     <Link href="/product">
                       Learn More
@@ -761,7 +761,7 @@ export default function Home() {
                 <div className="mt-4">
                   <Button
                     asChild
-                    className="w-fit bg-gradient-to-r from-primary to-primary/80 hover:opacity-90 transition-opacity"
+                    className="w-fit bg-black text-white hover:bg-gray-800 transition-colors"
                   >
                     <Link href="/services">
                       Learn More
@@ -857,7 +857,7 @@ export default function Home() {
 
                 {/* Popular Package */}
                 <div className="flex flex-col rounded-xl border-2 border-primary bg-card p-6 shadow-xl relative">
-                  <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-primary to-primary/80 text-primary-foreground px-3 py-1 rounded-full text-xs font-semibold">
+                  <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-black text-white hover:bg-gray-800 transition-colors text-primary-foreground px-3 py-1 rounded-full text-xs font-semibold">
                     POPULAR
                   </div>
                   <div className="space-y-2">
@@ -865,7 +865,7 @@ export default function Home() {
                     <p className="text-sm text-muted-foreground">Most chosen option</p>
                   </div>
                   <div className="mt-4 flex items-baseline">
-                    <span className="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/80">₹3,000</span>
+                    <span className="text-3xl font-bold bg-clip-text text-transparent bg-black text-white hover:bg-gray-800 transition-colors">₹3,000</span>
                   </div>
                   <div className="mt-1 text-sm text-muted-foreground">60,000 credits</div>
                   <div className="mt-2 mb-4 h-0.5 w-12 bg-gradient-to-r from-primary to-primary/30 rounded-full"></div>
@@ -1042,7 +1042,7 @@ export default function Home() {
                 <Button
                   asChild
                   size="lg"
-                  className="bg-gradient-to-r from-primary to-primary/80 text-white px-8"
+                  className="bg-black text-white hover:bg-gray-800 transition-colors text-white px-8"
                 >
                   <Link href="/trysynthengyne">
                     Start with Free Credits
@@ -1160,7 +1160,7 @@ export default function Home() {
                         <div className="mt-3">
                           <Button
                             onClick={handleSendEmail}
-                            className="w-full bg-gradient-to-r from-primary to-primary/80 text-white"
+                            className="w-full bg-black text-white hover:bg-gray-800 transition-colors text-white"
                           >
                             Send Email
                           </Button>
@@ -1242,7 +1242,7 @@ export default function Home() {
                   <div className="flex items-center gap-3">
                     <Button
                       type="submit"
-                      className="w-full bg-gradient-to-r from-primary to-primary/80 text-white"
+                      className="w-full bg-black text-white hover:bg-gray-800 transition-colors text-white"
                       disabled={formStatus.success === true}
                     >
                       {formStatus.success === undefined ? 'Contact Us' : formStatus.success ? 'Message Sent' : 'Try Again'}
@@ -1250,7 +1250,7 @@ export default function Home() {
                     {formStatus.success && (
                       <Button
                         type="button"
-                        className="bg-gradient-to-r from-primary to-primary/80 text-white"
+                        className="bg-black text-white hover:bg-gray-800 transition-colors text-white"
                         onClick={() => {
                           setFormStatus({});
                           const form = document.getElementById('contact-form') as HTMLFormElement;

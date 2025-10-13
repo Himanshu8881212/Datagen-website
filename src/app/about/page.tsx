@@ -175,7 +175,7 @@ export default function AboutPage() {
                     DataGen is powered by a team of AI specialists, data scientists, and software engineers with expertise in machine learning and data generation. We combine technical knowledge with industry experience to deliver effective solutions for your business needs.
                   </p>
                   <div className="flex justify-center">
-                    <Button asChild className="bg-gradient-to-r from-primary to-primary/80 hover:opacity-90 transition-opacity">
+                    <Button asChild className="bg-black text-white hover:bg-gray-800 transition-colors">
                       <Link href="/#contact">Contact Us</Link>
                     </Button>
                   </div>
