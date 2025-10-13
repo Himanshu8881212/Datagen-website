@@ -13,7 +13,7 @@ export function Logo({ className = '', variant = 'header' }: LogoProps) {
   const logoSrc = variant === 'header' ? '/logo-compact.svg' : '/logo.svg';
   const logoAlt = variant === 'header' ? 'DataGen' : 'DataGen - AI and Synthetic Data Solutions';
 
-  // Use larger sizes for crisp rendering
+  // Responsive sizes - smaller on mobile, larger on desktop
   const logoWidth = variant === 'header' ? 160 : 300;
   const logoHeight = variant === 'header' ? 48 : 75;
 
@@ -24,7 +24,7 @@ export function Logo({ className = '', variant = 'header' }: LogoProps) {
         alt={logoAlt}
         width={logoWidth}
         height={logoHeight}
-        className="h-auto w-auto max-w-full"
+        className="h-auto w-auto"
         style={{
           imageRendering: 'crisp-edges',
           WebkitFontSmoothing: 'antialiased',
