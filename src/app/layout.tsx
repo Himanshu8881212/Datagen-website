@@ -68,13 +68,11 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: '/icon.png', sizes: '32x32', type: 'image/png' },
+      { url: '/favicon.svg', type: 'image/svg+xml' },
       { url: '/logo-mark.svg', type: 'image/svg+xml' },
     ],
-    shortcut: '/logo-mark.svg',
-    apple: [
-      { url: '/apple-icon.png', sizes: '180x180', type: 'image/png' },
-    ],
+    shortcut: '/favicon.svg',
+    apple: '/favicon.svg',
   },
   manifest: '/manifest.json',
   openGraph: {
@@ -281,6 +279,12 @@ export default function RootLayout({
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
         <meta name="format-detection" content="telephone=no" />
+
+        {/* Favicon - Multiple formats for better browser support */}
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <link rel="alternate icon" type="image/svg+xml" href="/logo-mark.svg" />
+        <link rel="apple-touch-icon" href="/favicon.svg" />
+        <link rel="shortcut icon" href="/favicon.svg" />
 
         {/* Preconnect to external domains */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
