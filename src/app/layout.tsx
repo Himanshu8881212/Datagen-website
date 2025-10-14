@@ -18,7 +18,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL('https://datagen.in'),
   title: {
-    default: "DataGen - AI Synthetic Data Solutions | Generative AI Models & Custom Datasets",
+    default: "DataGen - AI Synthetic Data Solutions | Generative AI Models and Custom Datasets",
     template: "%s | DataGen"
   },
   description: "DataGen specializes in AI synthetic data generation, generative AI models, and custom datasets for machine learning. Transform your AI projects with SynthEngyne - the leading synthetic data platform for artificial intelligence training.",
@@ -82,8 +82,8 @@ export const metadata: Metadata = {
     locale: 'en_US',
     url: 'https://datagen.in',
     siteName: 'DataGen - AI Synthetic Data Solutions',
-    title: 'DataGen - Leading AI Synthetic Data & Generative AI Platform',
-    description: 'Transform your AI projects with DataGen\'s synthetic data solutions. Generate custom datasets, deploy generative AI models, and accelerate machine learning development with SynthEngyne.',
+    title: 'DataGen - Leading AI Synthetic Data and Generative AI Platform',
+    description: 'Transform your AI projects with DataGen synthetic data solutions. Generate custom datasets, deploy generative AI models, and accelerate machine learning development with SynthEngyne.',
     images: [
       {
         url: 'https://datagen.in/og-image.jpg',
@@ -95,7 +95,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'DataGen - AI Synthetic Data & Generative AI Solutions',
+    title: 'DataGen - AI Synthetic Data and Generative AI Solutions',
     description: 'Leading platform for AI synthetic data generation, custom datasets, and generative AI model deployment. Accelerate your artificial intelligence projects.',
     images: ['https://datagen.in/twitter-image.jpg'],
     creator: '@DataGenAI',
