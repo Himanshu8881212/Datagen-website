@@ -517,10 +517,10 @@ export default function Home() {
               <div className="flex flex-col justify-center space-y-6">
                 <div className="space-y-4">
                   <h1 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl xl:text-6xl/none bg-clip-text text-transparent bg-gradient-to-r from-foreground to-foreground/80">
-                    DataGen - Leading <em>AI Synthetic Data</em> & <em>Generative AI</em> Platform
+                    DataGen - Leading AI Synthetic Data and Generative AI Platform
                   </h1>
                   <p className="max-w-[600px] text-muted-foreground text-base md:text-lg lg:text-xl leading-relaxed">
-                    We specialize in <strong>AI synthetic data generation</strong>, <strong>custom generative AI models</strong>, and <strong>enterprise AI solutions</strong>. Transform your <em>machine learning projects</em> with privacy-compliant <strong>artificial intelligence training data</strong>.
+                    We specialize in <strong>AI synthetic data generation</strong>, <strong>custom generative AI models</strong>, and <strong>enterprise AI solutions</strong>. Transform your machine learning projects with privacy-compliant <strong>artificial intelligence training data</strong>.
                   </p>
                   <div className="flex flex-wrap gap-2 mt-4">
                     <span className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium">AI Synthetic Data</span>
@@ -582,10 +582,10 @@ export default function Home() {
               <div className="flex flex-col justify-center space-y-8 order-1 lg:order-2">
                 <div className="space-y-4">
                   <h2 className="text-2xl font-bold tracking-tight sm:text-3xl md:text-4xl mb-6">
-                    SynthEngyne - <em>AI Synthetic Data Platform</em>
+                    SynthEngyne - AI Synthetic Data Platform
                   </h2>
                   <p className="max-w-[600px] text-muted-foreground text-base md:text-lg leading-relaxed">
-                    Our cutting-edge <strong>AI synthetic data platform</strong> for generating <strong>custom machine learning datasets</strong>. Supports multiple data formats with <strong>AI quality assurance</strong>, <strong>data privacy protection</strong>, and <strong>enterprise scalability</strong> for <em>artificial intelligence training</em>.
+                    Our cutting-edge <strong>AI synthetic data platform</strong> for generating <strong>custom machine learning datasets</strong>. Supports multiple data formats with <strong>AI quality assurance</strong>, <strong>data privacy protection</strong>, and <strong>enterprise scalability</strong> for artificial intelligence training.
                   </p>
 
                   {/* SynthEngyne Feature Cards */}
@@ -685,9 +685,9 @@ export default function Home() {
             <div className="grid gap-8 lg:grid-cols-2 lg:gap-16 items-center">
               <div className="flex flex-col justify-center space-y-6">
                 <div className="space-y-4">
-                  <h3 className="text-xl font-bold tracking-tight sm:text-2xl md:text-3xl">Professional <em>AI Development Services</em></h3>
+                  <h3 className="text-xl font-bold tracking-tight sm:text-2xl md:text-3xl">Professional AI Development Services</h3>
                   <p className="max-w-[600px] text-muted-foreground text-base md:text-lg leading-relaxed">
-                    Enterprise-grade <strong>artificial intelligence solutions</strong> including <strong>AI model deployment</strong>, <strong>synthetic data consulting</strong>, <strong>custom AI model fine-tuning</strong>, and <strong>intelligent automation systems</strong>. We deliver comprehensive <em>AI development services</em> that drive measurable business value through <strong>machine learning innovation</strong>.
+                    Enterprise-grade <strong>artificial intelligence solutions</strong> including <strong>AI model deployment</strong>, <strong>synthetic data consulting</strong>, <strong>custom AI model fine-tuning</strong>, and <strong>intelligent automation systems</strong>. We deliver comprehensive AI development services that drive measurable business value through <strong>machine learning innovation</strong>.
                   </p>
                 </div>
 
@@ -1147,7 +1147,7 @@ export default function Home() {
                       <p>{formStatus.message}</p>
 
                       {formStatus.note && (
-                        <p className="mt-2 text-sm italic">{formStatus.note}</p>
+                        <p className="mt-2 text-sm">{formStatus.note}</p>
                       )}
 
                       {formStatus.error && (
