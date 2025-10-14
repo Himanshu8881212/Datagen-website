@@ -18,12 +18,9 @@ if (typeof window !== 'undefined') {
   if (publicKey) {
     try {
       emailjs.init(publicKey);
-      console.log('EmailJS initialized successfully');
     } catch (error) {
-      console.error('Error initializing EmailJS:', error);
+      // Silent error - EmailJS initialization failed
     }
-  } else {
-    console.warn('EmailJS public key not found in environment variables');
   }
 }
 
@@ -41,21 +38,7 @@ export default function Home() {
   // Generate CSRF token once to prevent hydration errors
   const [csrfToken] = useState(() => Math.random().toString(36).substring(2, 15));
 
-  // Debug EmailJS configuration on component mount
-  useEffect(() => {
-    console.log('EmailJS Configuration Check:', {
-      serviceId: process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID ? `Provided: ${process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID}` : 'Missing',
-      templateId: process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID ? `Provided: ${process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID}` : 'Missing',
-      publicKey: process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY ? `Provided: ${process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY.substring(0, 8)}...` : 'Missing',
-      emailjsLoaded: typeof emailjs !== 'undefined',
-      emailjsVersion: 'Loaded'
-    });
 
-    // Test EmailJS availability
-    if (typeof emailjs !== 'undefined') {
-      console.log('EmailJS methods available:', Object.keys(emailjs));
-    }
-  }, []);
 
   // Handle hash navigation when the page loads
   useEffect(() => {

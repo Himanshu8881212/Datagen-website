@@ -30,7 +30,7 @@ export function Logo({ className = '', variant = 'header' }: LogoProps) {
           WebkitFontSmoothing: 'antialiased',
           MozOsxFontSmoothing: 'grayscale',
         }}
-        priority
+        priority={variant === 'header'} // Only prioritize header logo
         unoptimized
       />
     </Link>

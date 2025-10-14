@@ -273,7 +273,7 @@ export default function RootLayout({
         {/* Additional SEO Meta Tags */}
         <meta name="theme-color" content="#000000" />
         <meta name="msapplication-TileColor" content="#000000" />
-        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
         <meta name="format-detection" content="telephone=no" />
 
@@ -290,7 +290,6 @@ export default function RootLayout({
 
         {/* DNS Prefetch */}
         <link rel="dns-prefetch" href="//www.google-analytics.com" />
-        <link rel="dns-prefetch" href="//www.googletagmanager.com" />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-background min-h-screen`}
