@@ -330,6 +330,18 @@ export default function RootLayout({
                   throw error;
                 });
               };
+
+              // Suppress Next.js RSC prefetch errors for static exports
+              const originalConsoleError = console.error;
+              console.error = function(...args) {
+                // Filter out Next.js RSC payload errors
+                const message = args[0]?.toString() || '';
+                if (message.includes('Failed to fetch RSC payload') ||
+                    message.includes('Falling back to browser navigation')) {
+                  return; // Suppress these specific errors
+                }
+                originalConsoleError.apply(console, args);
+              };
             }
           `}
         </Script>
