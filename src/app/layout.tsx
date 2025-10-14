@@ -16,7 +16,11 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "DataGen - AI Synthetic Data Solutions | Generative AI Models & Custom Datasets",
+  metadataBase: new URL('https://datagen.in'),
+  title: {
+    default: "DataGen - AI Synthetic Data Solutions | Generative AI Models & Custom Datasets",
+    template: "%s | DataGen"
+  },
   description: "DataGen specializes in AI synthetic data generation, generative AI models, and custom datasets for machine learning. Transform your AI projects with SynthEngyne - the leading synthetic data platform for artificial intelligence training.",
   keywords: [
     "artificial intelligence",
@@ -49,6 +53,8 @@ export const metadata: Metadata = {
   authors: [{ name: "DataGen Team" }],
   creator: "DataGen",
   publisher: "DataGen",
+  applicationName: "DataGen",
+  referrer: 'origin-when-cross-origin',
   robots: {
     index: true,
     follow: true,
@@ -60,6 +66,17 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
+  icons: {
+    icon: [
+      { url: '/icon.png', sizes: '32x32', type: 'image/png' },
+      { url: '/logo-mark.svg', type: 'image/svg+xml' },
+    ],
+    shortcut: '/logo-mark.svg',
+    apple: [
+      { url: '/apple-icon.png', sizes: '180x180', type: 'image/png' },
+    ],
+  },
+  manifest: '/manifest.json',
   openGraph: {
     type: 'website',
     locale: 'en_US',
@@ -82,6 +99,7 @@ export const metadata: Metadata = {
     description: 'Leading platform for AI synthetic data generation, custom datasets, and generative AI model deployment. Accelerate your artificial intelligence projects.',
     images: ['https://datagen.in/twitter-image.jpg'],
     creator: '@DataGenAI',
+    site: '@DataGenAI',
   },
   alternates: {
     canonical: 'https://datagen.in',
@@ -91,6 +109,10 @@ export const metadata: Metadata = {
   other: {
     'google-site-verification': 'your-google-verification-code',
     'msvalidate.01': 'your-bing-verification-code',
+  },
+  verification: {
+    google: 'your-google-verification-code',
+    yandex: 'your-yandex-verification-code',
   },
 };
 

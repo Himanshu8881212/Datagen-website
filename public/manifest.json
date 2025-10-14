@@ -1,0 +1,49 @@
+{
+  "name": "DataGen - AI Synthetic Data Solutions",
+  "short_name": "DataGen",
+  "description": "Leading platform for AI synthetic data generation, generative AI models, and custom datasets for machine learning",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#000000",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/logo-mark.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "/apple-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ],
+  "categories": [
+    "business",
+    "productivity",
+    "utilities"
+  ],
+  "screenshots": [],
+  "shortcuts": [
+    {
+      "name": "Try SynthEngyne",
+      "short_name": "SynthEngyne",
+      "description": "Start generating synthetic data",
+      "url": "/trysynthengyne",
+      "icons": [
+        {
+          "src": "/logo-mark.svg",
+          "sizes": "96x96"
+        }
+      ]
+    }
+  ]
+}
+
