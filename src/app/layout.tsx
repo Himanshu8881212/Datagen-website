@@ -331,15 +331,22 @@ export default function RootLayout({
                 });
               };
 
-              // Suppress Next.js RSC prefetch errors for static exports
+              // Suppress Next.js RSC prefetch errors and Permissions-Policy warnings
               const originalConsoleError = console.error;
               console.error = function(...args) {
-                // Filter out Next.js RSC payload errors
                 const message = args[0]?.toString() || '';
+
+                // Filter out Next.js RSC payload errors
                 if (message.includes('Failed to fetch RSC payload') ||
                     message.includes('Falling back to browser navigation')) {
                   return; // Suppress these specific errors
                 }
+
+                // Filter out Permissions-Policy warnings about deprecated features
+                if (message.includes('Permissions-Policy') && message.includes('ambient-light-sensor')) {
+                  return; // Suppress Cloudflare's deprecated header warnings
+                }
+
                 originalConsoleError.apply(console, args);
               };
             }
