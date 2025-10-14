@@ -151,8 +151,6 @@ export default function Home() {
 
       // Check if EmailJS credentials are available
       if (!serviceId || !templateId || !process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY) {
-        console.warn('EmailJS credentials missing, showing success message to user but logging form data');
-
         // Show success message to user
         setFormStatus({
           success: true,
@@ -162,20 +160,6 @@ export default function Home() {
         toast.success('Message received! We\'ll get back to you soon.');
         form.reset();
         toast.dismiss(loadingToast);
-
-        // Log the form data for manual follow-up
-        console.log('Contact form data (EmailJS credentials missing):', {
-          name: formJson.name,
-          email: formJson.email,
-          phone: formJson.phone || 'Not provided',
-          message: formJson.message,
-          timestamp: new Date().toISOString(),
-          credentials: {
-            serviceId: serviceId ? 'Provided' : 'Missing',
-            templateId: templateId ? 'Provided' : 'Missing',
-            publicKey: process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY ? 'Provided' : 'Missing'
-          }
-        });
         return;
       }
 
@@ -187,8 +171,6 @@ export default function Home() {
         process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
       )
         .then((response) => {
-          console.log('Email sent successfully with EmailJS:', response);
-
           // Update form status
           setFormStatus({
             success: true,
@@ -205,37 +187,7 @@ export default function Home() {
           toast.dismiss(loadingToast);
         })
         .catch((emailJSError) => {
-          // More comprehensive error logging
-          console.error('EmailJS Error Object:', emailJSError);
-          console.error('EmailJS Error Type:', typeof emailJSError);
-          console.error('EmailJS Error Constructor:', emailJSError?.constructor?.name);
-
-          // Try to extract error information in different ways
-          let errorInfo = {
-            message: 'Unknown error',
-            status: 'No status',
-            text: 'No error text',
-            code: 'No code'
-          };
-
-          try {
-            if (emailJSError) {
-              errorInfo.message = emailJSError.message || emailJSError.toString() || 'Unknown error';
-              errorInfo.status = emailJSError.status || emailJSError.code || 'No status';
-              errorInfo.text = emailJSError.text || emailJSError.responseText || 'No error text';
-              errorInfo.code = emailJSError.code || emailJSError.status || 'No code';
-            }
-          } catch (e) {
-            console.error('Error parsing EmailJS error:', e);
-          }
-
-          console.log('Parsed EmailJS error details:', errorInfo);
-          console.log('EmailJS credentials check:', {
-            serviceId: serviceId ? `Provided (${serviceId})` : 'Missing',
-            templateId: templateId ? `Provided (${templateId})` : 'Missing',
-            publicKey: process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY ? `Provided (${process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY.substring(0, 5)}...)` : 'Missing'
-          });
-          console.log('Template parameters sent:', templateParams);
+          // Silent error handling
 
           // Even if EmailJS fails, show success message to the user
           // This ensures a good user experience even if there are backend issues
@@ -253,16 +205,6 @@ export default function Home() {
           // Dismiss loading toast
           toast.dismiss(loadingToast);
 
-          // Log the form data for manual follow-up
-          console.log('Contact form data (EmailJS failed but user shown success):', {
-            name: formJson.name,
-            email: formJson.email,
-            phone: formJson.phone || 'Not provided',
-            message: formJson.message,
-            timestamp: new Date().toISOString(),
-            emailJSError: errorInfo
-          });
-
           // As a fallback, create a mailto link for manual sending
           const mailtoLink = createMailtoLink(
             formJson.name as string,
@@ -270,11 +212,8 @@ export default function Home() {
             formJson.phone as string || '',
             formJson.message as string
           );
-          console.log('Fallback mailto link created:', mailtoLink);
         });
     } catch (error) {
-      console.error('Error processing form:', error);
-
       // Even if there's an error, show success message to the user
       setFormStatus({
         success: true,
@@ -283,12 +222,6 @@ export default function Home() {
 
       // Show success toast anyway
       toast.success('Message received! We\'ll get back to you soon.');
-
-      // Log the error for debugging
-      console.log('Contact form processing error (but user shown success):', {
-        error: String(error),
-        timestamp: new Date().toISOString()
-      });
     }
   };
 
@@ -332,8 +265,6 @@ export default function Home() {
         templateParams
       )
         .then((response) => {
-          console.log('Email sent successfully with EmailJS:', response);
-
           // Update form status
           setFormStatus({
             success: true,
@@ -352,14 +283,6 @@ export default function Home() {
           toast.dismiss(loadingToast);
         })
         .catch((emailJSError) => {
-          console.error('Error sending email with EmailJS:', emailJSError);
-          console.log('EmailJS credentials:', {
-            serviceId: serviceId ? 'Provided' : 'Missing',
-            templateId: templateId ? 'Provided' : 'Missing',
-            publicKey: process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY ? 'Provided' : 'Missing'
-          });
-          console.log('Template parameters:', templateParams);
-
           // Even if EmailJS fails, show success message to the user
           setFormStatus({
             success: true,

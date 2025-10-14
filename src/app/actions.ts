@@ -81,24 +81,13 @@ export async function submitContactForm(formData: FormData) {
         message: "Thank you for your message! We'll get back to you soon."
       };
     } catch (emailError) {
-      console.error('Error sending email:', emailError);
-
-      // Fallback: If email sending fails, log the data for manual handling
-      console.log('Contact form submission data:', {
-        name: validatedData.data.name,
-        email: validatedData.data.email,
-        phone: validatedData.data.phone,
-        message: validatedData.data.message,
-        timestamp: new Date().toISOString()
-      });
-
+      // Fallback: If email sending fails, still show success to user
       return {
         success: true, // Still return success to the user
         message: "Thank you for your message! We've received your submission and will get back to you soon."
       };
     }
   } catch (error) {
-    console.error('Error submitting contact form:', error);
     return {
       success: false,
       message: "An error occurred while submitting the form. Please try again."

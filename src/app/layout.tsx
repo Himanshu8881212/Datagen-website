@@ -326,7 +326,7 @@ export default function RootLayout({
               const originalFetch = window.fetch;
               window.fetch = function(...args) {
                 return originalFetch.apply(this, args).catch(error => {
-                  console.error('Fetch error:', error, 'Request:', args[0]);
+                  // Silent error handling
                   throw error;
                 });
               };
