@@ -13,9 +13,9 @@ export function Logo({ className = '', variant = 'header' }: LogoProps) {
   const logoSrc = variant === 'header' ? '/logo-compact.svg' : '/logo.svg';
   const logoAlt = variant === 'header' ? 'DataGen' : 'DataGen - AI and Synthetic Data Solutions';
 
-  // Responsive sizes - smaller on mobile, larger on desktop
-  const logoWidth = variant === 'header' ? 160 : 300;
-  const logoHeight = variant === 'header' ? 48 : 75;
+  // Consistent sizes across all viewports
+  const logoWidth = variant === 'header' ? 160 : 240;
+  const logoHeight = variant === 'header' ? 48 : 60;
 
   return (
     <Link href="/" className={`inline-block transition-opacity duration-200 hover:opacity-90 ${className}`}>

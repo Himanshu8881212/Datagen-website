@@ -122,19 +122,10 @@ export function Footer({ onNavigate }: FooterProps) {
           </div>
         </div>
 
-        <div className="mt-12 pt-8 border-t border-white/20">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div>
-              <h4 className="text-sm font-semibold mb-2 text-white">Contact Us</h4>
-              <p className="text-xs text-white/70">Email: info@datagen.in</p>
-              <p className="text-xs text-white/70">Website: www.datagen.in</p>
-            </div>
-            <div className="text-right">
-              <p className="text-xs text-white/70">
-                DataGen © 2024. All rights reserved.
-              </p>
-            </div>
-          </div>
+        <div className="mt-12 pt-8 border-t border-white/20 text-center">
+          <p className="text-sm text-white/70">
+            DataGen © 2024. All rights reserved.
+          </p>
         </div>
       </div>
     </footer>

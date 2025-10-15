@@ -1,8 +1,8 @@
-<svg width="300" height="75" viewBox="0 0 300 75" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg width="240" height="60" viewBox="0 0 240 60" fill="none" xmlns="http://www.w3.org/2000/svg">
   <!-- Original DataGen Mark -->
-  <g transform="translate(0, 17.5)">
+  <g transform="translate(0, 12)">
     <!-- Outer white ring - positioned with stroke-width accounted for -->
-    <circle cx="19" cy="20" r="18" fill="none" stroke="#ffffff" stroke-width="2" opacity="0.9"/>
+    <circle cx="19" cy="18" r="18" fill="none" stroke="#ffffff" stroke-width="2" opacity="0.9"/>
 
     <!-- Logo mark - Enhanced data/AI symbol -->
     <g transform="translate(7, 8)">
@@ -36,17 +36,17 @@
   </g>
 
   <!-- Main text "DataGen" -->
-  <text x="49" y="42"
+  <text x="49" y="32"
         font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
-        font-size="28"
+        font-size="22"
         font-weight="800"
         fill="#ffffff"
         letter-spacing="-0.5px">DataGen</text>
 
   <!-- Subtext -->
-  <text x="49" y="58"
+  <text x="49" y="46"
         font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
-        font-size="13"
+        font-size="11"
         font-weight="600"
         fill="#ffffff"
         letter-spacing="0.2px">AI and Synthetic Data Solutions</text>
