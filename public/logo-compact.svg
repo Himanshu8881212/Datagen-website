@@ -1,11 +1,11 @@
 <svg width="200" height="60" viewBox="0 0 200 60" fill="none" xmlns="http://www.w3.org/2000/svg">
   <!-- Original DataGen Mark -->
   <g transform="translate(0, 10)">
-    <!-- Outer white ring - positioned so left edge is at x=0 -->
-    <circle cx="18" cy="20" r="18" fill="none" stroke="#ffffff" stroke-width="2" opacity="0.9"/>
+    <!-- Outer white ring - positioned with stroke-width accounted for -->
+    <circle cx="19" cy="20" r="18" fill="none" stroke="#ffffff" stroke-width="2" opacity="0.9"/>
 
     <!-- Logo mark - Enhanced data/AI symbol -->
-    <g transform="translate(6, 8)">
+    <g transform="translate(7, 8)">
       <!-- Central node -->
       <circle cx="12" cy="12" r="3.5" fill="#ffffff" stroke="#ffffff" stroke-width="1"/>
 
@@ -36,7 +36,7 @@
   </g>
 
   <!-- Main text "DataGen" -->
-  <text x="48" y="38"
+  <text x="49" y="38"
         font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
         font-size="22"
         font-weight="800"
