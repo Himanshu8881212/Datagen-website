@@ -131,7 +131,7 @@ export function Footer({ onNavigate }: FooterProps) {
             </div>
             <div className="text-right">
               <p className="text-xs text-white/70">
-                DataGen © 2025. All rights reserved.
+                DataGen © 2024. All rights reserved.
               </p>
             </div>
           </div>
