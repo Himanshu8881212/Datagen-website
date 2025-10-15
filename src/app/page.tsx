@@ -771,7 +771,7 @@ export default function Home() {
                     <p className="text-sm text-muted-foreground">Most chosen option</p>
                   </div>
                   <div className="mt-4 flex items-baseline">
-                    <span className="text-3xl font-bold bg-clip-text text-transparent bg-black text-white hover:bg-gray-800 transition-colors">₹3,000</span>
+                    <span className="text-3xl font-bold">₹3,000</span>
                   </div>
                   <div className="mt-1 text-sm text-muted-foreground">60,000 credits</div>
                   <div className="mt-2 mb-4 h-0.5 w-12 bg-gradient-to-r from-primary to-primary/30 rounded-full"></div>
