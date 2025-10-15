@@ -16,7 +16,7 @@ export function Header({ currentPage = "home" }: HeaderProps) {
       <div className="dynamic-container flex h-16 md:h-20 items-center justify-between">
         <div className="flex items-center gap-8">
           <Logo variant="header" />
-          <nav className="hidden md:flex gap-6 lg:gap-8">
+          <nav className="hidden md:flex gap-8">
             <Link
               href={currentPage === "home" ? "#product" : "/#product"}
               className="text-sm font-medium text-white tracking-wide"
