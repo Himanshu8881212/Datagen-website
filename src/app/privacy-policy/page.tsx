@@ -16,7 +16,7 @@ export default function PrivacyPolicyPage() {
           <div className="absolute -top-40 -right-40 w-80 h-80 bg-primary/10 rounded-full blur-3xl"></div>
           <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-primary/10 rounded-full blur-3xl"></div>
 
-          <div className="container mx-auto px-4 md:px-6 lg:px-8 relative z-10">
+          <div className="dynamic-container relative z-10">
             <div className="max-w-4xl mx-auto text-center">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-foreground">
                 Privacy Policy
@@ -30,7 +30,7 @@ export default function PrivacyPolicyPage() {
 
         {/* Privacy Policy Content */}
         <section className="py-16 md:py-24">
-          <div className="container mx-auto px-4 md:px-6 lg:px-8">
+          <div className="dynamic-container">
             <div className="max-w-4xl mx-auto">
               <div className="space-y-12">
 

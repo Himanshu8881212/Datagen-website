@@ -20,7 +20,7 @@ export function Footer({ onNavigate }: FooterProps) {
 
   return (
     <footer className="border-t border-white/20 py-12 md:py-16 bg-black text-white">
-      <div className="container mx-auto px-4 md:px-6 lg:px-8">
+      <div className="dynamic-container">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
           <div className="space-y-4">
             <Logo variant="footer" />

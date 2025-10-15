@@ -28,7 +28,7 @@ export default function MachineLearningDatasetsPage() {
         {/* Hero Section */}
         <section className="py-24 md:py-36 relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent"></div>
-          <div className="container mx-auto px-4 md:px-6 lg:px-8 relative">
+          <div className="dynamic-container relative">
             <div className="max-w-4xl mx-auto text-center">
               <h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl mb-6">
                 Premium <span className="text-primary">Machine Learning Datasets</span> for AI Training
@@ -52,7 +52,7 @@ export default function MachineLearningDatasetsPage() {
 
         {/* Dataset Types Section */}
         <section className="py-24 bg-muted/30">
-          <div className="container mx-auto px-4 md:px-6 lg:px-8">
+          <div className="dynamic-container">
             <div className="text-center mb-16">
               <h2 className="text-3xl font-bold mb-4">Dataset Types & Formats</h2>
               <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
@@ -115,7 +115,7 @@ export default function MachineLearningDatasetsPage() {
 
         {/* Features Section */}
         <section className="py-24">
-          <div className="container mx-auto px-4 md:px-6 lg:px-8">
+          <div className="dynamic-container">
             <div className="grid lg:grid-cols-2 gap-16 items-center">
               <div>
                 <h2 className="text-3xl font-bold mb-6">Why Choose Our Machine Learning Datasets?</h2>

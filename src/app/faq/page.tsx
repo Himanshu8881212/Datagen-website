@@ -17,7 +17,7 @@ export default function FAQPage() {
           <div className="absolute -top-40 -right-40 w-80 h-80 bg-primary/10 rounded-full blur-3xl"></div>
           <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-primary/10 rounded-full blur-3xl"></div>
 
-          <div className="container mx-auto px-4 md:px-6 lg:px-8 relative">
+          <div className="dynamic-container relative">
             <div className="mx-auto max-w-6xl space-y-8">
               <div className="text-center mb-12">
                 <h1 className="text-4xl font-bold tracking-tight sm:text-5xl mb-4">Frequently Asked Questions</h1>

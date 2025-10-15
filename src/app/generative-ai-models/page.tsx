@@ -28,7 +28,7 @@ export default function GenerativeAIModelsPage() {
         {/* Hero Section */}
         <section className="py-24 md:py-36 relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent"></div>
-          <div className="container mx-auto px-4 md:px-6 lg:px-8 relative">
+          <div className="dynamic-container relative">
             <div className="max-w-4xl mx-auto text-center">
               <h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl mb-6">
                 <span className="text-primary">Generative AI Models</span> Development & Deployment
@@ -52,7 +52,7 @@ export default function GenerativeAIModelsPage() {
 
         {/* Services Section */}
         <section className="py-24 bg-muted/30">
-          <div className="container mx-auto px-4 md:px-6 lg:px-8">
+          <div className="dynamic-container">
             <div className="text-center mb-16">
               <h2 className="text-3xl font-bold mb-4">Generative AI Model Services</h2>
               <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
@@ -155,7 +155,7 @@ export default function GenerativeAIModelsPage() {
 
         {/* CTA Section */}
         <section className="py-24">
-          <div className="container mx-auto px-4 md:px-6 lg:px-8">
+          <div className="dynamic-container">
             <div className="bg-gradient-to-r from-primary/10 to-primary/5 rounded-2xl p-12 text-center">
               <h2 className="text-3xl font-bold mb-4">Ready to Build Your Generative AI Model?</h2>
               <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
