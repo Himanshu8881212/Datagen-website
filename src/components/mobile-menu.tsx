@@ -96,7 +96,7 @@ export function MobileMenu() {
         <div className="h-full flex flex-col overflow-y-auto">
           {/* Logo section - matches header height */}
           <div className="h-16 px-5 flex items-center border-b border-white/5 bg-black">
-            <Link href="/" onClick={closeMenu} className="inline-block group">
+            <a href="https://datagen.in" onClick={closeMenu} className="inline-block group">
               <Image
                 src="/logo-compact.svg"
                 alt="DataGen"
@@ -105,7 +105,7 @@ export function MobileMenu() {
                 className="h-auto w-auto transition-opacity group-hover:opacity-80"
                 priority
               />
-            </Link>
+            </a>
           </div>
 
           {/* Navigation Links - Professional styling */}
