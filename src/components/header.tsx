@@ -13,9 +13,9 @@ interface HeaderProps {
 export function Header({ currentPage = "home" }: HeaderProps) {
   return (
     <header className="border-b border-white/20 sticky top-0 z-50 bg-black text-white shadow-md w-full">
-      <div className="dynamic-container flex h-16 md:h-20 items-center justify-between relative">
+      <div className="dynamic-container flex h-16 md:h-20 items-center justify-between">
         <Logo variant="header" />
-        <nav className="hidden md:flex gap-8 absolute left-[320px]">
+        <nav className="hidden md:flex gap-8 fixed left-[calc(clamp(1rem,5vw,3rem)+200px)]">
           <Link
             href={currentPage === "home" ? "#product" : "/#product"}
             className="text-sm font-medium text-white tracking-wide"
