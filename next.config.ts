@@ -4,13 +4,13 @@ const nextConfig: NextConfig = {
   /* config options here */
   reactStrictMode: true,
 
-  // Suppress hydration warnings caused by browser extensions in development
-  ...(process.env.NODE_ENV === 'development' && {
-    onDemandEntries: {
-      maxInactiveAge: 25 * 1000,
-      pagesBufferLength: 2,
-    },
-  }),
+  // Disable powered by header for security
+  poweredByHeader: false,
+
+  // Image optimization
+  images: {
+    unoptimized: false,
+  },
 };
 
 export default nextConfig;
