@@ -13,8 +13,8 @@ export function Logo({ className = '', variant = 'header' }: LogoProps) {
   const logoSrc = variant === 'header' ? '/logo-compact.svg' : '/logo.svg';
   const logoAlt = variant === 'header' ? 'DataGen' : 'DataGen - AI and Synthetic Data Solutions';
 
-  // Consistent sizes across all viewports
-  const logoWidth = variant === 'header' ? 160 : 240;
+  // Consistent sizes across all viewports - matching SynthEngyne app
+  const logoWidth = variant === 'header' ? 280 : 240;
   const logoHeight = variant === 'header' ? 48 : 60;
 
   return (

@@ -337,64 +337,62 @@ export default function Home() {
     <div className="flex flex-col min-h-screen w-full">
       {/* Navigation */}
       <header className="border-b border-white/20 sticky top-0 z-50 bg-black text-white shadow-md w-full">
-        <div className="dynamic-container flex h-16 md:h-20 items-center justify-between">
-          <div className="flex items-center gap-8">
-            <Logo variant="header" />
-            <nav className="hidden md:flex gap-6 lg:gap-8">
-              <Link
-                href="#product"
-                className="text-sm font-medium text-white tracking-wide"
-                onClick={(e) => {
-                  e.preventDefault();
-                  scrollToElement('product');
-                  window.history.pushState(null, '', '#product');
-                }}
-              >
-                Product
-              </Link>
-              <Link
-                href="#services"
-                className="text-sm font-medium text-white tracking-wide"
-                onClick={(e) => {
-                  e.preventDefault();
-                  scrollToElement('services');
-                  window.history.pushState(null, '', '#services');
-                }}
-              >
-                Services
-              </Link>
-              <Link
-                href="#faq"
-                className="text-sm font-medium text-white tracking-wide"
-                onClick={(e) => {
-                  e.preventDefault();
-                  scrollToElement('faq');
-                  window.history.pushState(null, '', '#faq');
-                }}
-              >
-                FAQ
-              </Link>
-              <Link
-                href="#contact"
-                className="text-sm font-medium text-white tracking-wide"
-                onClick={(e) => {
-                  e.preventDefault();
-                  scrollToElement('contact');
-                  window.history.pushState(null, '', '#contact');
-                }}
-              >
-                Contact Us
-              </Link>
-              <Link
-                href="https://docs.datagen.in/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-sm font-medium text-white tracking-wide"
-              >
-                Docs
-              </Link>
-            </nav>
-          </div>
+        <div className="dynamic-container flex h-16 md:h-20 items-center justify-between relative">
+          <Logo variant="header" />
+          <nav className="hidden md:flex gap-8 absolute left-[calc(clamp(1rem,5vw,3rem)+300px)]">
+            <Link
+              href="#product"
+              className="text-sm font-medium text-white tracking-wide"
+              onClick={(e) => {
+                e.preventDefault();
+                scrollToElement('product');
+                window.history.pushState(null, '', '#product');
+              }}
+            >
+              Product
+            </Link>
+            <Link
+              href="#services"
+              className="text-sm font-medium text-white tracking-wide"
+              onClick={(e) => {
+                e.preventDefault();
+                scrollToElement('services');
+                window.history.pushState(null, '', '#services');
+              }}
+            >
+              Services
+            </Link>
+            <Link
+              href="#faq"
+              className="text-sm font-medium text-white tracking-wide"
+              onClick={(e) => {
+                e.preventDefault();
+                scrollToElement('faq');
+                window.history.pushState(null, '', '#faq');
+              }}
+            >
+              FAQ
+            </Link>
+            <Link
+              href="#contact"
+              className="text-sm font-medium text-white tracking-wide"
+              onClick={(e) => {
+                e.preventDefault();
+                scrollToElement('contact');
+                window.history.pushState(null, '', '#contact');
+              }}
+            >
+              Contact Us
+            </Link>
+            <Link
+              href="https://docs.datagen.in/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm font-medium text-white tracking-wide"
+            >
+              Docs
+            </Link>
+          </nav>
           <div className="flex items-center gap-3 md:gap-4">
             <Button
               asChild
@@ -1183,6 +1181,6 @@ export default function Home() {
         scrollToElement(section);
         window.history.pushState(null, '', `#${section}`);
       }} />
-    </div>
+    </div >
   );
 }
