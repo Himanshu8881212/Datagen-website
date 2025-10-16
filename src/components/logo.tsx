@@ -31,7 +31,6 @@ export function Logo({ className = '', variant = 'header', href }: LogoProps) {
         MozOsxFontSmoothing: 'grayscale',
       }}
       priority={variant === 'header'} // Only prioritize header logo
-      unoptimized
       suppressHydrationWarning
     />
   );
