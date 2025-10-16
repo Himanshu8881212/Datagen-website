@@ -68,14 +68,13 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: '/favicon.svg?v=3', type: 'image/svg+xml' },
-      { url: '/favicon.ico?v=3', type: 'image/x-icon' },
-      { url: '/favicon-32.png?v=3', type: 'image/png', sizes: '32x32' },
-      { url: '/favicon-48.png?v=3', type: 'image/png', sizes: '48x48' },
-      { url: '/favicon-192.png?v=3', type: 'image/png', sizes: '192x192' },
+      { url: '/favicon.ico', type: 'image/x-icon' },
+      { url: '/favicon-48.png', type: 'image/png', sizes: '48x48' },
+      { url: '/favicon-192.png', type: 'image/png', sizes: '192x192' },
+      { url: '/favicon.svg', type: 'image/svg+xml' },
     ],
-    shortcut: ['/favicon.ico?v=3'],
-    apple: '/favicon-180.png?v=3',
+    shortcut: ['/favicon.ico'],
+    apple: '/favicon-180.png',
   },
   manifest: '/manifest.json',
   openGraph: {
