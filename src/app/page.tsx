@@ -336,7 +336,7 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-screen w-full">
       {/* Navigation */}
-      <header className="border-b border-white/20 sticky top-0 z-50 bg-black text-white shadow-md w-full">
+      <header className="border-b border-white/20 sticky top-0 z-50 bg-black text-white shadow-md w-full relative">
         <div className="dynamic-container flex h-16 md:h-20 items-center justify-between">
           <Logo variant="header" />
           <nav className="hidden md:flex gap-8 absolute md:left-[calc(2rem+300px)] lg:left-[calc(3rem+300px)] xl:left-[calc(4rem+300px)] 2xl:left-[calc(6rem+300px)]">
