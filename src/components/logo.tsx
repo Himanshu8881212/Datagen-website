@@ -18,7 +18,7 @@ export function Logo({ className = '', variant = 'header' }: LogoProps) {
   const logoHeight = variant === 'header' ? 48 : 60;
 
   return (
-    <Link href="/" className={`inline-block transition-opacity duration-200 hover:opacity-90 ${className}`}>
+    <Link href="/" className={`inline-block transition-opacity duration-200 hover:opacity-90 ${className}`} suppressHydrationWarning>
       <Image
         src={logoSrc}
         alt={logoAlt}
@@ -32,6 +32,7 @@ export function Logo({ className = '', variant = 'header' }: LogoProps) {
         }}
         priority={variant === 'header'} // Only prioritize header logo
         unoptimized
+        suppressHydrationWarning
       />
     </Link>
   );
