@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
+import { Resend } from 'resend';
 
 export async function POST(request: NextRequest) {
   try {
@@ -13,63 +14,45 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Get EmailJS credentials from environment variables (server-side)
-    const serviceId = process.env.EMAILJS_SERVICE_ID;
-    const templateId = process.env.EMAILJS_TEMPLATE_ID;
-    const publicKey = process.env.EMAILJS_PUBLIC_KEY;
+    // Get Resend API key from environment variables
+    const resendApiKey = process.env.RESEND_API_KEY;
 
-    console.log('Server-side EmailJS config:', {
-      serviceId: serviceId ? 'SET' : 'NOT SET',
-      templateId: templateId ? 'SET' : 'NOT SET',
-      publicKey: publicKey ? 'SET' : 'NOT SET',
-    });
-
-    if (!serviceId || !templateId || !publicKey) {
-      const missingVars = [];
-      if (!serviceId) missingVars.push('EMAILJS_SERVICE_ID');
-      if (!templateId) missingVars.push('EMAILJS_TEMPLATE_ID');
-      if (!publicKey) missingVars.push('EMAILJS_PUBLIC_KEY');
-
-      console.error('Missing EmailJS configuration:', missingVars);
-
+    if (!resendApiKey) {
+      console.error('Missing RESEND_API_KEY environment variable');
       return NextResponse.json(
         {
           success: false,
-          message: `Server configuration error: ${missingVars.join(', ')} not set`,
+          message: 'Server configuration error: RESEND_API_KEY not set',
         },
         { status: 500 }
       );
     }
 
-    // Send email using EmailJS REST API (server-side compatible)
-    const templateParams = {
-      from_name: name,
-      from_email: email,
-      phone_number: phone || 'Not provided',
-      message: message,
-      to_email: 'info@datagen.in',
-    };
+    // Initialize Resend
+    const resend = new Resend(resendApiKey);
 
-    const emailJSResponse = await fetch('https://api.emailjs.com/api/v1.0/email/send', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        service_id: serviceId,
-        template_id: templateId,
-        user_id: publicKey,
-        template_params: templateParams,
-      }),
+    // Send email using Resend
+    const { data, error } = await resend.emails.send({
+      from: 'DataGen Contact Form <onboarding@resend.dev>', // Resend's test domain
+      to: ['info@datagen.in'],
+      replyTo: email,
+      subject: `New Contact Form Submission from ${name}`,
+      html: `
+        <h2>New Contact Form Submission</h2>
+        <p><strong>Name:</strong> ${name}</p>
+        <p><strong>Email:</strong> ${email}</p>
+        <p><strong>Phone:</strong> ${phone || 'Not provided'}</p>
+        <p><strong>Message:</strong></p>
+        <p>${message.replace(/\n/g, '<br>')}</p>
+      `,
     });
 
-    if (!emailJSResponse.ok) {
-      const errorText = await emailJSResponse.text();
-      console.error('EmailJS API error:', errorText);
-      throw new Error(`EmailJS API error: ${errorText}`);
+    if (error) {
+      console.error('Resend API error:', error);
+      throw new Error(error.message || 'Failed to send email');
     }
 
-    console.log('EmailJS response: Success');
+    console.log('Email sent successfully:', data);
 
     return NextResponse.json({
       success: true,
