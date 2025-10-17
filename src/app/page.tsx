@@ -9,33 +9,6 @@ import { MobileMenu } from "@/components/mobile-menu";
 import { Logo } from "@/components/logo";
 import { Footer } from "@/components/footer";
 import { createScrollHandler, scrollToElement } from "@/lib/scroll-utils";
-// Import EmailJS for email sending
-import emailjs from '@emailjs/browser';
-
-// Debug: Log all environment variables
-if (typeof window !== 'undefined') {
-  console.log('=== EmailJS Environment Variables Debug ===');
-  console.log('PUBLIC_KEY:', process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY ? 'SET' : 'NOT SET');
-  console.log('SERVICE_ID:', process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID ? 'SET' : 'NOT SET');
-  console.log('TEMPLATE_ID:', process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID ? 'SET' : 'NOT SET');
-  console.log('All NEXT_PUBLIC_ vars:', Object.keys(process.env).filter(k => k.startsWith('NEXT_PUBLIC_')));
-  console.log('==========================================');
-}
-
-// Initialize EmailJS with public key
-if (typeof window !== 'undefined') {
-  const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
-  if (publicKey) {
-    try {
-      emailjs.init(publicKey);
-      console.log('EmailJS initialized successfully');
-    } catch (error) {
-      console.error('EmailJS initialization failed:', error);
-    }
-  } else {
-    console.warn('NEXT_PUBLIC_EMAILJS_PUBLIC_KEY is not set');
-  }
-}
 
 export default function Home() {
   const [formStatus, setFormStatus] = useState<{
@@ -99,7 +72,7 @@ export default function Home() {
   };
 
   // Function to handle form submission
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
     try {
@@ -142,104 +115,49 @@ export default function Home() {
       // Show loading toast
       const loadingToast = toast.loading('Sending your message...');
 
-      // Initialize EmailJS with your public key
-      // No need to initialize separately as we'll pass the public key directly to send
-
-      // Prepare template parameters
-      const templateParams = {
-        from_name: formJson.name as string,
-        reply_to: formJson.email as string,
-        phone: (formJson.phone as string) || 'Not provided',
-        message: formJson.message as string,
-        to_email: 'info@datagen.in',
-        user_name: formJson.name as string,
-        user_email: formJson.email as string,
-        user_phone: (formJson.phone as string) || 'Not provided',
-        user_message: formJson.message as string
-      };
-
-      // Get EmailJS credentials from environment variables
-      const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || '';
-      const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || '';
-      const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || '';
-
-      // Check if EmailJS credentials are available
-      if (!serviceId || !templateId || !publicKey) {
-        const missingVars = [];
-        if (!serviceId) missingVars.push('NEXT_PUBLIC_EMAILJS_SERVICE_ID');
-        if (!templateId) missingVars.push('NEXT_PUBLIC_EMAILJS_TEMPLATE_ID');
-        if (!publicKey) missingVars.push('NEXT_PUBLIC_EMAILJS_PUBLIC_KEY');
-
-        const errorMsg = `Missing EmailJS configuration: ${missingVars.join(', ')}`;
-        console.error(errorMsg);
-
-        setFormStatus({
-          success: false,
-          message: `Configuration error: ${missingVars.join(', ')} not set. Please contact support.`
-        });
-
-        toast.error(errorMsg);
-        toast.dismiss(loadingToast);
-        return;
-      }
-
-      // Try to send email using EmailJS with explicit public key
-      emailjs.send(
-        serviceId,
-        templateId,
-        templateParams,
-        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
-      )
-        .then((response) => {
-          // Update form status
-          setFormStatus({
-            success: true,
-            message: "Thank you for your message! We'll get back to you soon."
-          });
-
-          // Show success toast
-          toast.success('Message sent successfully! We\'ll get back to you soon.');
-
-          // Reset form on success
-          form.reset();
-
-          // Dismiss loading toast
-          toast.dismiss(loadingToast);
-        })
-        .catch((emailJSError) => {
-          // Log the error for debugging
-          console.error('EmailJS Error:', {
-            error: emailJSError,
-            message: emailJSError?.message || 'Unknown error',
-            serviceId: serviceId ? '***' : 'NOT_SET',
-            templateId: templateId ? '***' : 'NOT_SET',
-            publicKey: process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY ? '***' : 'NOT_SET'
-          });
-
-          // Show error message to user
-          setFormStatus({
-            success: false,
-            message: `Email sending failed: ${emailJSError?.message || 'Unknown error'}. Please try again or contact us directly.`
-          });
-
-          // Show error toast
-          toast.error(`Failed to send message: ${emailJSError?.message || 'Unknown error'}`);
-
-          // Reset form
-          form.reset();
-
-          // Dismiss loading toast
-          toast.dismiss(loadingToast);
-        });
-    } catch (error) {
-      // Even if there's an error, show success message to the user
-      setFormStatus({
-        success: true,
-        message: "Thank you for your message! We'll get back to you soon."
+      // Send email via API route (server-side)
+      const response = await fetch('/api/send-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formJson.name as string,
+          email: formJson.email as string,
+          phone: (formJson.phone as string) || '',
+          message: formJson.message as string,
+        }),
       });
 
-      // Show success toast anyway
-      toast.success('Message received! We\'ll get back to you soon.');
+      const result = await response.json();
+
+      if (!response.ok || !result.success) {
+        throw new Error(result.message || 'Failed to send email');
+      }
+
+      console.log('Email sent successfully:', result);
+
+      setFormStatus({
+        success: true,
+        message: 'Thank you for your message! We will get back to you soon.'
+      });
+
+      toast.success('Message sent successfully!');
+      toast.dismiss(loadingToast);
+
+      // Reset form
+      form.reset();
+    } catch (error) {
+      console.error('Form submission error:', error);
+
+      const errorMessage = error instanceof Error ? error.message : 'Failed to send message';
+
+      setFormStatus({
+        success: false,
+        message: `Failed to send message: ${errorMessage}. Please try again or contact us directly at info@datagen.in`
+      });
+
+      toast.error(`Error: ${errorMessage}`);
     }
   };
 
