@@ -12,6 +12,16 @@ import { createScrollHandler, scrollToElement } from "@/lib/scroll-utils";
 // Import EmailJS for email sending
 import emailjs from '@emailjs/browser';
 
+// Debug: Log all environment variables
+if (typeof window !== 'undefined') {
+  console.log('=== EmailJS Environment Variables Debug ===');
+  console.log('PUBLIC_KEY:', process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY ? 'SET' : 'NOT SET');
+  console.log('SERVICE_ID:', process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID ? 'SET' : 'NOT SET');
+  console.log('TEMPLATE_ID:', process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID ? 'SET' : 'NOT SET');
+  console.log('All NEXT_PUBLIC_ vars:', Object.keys(process.env).filter(k => k.startsWith('NEXT_PUBLIC_')));
+  console.log('==========================================');
+}
+
 // Initialize EmailJS with public key
 if (typeof window !== 'undefined') {
   const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
