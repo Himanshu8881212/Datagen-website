@@ -32,9 +32,11 @@ export async function POST(request: NextRequest) {
     const resend = new Resend(resendApiKey);
 
     // Send email using Resend
+    // Note: With Resend's free tier, you can only send to your verified email
+    // To send to other emails, verify your domain at resend.com/domains
     const { data, error } = await resend.emails.send({
       from: 'DataGen Contact Form <onboarding@resend.dev>', // Resend's test domain
-      to: ['info@datagen.in'],
+      to: ['himanshuninawe@gmail.com'], // Your verified email (free tier restriction)
       replyTo: email,
       subject: `New Contact Form Submission from ${name}`,
       html: `
@@ -44,6 +46,8 @@ export async function POST(request: NextRequest) {
         <p><strong>Phone:</strong> ${phone || 'Not provided'}</p>
         <p><strong>Message:</strong></p>
         <p>${message.replace(/\n/g, '<br>')}</p>
+        <hr>
+        <p><em>Note: This email was sent to your personal email because Resend's free tier only allows sending to verified addresses. To send to info@datagen.in, verify your domain at resend.com/domains</em></p>
       `,
     });
 
