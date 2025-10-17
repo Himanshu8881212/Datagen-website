@@ -4,13 +4,14 @@ const nextConfig: NextConfig = {
   /* config options here */
   reactStrictMode: true,
 
-  // Static export for Cloudflare Pages
-  output: 'export',
+  // Removed static export to enable Vercel environment variables
+  // Static export doesn't support runtime environment variables
+  // output: 'export',
 
   // Disable powered by header for security
   poweredByHeader: false,
 
-  // Image optimization disabled for static export
+  // Image optimization
   images: {
     unoptimized: true,
   },
