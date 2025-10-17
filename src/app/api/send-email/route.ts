@@ -53,8 +53,8 @@ export async function POST(request: NextRequest) {
 
                   <!-- BLACK HEADER -->
                   <tr>
-                    <td style="background-color: #000000; padding: 30px; text-align: center;">
-                      <img src="https://datagen.in/logo.svg" alt="DataGen" width="240" height="60" style="display: block; margin: 0 auto;" />
+                    <td style="background-color: #000000; padding: 25px; text-align: center;">
+                      <img src="https://datagen.in/logo-compact.svg" alt="DataGen" width="200" height="35" style="display: block; margin: 0 auto;" />
                     </td>
                   </tr>
 
@@ -114,10 +114,7 @@ export async function POST(request: NextRequest) {
                   <!-- BLACK FOOTER -->
                   <tr>
                     <td style="background-color: #000000; padding: 40px 30px; text-align: center;">
-                      <img src="https://datagen.in/logo.svg" alt="DataGen" width="200" height="50" style="display: block; margin: 0 auto 20px auto;" />
-                      <p style="color: #ffffff; font-size: 13px; margin: 0 0 8px 0;">
-                        AI and Synthetic Data Solutions
-                      </p>
+                      <img src="https://datagen.in/logo.svg" alt="DataGen" width="240" height="60" style="display: block; margin: 0 auto 20px auto;" />
                       <p style="color: rgba(255, 255, 255, 0.7); font-size: 13px; margin: 0 0 20px 0;">
                         <a href="https://datagen.in" style="color: rgba(255, 255, 255, 0.7); text-decoration: none;">datagen.in</a> |
                         <a href="mailto:info@datagen.in" style="color: rgba(255, 255, 255, 0.7); text-decoration: none;">info@datagen.in</a>
