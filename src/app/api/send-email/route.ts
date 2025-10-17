@@ -45,11 +45,11 @@ export async function POST(request: NextRequest) {
           <meta name="viewport" content="width=device-width, initial-scale=1.0">
           <title>New Contact Form Submission</title>
         </head>
-        <body style="margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; background-color: #ffffff;">
-          <table width="100%" cellpadding="0" cellspacing="0" style="background-color: #ffffff;">
+        <body style="margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; background-color: #f5f5f5;">
+          <table width="100%" cellpadding="0" cellspacing="0" style="background-color: #f5f5f5;">
             <tr>
-              <td align="center">
-                <table width="600" cellpadding="0" cellspacing="0" style="background-color: #ffffff;">
+              <td align="center" style="padding: 0;">
+                <table width="600" cellpadding="0" cellspacing="0" style="background-color: #ffffff; margin: 0;">
 
                   <!-- BLACK HEADER -->
                   <tr>
@@ -60,7 +60,7 @@ export async function POST(request: NextRequest) {
 
                   <!-- WHITE BODY -->
                   <tr>
-                    <td style="padding: 40px 30px; background-color: #ffffff;">
+                    <td style="padding: 40px 30px; background-color: #ffffff !important;">
 
                       <h1 style="color: #000000; font-size: 22px; font-weight: 700; margin: 0 0 8px 0;">
                         You got a message!
