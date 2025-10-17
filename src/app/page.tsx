@@ -1128,7 +1128,7 @@ export default function Home() {
                     )}
                   </div>
 
-                  <div className="flex items-center gap-3">
+                  <div className="flex flex-col sm:flex-row items-center gap-3">
                     <Button
                       type="submit"
                       className="w-full bg-black text-white hover:bg-gray-800 transition-colors text-white"
@@ -1139,7 +1139,7 @@ export default function Home() {
                     {formStatus.success && (
                       <Button
                         type="button"
-                        className="bg-black text-white hover:bg-gray-800 transition-colors text-white"
+                        className="w-full bg-black text-white hover:bg-gray-800 transition-colors text-white"
                         onClick={() => {
                           setFormStatus({});
                           const form = document.getElementById('contact-form') as HTMLFormElement;

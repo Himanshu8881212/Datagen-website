@@ -45,25 +45,11 @@ export async function POST(request: NextRequest) {
           <meta name="viewport" content="width=device-width, initial-scale=1.0">
           <title>New Contact Form Submission</title>
         </head>
-        <body style="margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; background-color: #f3f4f6;">
-          <table width="100%" cellpadding="0" cellspacing="0" style="background-color: #f3f4f6; padding: 20px 0;">
+        <body style="margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; background-color: #ffffff;">
+          <table width="100%" cellpadding="0" cellspacing="0" style="background-color: #ffffff;">
             <tr>
               <td align="center">
-                <table width="600" cellpadding="0" cellspacing="0" style="background-color: #ffffff; overflow: hidden; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);">
-
-                  <!-- Header matching website design - Black background -->
-                  <tr>
-                    <td style="background-color: #000000; padding: 20px 30px; border-bottom: 1px solid rgba(255, 255, 255, 0.2);">
-                      <table width="100%" cellpadding="0" cellspacing="0">
-                        <tr>
-                          <td align="left">
-                            <!-- DataGen Logo (compact version like website header) -->
-                            <img src="https://datagen.in/logo-compact.svg" alt="DataGen" width="280" height="48" style="display: block; height: auto;" />
-                          </td>
-                        </tr>
-                      </table>
-                    </td>
-                  </tr>
+                <table width="600" cellpadding
 
                   <!-- Content -->
                   <tr>
