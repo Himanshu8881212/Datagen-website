@@ -97,6 +97,11 @@ export default function Home() {
         errors.name = ['Name must be at least 2 characters'];
       }
 
+      if (!formJson.subject || (formJson.subject as string).length < 1) {
+        isValid = false;
+        errors.subject = ['Please select a subject'];
+      }
+
       if (!formJson.message || (formJson.message as string).length < 10) {
         isValid = false;
         errors.message = ['Message must be at least 10 characters'];
@@ -124,6 +129,7 @@ export default function Home() {
         body: JSON.stringify({
           name: formJson.name as string,
           email: formJson.email as string,
+          subject: formJson.subject as string,
           phone: (formJson.phone as string) || '',
           message: formJson.message as string,
         }),
@@ -1065,6 +1071,31 @@ export default function Home() {
                     />
                     {formStatus.errors?.name && (
                       <p className="text-xs text-red-500 mt-1">{formStatus.errors.name[0]}</p>
+                    )}
+                  </div>
+
+                  <div className="space-y-2">
+                    <label className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70" htmlFor="subject">
+                      Subject *
+                    </label>
+                    <select
+                      className={`flex h-10 w-full rounded-md border ${formStatus.errors?.subject ? 'border-red-500' : 'border-primary/20 hover:border-primary/40 focus:border-primary'} bg-background px-3 py-2 text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 transition-colors`}
+                      id="subject"
+                      name="subject"
+                      required
+                    >
+                      <option value="">Select a subject</option>
+                      <option value="General Inquiry">General Inquiry</option>
+                      <option value="Product Demo Request">Product Demo Request</option>
+                      <option value="Partnership Opportunity">Partnership Opportunity</option>
+                      <option value="Technical Support">Technical Support</option>
+                      <option value="Pricing & Plans">Pricing & Plans</option>
+                      <option value="Report an Issue">Report an Issue</option>
+                      <option value="Feature Request">Feature Request</option>
+                      <option value="Other">Other</option>
+                    </select>
+                    {formStatus.errors?.subject && (
+                      <p className="text-xs text-red-500 mt-1">{formStatus.errors.subject[0]}</p>
                     )}
                   </div>
 
