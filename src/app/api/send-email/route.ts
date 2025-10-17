@@ -1,5 +1,4 @@
 import { NextRequest, NextResponse } from 'next/server';
-import emailjs from '@emailjs/browser';
 
 export async function POST(request: NextRequest) {
   try {
@@ -42,10 +41,7 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Initialize EmailJS
-    emailjs.init(publicKey);
-
-    // Send email using EmailJS
+    // Send email using EmailJS REST API (server-side compatible)
     const templateParams = {
       from_name: name,
       from_email: email,
@@ -54,13 +50,26 @@ export async function POST(request: NextRequest) {
       to_email: 'info@datagen.in',
     };
 
-    const response = await emailjs.send(
-      serviceId,
-      templateId,
-      templateParams
-    );
+    const emailJSResponse = await fetch('https://api.emailjs.com/api/v1.0/email/send', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        service_id: serviceId,
+        template_id: templateId,
+        user_id: publicKey,
+        template_params: templateParams,
+      }),
+    });
 
-    console.log('EmailJS response:', response);
+    if (!emailJSResponse.ok) {
+      const errorText = await emailJSResponse.text();
+      console.error('EmailJS API error:', errorText);
+      throw new Error(`EmailJS API error: ${errorText}`);
+    }
+
+    console.log('EmailJS response: Success');
 
     return NextResponse.json({
       success: true,
