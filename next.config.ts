@@ -4,12 +4,15 @@ const nextConfig: NextConfig = {
   /* config options here */
   reactStrictMode: true,
 
+  // Static export for Cloudflare Pages
+  output: 'export',
+
   // Disable powered by header for security
   poweredByHeader: false,
 
-  // Image optimization enabled for Vercel
+  // Image optimization disabled for static export
   images: {
-    unoptimized: false,
+    unoptimized: true,
   },
 
   // Disable ESLint during builds

@@ -18,9 +18,12 @@ if (typeof window !== 'undefined') {
   if (publicKey) {
     try {
       emailjs.init(publicKey);
+      console.log('EmailJS initialized successfully');
     } catch (error) {
-      // Silent error - EmailJS initialization failed
+      console.error('EmailJS initialization failed:', error);
     }
+  } else {
+    console.warn('NEXT_PUBLIC_EMAILJS_PUBLIC_KEY is not set');
   }
 }
 
@@ -148,17 +151,24 @@ export default function Home() {
       // Get EmailJS credentials from environment variables
       const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || '';
       const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || '';
+      const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || '';
 
       // Check if EmailJS credentials are available
-      if (!serviceId || !templateId || !process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY) {
-        // Show success message to user
+      if (!serviceId || !templateId || !publicKey) {
+        const missingVars = [];
+        if (!serviceId) missingVars.push('NEXT_PUBLIC_EMAILJS_SERVICE_ID');
+        if (!templateId) missingVars.push('NEXT_PUBLIC_EMAILJS_TEMPLATE_ID');
+        if (!publicKey) missingVars.push('NEXT_PUBLIC_EMAILJS_PUBLIC_KEY');
+
+        const errorMsg = `Missing EmailJS configuration: ${missingVars.join(', ')}`;
+        console.error(errorMsg);
+
         setFormStatus({
-          success: true,
-          message: "Thank you for your message! We'll get back to you soon."
+          success: false,
+          message: `Configuration error: ${missingVars.join(', ')} not set. Please contact support.`
         });
 
-        toast.success('Message received! We\'ll get back to you soon.');
-        form.reset();
+        toast.error(errorMsg);
         toast.dismiss(loadingToast);
         return;
       }
@@ -187,31 +197,29 @@ export default function Home() {
           toast.dismiss(loadingToast);
         })
         .catch((emailJSError) => {
-          // Silent error handling
-
-          // Even if EmailJS fails, show success message to the user
-          // This ensures a good user experience even if there are backend issues
-          setFormStatus({
-            success: true,
-            message: "Thank you for your message! We'll get back to you soon."
+          // Log the error for debugging
+          console.error('EmailJS Error:', {
+            error: emailJSError,
+            message: emailJSError?.message || 'Unknown error',
+            serviceId: serviceId ? '***' : 'NOT_SET',
+            templateId: templateId ? '***' : 'NOT_SET',
+            publicKey: process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY ? '***' : 'NOT_SET'
           });
 
-          // Show success toast anyway
-          toast.success('Message received! We\'ll get back to you soon.');
+          // Show error message to user
+          setFormStatus({
+            success: false,
+            message: `Email sending failed: ${emailJSError?.message || 'Unknown error'}. Please try again or contact us directly.`
+          });
+
+          // Show error toast
+          toast.error(`Failed to send message: ${emailJSError?.message || 'Unknown error'}`);
 
           // Reset form
           form.reset();
 
           // Dismiss loading toast
           toast.dismiss(loadingToast);
-
-          // As a fallback, create a mailto link for manual sending
-          const mailtoLink = createMailtoLink(
-            formJson.name as string,
-            formJson.email as string,
-            formJson.phone as string || '',
-            formJson.message as string
-          );
         });
     } catch (error) {
       // Even if there's an error, show success message to the user
@@ -258,6 +266,25 @@ export default function Home() {
       const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || '';
       const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || '';
 
+      // Check if EmailJS credentials are available
+      if (!serviceId || !templateId) {
+        const missingVars = [];
+        if (!serviceId) missingVars.push('NEXT_PUBLIC_EMAILJS_SERVICE_ID');
+        if (!templateId) missingVars.push('NEXT_PUBLIC_EMAILJS_TEMPLATE_ID');
+
+        const errorMsg = `Missing EmailJS configuration: ${missingVars.join(', ')}`;
+        console.error(errorMsg);
+
+        setFormStatus({
+          success: false,
+          message: `Configuration error: ${missingVars.join(', ')} not set. Please contact support.`
+        });
+
+        toast.error(errorMsg);
+        toast.dismiss(loadingToast);
+        return;
+      }
+
       // Try to send email using EmailJS with the initialized instance
       emailjs.send(
         serviceId,
@@ -283,14 +310,22 @@ export default function Home() {
           toast.dismiss(loadingToast);
         })
         .catch((emailJSError) => {
-          // Even if EmailJS fails, show success message to the user
-          setFormStatus({
-            success: true,
-            message: "Thank you for your message! We'll get back to you soon."
+          // Log the error for debugging
+          console.error('EmailJS Error (second handler):', {
+            error: emailJSError,
+            message: emailJSError?.message || 'Unknown error',
+            serviceId: serviceId ? '***' : 'NOT_SET',
+            templateId: templateId ? '***' : 'NOT_SET'
           });
 
-          // Show success toast anyway
-          toast.success('Message received! We\'ll get back to you soon.');
+          // Show error message to user
+          setFormStatus({
+            success: false,
+            message: `Email sending failed: ${emailJSError?.message || 'Unknown error'}. Please try again or contact us directly.`
+          });
+
+          // Show error toast
+          toast.error(`Failed to send message: ${emailJSError?.message || 'Unknown error'}`);
 
           // Reset form
           if (formRef.current) {
@@ -299,15 +334,6 @@ export default function Home() {
 
           // Dismiss loading toast
           toast.dismiss(loadingToast);
-
-          // Log the form data for manual follow-up
-          console.log('Contact form data (EmailJS failed but user shown success):', {
-            name: formJson.name,
-            email: formJson.email,
-            phone: formJson.phone || 'Not provided',
-            message: formJson.message,
-            timestamp: new Date().toISOString()
-          });
         });
     } catch (error) {
       console.error('Error sending email:', error);

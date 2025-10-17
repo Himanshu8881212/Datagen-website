@@ -81,10 +81,23 @@ export async function submitContactForm(formData: FormData) {
         message: "Thank you for your message! We'll get back to you soon."
       };
     } catch (emailError) {
-      // Fallback: If email sending fails, still show success to user
+      // Log the actual error for debugging
+      console.error('Email sending failed:', {
+        error: emailError instanceof Error ? emailError.message : String(emailError),
+        stack: emailError instanceof Error ? emailError.stack : undefined,
+        emailConfig: {
+          host: process.env.EMAIL_HOST,
+          port: process.env.EMAIL_PORT,
+          secure: process.env.EMAIL_SECURE,
+          user: process.env.EMAIL_USER ? '***' : 'NOT_SET',
+          pass: process.env.EMAIL_PASS ? '***' : 'NOT_SET',
+        }
+      });
+
+      // Return error to user instead of silent failure
       return {
-        success: true, // Still return success to the user
-        message: "Thank you for your message! We've received your submission and will get back to you soon."
+        success: false,
+        message: `Email sending failed: ${emailError instanceof Error ? emailError.message : 'Unknown error'}`
       };
     }
   } catch (error) {
