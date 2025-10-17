@@ -138,59 +138,33 @@ export async function POST(request: NextRequest) {
                     </td>
                   </tr>
 
-                  <!-- Footer matching website design - Black background -->
+                  <!-- Footer - Simple and Professional -->
                   <tr>
-                    <td style="background-color: #000000; padding: 40px 30px; border-top: 1px solid rgba(255, 255, 255, 0.2);">
+                    <td style="background-color: #f9fafb; padding: 30px; border-top: 1px solid #e5e7eb;">
                       <table width="100%" cellpadding="0" cellspacing="0">
                         <tr>
-                          <td>
+                          <td align="center">
                             <!-- Logo -->
-                            <div style="margin-bottom: 30px;">
-                              <img src="https://datagen.in/logo.svg" alt="DataGen - AI and Synthetic Data Solutions" width="240" height="60" style="display: block; height: auto;" />
+                            <div style="margin-bottom: 20px;">
+                              <img src="https://datagen.in/logo.svg" alt="DataGen" width="180" height="45" style="display: block; margin: 0 auto; height: auto;" />
                             </div>
 
-                            <!-- Footer Links Grid -->
-                            <table width="100%" cellpadding="0" cellspacing="0" style="margin-bottom: 30px;">
-                              <tr>
-                                <td width="33%" valign="top" style="padding-right: 15px;">
-                                  <h4 style="color: #ffffff; font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin: 0 0 15px 0;">PRODUCT</h4>
-                                  <p style="margin: 0 0 10px 0;">
-                                    <a href="https://datagen.in/#product" style="color: rgba(255, 255, 255, 0.7); text-decoration: none; font-size: 13px;">SynthEngyne</a>
-                                  </p>
-                                  <p style="margin: 0 0 10px 0;">
-                                    <a href="https://datagen.in/#pricing" style="color: rgba(255, 255, 255, 0.7); text-decoration: none; font-size: 13px;">Pricing</a>
-                                  </p>
-                                </td>
-                                <td width="33%" valign="top" style="padding-right: 15px;">
-                                  <h4 style="color: #ffffff; font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin: 0 0 15px 0;">SERVICES</h4>
-                                  <p style="margin: 0 0 10px 0;">
-                                    <a href="https://datagen.in/#services" style="color: rgba(255, 255, 255, 0.7); text-decoration: none; font-size: 13px;">Overview</a>
-                                  </p>
-                                  <p style="margin: 0 0 10px 0;">
-                                    <a href="https://datagen.in/services" style="color: rgba(255, 255, 255, 0.7); text-decoration: none; font-size: 13px;">AI Solutions</a>
-                                  </p>
-                                </td>
-                                <td width="33%" valign="top">
-                                  <h4 style="color: #ffffff; font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin: 0 0 15px 0;">COMPANY</h4>
-                                  <p style="margin: 0 0 10px 0;">
-                                    <a href="https://datagen.in/about" style="color: rgba(255, 255, 255, 0.7); text-decoration: none; font-size: 13px;">About Us</a>
-                                  </p>
-                                  <p style="margin: 0 0 10px 0;">
-                                    <a href="https://datagen.in/#faq" style="color: rgba(255, 255, 255, 0.7); text-decoration: none; font-size: 13px;">FAQ</a>
-                                  </p>
-                                  <p style="margin: 0 0 10px 0;">
-                                    <a href="https://datagen.in/#contact" style="color: rgba(255, 255, 255, 0.7); text-decoration: none; font-size: 13px;">Contact</a>
-                                  </p>
-                                </td>
-                              </tr>
-                            </table>
+                            <!-- Contact Info -->
+                            <p style="color: #6b7280; font-size: 14px; margin: 0 0 10px 0; line-height: 1.6;">
+                              <strong style="color: #000000;">DataGen</strong> - AI and Synthetic Data Solutions
+                            </p>
+                            <p style="color: #6b7280; font-size: 13px; margin: 0 0 15px 0;">
+                              <a href="https://datagen.in" style="color: #3b82f6; text-decoration: none;">datagen.in</a> |
+                              <a href="mailto:info@datagen.in" style="color: #3b82f6; text-decoration: none;">info@datagen.in</a>
+                            </p>
+
+                            <!-- Divider -->
+                            <div style="height: 1px; background-color: #e5e7eb; margin: 20px 0;"></div>
 
                             <!-- Copyright -->
-                            <div style="padding-top: 30px; border-top: 1px solid rgba(255, 255, 255, 0.2); text-align: center;">
-                              <p style="color: rgba(255, 255, 255, 0.7); font-size: 13px; margin: 0;">
-                                DataGen © ${new Date().getFullYear()}. All rights reserved.
-                              </p>
-                            </div>
+                            <p style="color: #9ca3af; font-size: 12px; margin: 0;">
+                              © ${new Date().getFullYear()} DataGen. All rights reserved.
+                            </p>
                           </td>
                         </tr>
                       </table>
